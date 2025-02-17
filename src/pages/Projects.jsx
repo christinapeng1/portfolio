@@ -9,7 +9,7 @@ function Projects() {
       <div className="project-list">
         <div className="project-card">
           <Link to="/projects/Dropdown">
-            <h2>Dropdowns - Design Case Study</h2>
+            <h2>Dropdown Menu - Design Case Study</h2>
             <p>Click to learn more about Project 1</p>
           </Link>
         </div>
