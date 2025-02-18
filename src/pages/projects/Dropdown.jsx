@@ -9,23 +9,49 @@ import cabKeyboardGif from "../../assets/gifs/cab-dropdown-keyboard.gif"
 import cabMouseGif from "../../assets/gifs/cab-dropdown-mouse.gif"
 import Table from "../../components/Table"
 
-const columns = ["", "Mouse/Touchpad", "Keyboard"];
+const input_columns = ["", "Courses @ Brown", "Discord", "Steam"];
 
-const data = [
+const input_data = [
   {
-    "": "Courses @ Brown",
-    "Mouse/Touchpad": "🟡 difficult to find options lower in the dropdown",
-    Keyboard: "❌ inefficient due to the high number of options",
+    "": "Mouse/Trackpad",
+    "Courses @ Brown": "🟡 difficult to find options lower in the dropdown",
+    Discord: "✅ easy to navigate",
+    Steam: "✅ easy to navigate",
   },
   {
-    "": "Discord",
-    "Mouse/Touchpad": "✅ easy to navigate",
-    Keyboard: "🟡 unclear whether `space` or `enter` confirmed selection; confusing focus order",
+    "": "Keyboard",
+    "Courses @ Brown": "❌ inefficient due to the high number of options",
+    Discord:
+      "🟡 unclear whether `space` or `enter` confirmed selection; confusing focus order",
+    Steam:
+      "❌ difficult to begin tabbing through list of games from steam page",
+  },
+];
+
+const output_columns = ["", "Courses @ Brown", "Discord", "Steam"];
+
+const output_data = [
+  {
+    "": "State change results in visual change",
+    "Courses @ Brown": "✅ change in dropdown text",
+    Discord: "✅ change in dropdown text and icon",
+    Steam:
+      "✅ light blue highlight on selected game and visual game displayed on the right side",
   },
   {
-    "": "Steam",
-    "Mouse/Touchpad": "✅ easy to navigate",
-    Keyboard: "❌ difficult to begin tabbing through list of games from steam page",
+    "": "Logical focus order",
+    "Courses @ Brown": "✅ top-down focus order",
+    Discord: "✅ focus order begins at the first component",
+    Steam:
+      "❌ difficult to navigate, some components are skipped by the focus order",
+  },
+  {
+    "": "Screenreader compatibility",
+    "Courses @ Brown": "✅ compatible overall, clear about which dropdown option is being considered and provides instructions for how to select the option",
+    Discord:
+      "✅ compatible overall, clear about which dropdown option is selected and which is not",
+    Steam:
+      "❌ incompatible; only message from screenreader is 'you are currently on a window'",
   },
 ];
 
@@ -94,10 +120,23 @@ function Dropdown() {
               First, let's take a look at how dropdown components interact in
               three different applications:
             </p>
-            <Table columns={columns} data={data} />
+            <h3>Inputs</h3>
+            <Table columns={input_columns} data={input_data} />
+            <h3>Outputs</h3>
+            <Table columns={output_columns} data={output_data} />
 
             <h3>Courses @ Brown</h3>
-            <p>Dropdown menus in [Courses @ Brown](https://cab.brown.edu/)</p>
+            <p>
+              Dropdown menus in{" "}
+              <a
+                href="https://cab.brown.edu/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Courses @ Brown
+              </a>{" "}
+              are used to filter for courses by class year and department.
+            </p>
 
             {/* Flex container for alignment */}
             <div
@@ -110,19 +149,15 @@ function Dropdown() {
             >
               {/* Bullet Points Container */}
               <div style={{ width: "40%", textAlign: "left" }}>
-                <h4>Mouse Interaction</h4>
+                <h4>🟡 Mouse Interaction</h4>
                 <ul style={{ listStyleType: "disc" }}>
-                  <li>Seamless and intuitive navigation</li>
+                  <li>Long list of options make it difficult to navigate</li>
+                  <li>Option has a blue background when hovered over</li>
+                  <li>Option is selected after mouse click release</li>
                   <li>
-                    Selected status has a lighter black background when hovered
-                    over
+                    Dropdown text changes to the currently selected option
                   </li>
-                  <li>Status is selected after mouse click release</li>
-                  <li>
-                    Dropdown text indicating the current status updates after
-                    selection
-                  </li>
-                  <li>Must press `save` for the status to take effect</li>
+                  <li>Filter immediately takes effect</li>
                 </ul>
               </div>
 
@@ -130,7 +165,7 @@ function Dropdown() {
               <div style={{ width: "60%", textAlign: "center" }}>
                 <img
                   src={cabMouseGif}
-                  alt="Discord status dropdown mouse GIF"
+                  alt="Cab dropdown mouse GIF"
                   style={{
                     width: "70%", // Adjust GIF width
                     height: "auto",
@@ -154,19 +189,19 @@ function Dropdown() {
             >
               {/* Bullet Points Container */}
               <div style={{ width: "40%", textAlign: "left" }}>
-                <h4>Keyboard Interaction</h4>
+                <h4>❌ Keyboard Interaction</h4>
                 <ul style={{ listStyleType: "disc" }}>
-                  <li>Seamless and intuitive navigation</li>
                   <li>
-                    Selected status has a lighter black background when hovered
-                    over
+                    Long list of options make it difficult to navigate; must
+                    arrow-key-down through every option before reaching later
+                    options
                   </li>
-                  <li>Status is selected after mouse click release</li>
+                  <li>Option has a blue background when hovered over</li>
+                  <li>Option is selected after pressing `enter`</li>
                   <li>
-                    Dropdown text indicating the current status updates after
-                    selection
+                    Dropdown text changes to the currently selected option
                   </li>
-                  <li>Must press `save` for the status to take effect</li>
+                  <li>Filter immediately takes effect</li>
                 </ul>
               </div>
 
@@ -174,7 +209,7 @@ function Dropdown() {
               <div style={{ width: "60%", textAlign: "center" }}>
                 <img
                   src={cabKeyboardGif}
-                  alt="Discord status dropdown keyboard GIF"
+                  alt="CAB dropdown keyboard GIF"
                   style={{
                     width: "70%", // Adjust GIF width
                     height: "auto",
@@ -188,7 +223,11 @@ function Dropdown() {
             </div>
 
             <h3>Updating a Discord Status</h3>
-            <p>Updating a discord status in </p>
+            <p>
+              Updating a discord status utilizes a dropdown menu which contains
+              a list of possible statues: Online, Idle, Do Not Disturb, and
+              Invisible
+            </p>
 
             {/* Flex container for alignment */}
             <div
@@ -201,11 +240,11 @@ function Dropdown() {
             >
               {/* Bullet Points Container */}
               <div style={{ width: "60%", textAlign: "left" }}>
-                <h4>Mouse Interaction</h4>
+                <h4>✅ Mouse Interaction</h4>
                 <ul style={{ listStyleType: "disc" }}>
                   <li>Seamless and intuitive navigation</li>
                   <li>
-                    Selected status has a lighter black background when hovered
+                    Selected status has a lighter gray background when hovered
                     over
                   </li>
                   <li>Status is selected after mouse click release</li>
@@ -245,14 +284,28 @@ function Dropdown() {
             >
               {/* Bullet Points Container */}
               <div style={{ width: "60%", textAlign: "left" }}>
-                <h4>Keyboard Interaction</h4>
+                <h4>🟡 Keyboard Interaction</h4>
                 <ul style={{ listStyleType: "disc" }}>
-                  <li>Seamless and intuitive navigation</li>
                   <li>
-                    Selected status has a lighter black background when hovered
-                    over
+                    Having only 4 types of statuses make it easy to tab through
+                    quickly
                   </li>
-                  <li>Status is selected after mouse click release</li>
+                  <li>
+                    Focus order began at the `Cancel` button instead of the
+                    first component box
+                  </li>
+                  <li>
+                    Must tab through 5 layers to reach the status update
+                    component
+                  </li>
+                  <li>
+                    Unfriendly to error - any mistake in tabbing through the
+                    components requires retabbing through them again
+                  </li>
+                  <li>
+                    Unclear whether `enter` or `space` confirmed the status
+                    selection
+                  </li>
                   <li>
                     Dropdown text indicating the current status updates after
                     selection
@@ -278,104 +331,12 @@ function Dropdown() {
               </div>
             </div>
 
-            <h3>Viewing Steam Games</h3>
-            <p>Updating a discord status in </p>
-
-            {/* Flex container for alignment */}
-            <div
-              style={{
-                display: "flex",
-                justifyContent: "space-between",
-                gap: "20px",
-                marginBottom: "40px",
-              }}
-            >
-              {/* Bullet Points Container */}
-              <div style={{ width: "40%", textAlign: "left" }}>
-                <h4>Mouse Interaction</h4>
-                <ul style={{ listStyleType: "disc" }}>
-                  <li>Seamless and intuitive navigation</li>
-                  <li>
-                    Selected status has a lighter black background when hovered
-                    over
-                  </li>
-                  <li>Status is selected after mouse click release</li>
-                  <li>
-                    Dropdown text indicating the current status updates after
-                    selection
-                  </li>
-                  <li>Must press `save` for the status to take effect</li>
-                </ul>
-              </div>
-
-              {/* Image Container */}
-              <div style={{ width: "60%", textAlign: "center" }}>
-                <img
-                  src={steamMouseGif}
-                  alt="Discord status dropdown mouse GIF"
-                  style={{
-                    width: "70%", // Adjust GIF width
-                    height: "auto",
-                    borderRadius: "8px",
-                    boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
-                    outline: "5px solid #333",
-                    outlineOffset: "-5px",
-                  }}
-                />
-              </div>
-            </div>
-
-            {/* Flex container for alignment */}
-            <div
-              style={{
-                display: "flex",
-                justifyContent: "space-between",
-                gap: "20px",
-                marginBottom: "40px",
-              }}
-            >
-              {/* Bullet Points Container */}
-              <div style={{ width: "40%", textAlign: "left" }}>
-                <h4>Keyboard Interaction</h4>
-                <ul style={{ listStyleType: "disc" }}>
-                  <li>Seamless and intuitive navigation</li>
-                  <li>
-                    Selected status has a lighter black background when hovered
-                    over
-                  </li>
-                  <li>Status is selected after mouse click release</li>
-                  <li>
-                    Dropdown text indicating the current status updates after
-                    selection
-                  </li>
-                  <li>Must press `save` for the status to take effect</li>
-                </ul>
-              </div>
-
-              {/* Image Container */}
-              <div style={{ width: "60%", textAlign: "center" }}>
-                <img
-                  src={steamKeyboardGif}
-                  alt="Discord status dropdown keyboard GIF"
-                  style={{
-                    width: "70%", // Adjust GIF width
-                    height: "auto",
-                    borderRadius: "8px",
-                    boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
-                    outline: "5px solid #333",
-                    outlineOffset: "-5px",
-                  }}
-                />
-              </div>
-            </div>
-          </section>
-
-          <section id="research" className="project-section">
-            <h2>Discord</h2>
+            <h3>Steam</h3>
             <p>
-              First, let's take a look at how dropdown components interact in
-              three different applications:
+              Steam is a digital storefront for buying and playing video games.
             </p>
+
+            {/* Flex container for alignment */}
             <div
               style={{
                 display: "flex",
@@ -384,11 +345,31 @@ function Dropdown() {
                 marginBottom: "40px",
               }}
             >
-              {/* <div style={{ width: "45%", textAlign: "center" }}>
-                <h3>Keyboard Interaction</h3>
+              {/* Bullet Points Container */}
+              <div style={{ width: "40%", textAlign: "left" }}>
+                <h4>✅ Mouse Interaction</h4>
+                <ul style={{ listStyleType: "disc" }}>
+                  <li>Seamless and intuitive navigation</li>
+                  <li>
+                    Selected game has a light blue highlight when hovered over
+                  </li>
+                  <li>Game is selected after mouse click release</li>
+                  <li>
+                    Dropdown can be collapsed by clicking the `minus` sign next
+                    to `All`
+                  </li>
+                  <li>
+                    Contains a search function that allows quickly searching for
+                    a game when the list is too long
+                  </li>
+                </ul>
+              </div>
+
+              {/* Image Container */}
+              <div style={{ width: "60%", textAlign: "center" }}>
                 <img
-                  src={discordKeyboardGif}
-                  alt="Discord status dropdown keyboard GIF"
+                  src={steamMouseGif}
+                  alt="Steam games dropdown mouse GIF"
                   style={{
                     width: "70%", // Adjust GIF width
                     height: "auto",
@@ -398,56 +379,10 @@ function Dropdown() {
                     outlineOffset: "-5px",
                   }}
                 />
-              </div> */}
-
-              <div style={{ width: "45%", textAlign: "center" }}>
-                <h3>Mouse Interaction</h3>
-                <div>
-                  <img
-                    src={discordMouseGif}
-                    alt="Discord status dropdown mouse GIF"
-                    style={{
-                      width: "70%", // Adjust GIF width
-                      height: "auto",
-                      borderRadius: "8px",
-                      boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
-                      outline: "5px solid #333",
-                      outlineOffset: "-5px",
-                    }}
-                  />
-
-                  <div style={{ width: "45%", textAlign: "left" }}>
-                    <ul>
-                      <li>
-                        <strong>
-                          Learn how components incorporate accessibility for
-                          user interaction
-                        </strong>
-                      </li>
-                      <li>
-                        <strong>
-                          Explore multiple forms of input (mouse, keyboard) and
-                          output (visual style, text, labels for screen readers)
-                        </strong>
-                      </li>
-                      <li>
-                        <strong>Component States:</strong> Designing components
-                        to transition smoothly between various states of
-                        interaction (e.g., open, selected, or disabled) was key
-                        to creating a user-friendly experience.
-                      </li>
-                      <li>
-                        <strong>
-                          Understand trade-offs between learnability,
-                          memorability, efficiency, and accessibility
-                        </strong>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
               </div>
             </div>
 
+            {/* Flex container for alignment */}
             <div
               style={{
                 display: "flex",
@@ -456,69 +391,33 @@ function Dropdown() {
                 marginBottom: "40px",
               }}
             >
-              <div style={{ width: "45%", textAlign: "center" }}>
-                <h3>Steam Games Keyboard Interaction</h3>
+              {/* Bullet Points Container */}
+              <div style={{ width: "40%", textAlign: "left" }}>
+                <h4>❌ Keyboard Interaction</h4>
+                <ul style={{ listStyleType: "disc" }}>
+                  <li>
+                    Focus order is hard to understand -- difficult to begin
+                    tabbing through the games list without first clicking on the
+                    dropdown
+                  </li>
+                  <li>
+                    Game is immediately selected when navigating through with
+                    arrow keys -- no confimration required
+                  </li>
+                  <li>
+                    Impossible to tab into search bar as a keyboard-only user
+                  </li>
+                  <li>Selected game has a light blue highlight</li>
+                </ul>
+              </div>
+
+              {/* Image Container */}
+              <div style={{ width: "60%", textAlign: "center" }}>
                 <img
                   src={steamKeyboardGif}
-                  alt="Steam Games Keyboard Interaction GIF"
-                  style={{
-                    width: "90%", // Adjust GIF width
-                    height: "auto",
-                    borderRadius: "8px",
-                    boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
-                    outline: "5px solid #333",
-                    outlineOffset: "-5px",
-                  }}
-                />
-              </div>
-
-              <div style={{ width: "45%", textAlign: "center" }}>
-                <h3>Steam Games Mouse Interaction</h3>
-                <img
-                  src={steamMouseGif}
-                  alt="Steam Games Mouse Interaction GIF"
-                  style={{
-                    width: "90%", // Adjust GIF width
-                    height: "auto",
-                    borderRadius: "8px",
-                    boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
-                    outline: "5px solid #333",
-                    outlineOffset: "-5px",
-                  }}
-                />
-              </div>
-            </div>
-            <div
-              style={{
-                display: "flex",
-                justifyContent: "space-between",
-                gap: "20px",
-                marginBottom: "40px",
-              }}
-            >
-              <div style={{ width: "45%", textAlign: "center" }}>
-                <h3>Discord Status Keyboard Interaction</h3>
-                <img
-                  src={cabKeyboardGif}
                   alt="Discord status dropdown keyboard GIF"
                   style={{
-                    width: "90%", // Adjust GIF width
-                    height: "auto",
-                    borderRadius: "8px",
-                    boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
-                    outline: "5px solid #333",
-                    outlineOffset: "-5px",
-                  }}
-                />
-              </div>
-
-              <div style={{ width: "45%", textAlign: "center" }}>
-                <h3>Discord Status Mouse Interaction</h3>
-                <img
-                  src={cabMouseGif}
-                  alt="Discord status dropdown keyboard GIF"
-                  style={{
-                    width: "90%", // Adjust GIF width
+                    width: "70%", // Adjust GIF width
                     height: "auto",
                     borderRadius: "8px",
                     boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
