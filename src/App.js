@@ -8,15 +8,15 @@ import Dropdown from "./pages/projects/Dropdown";
 function App() {
   return (
     <div className="App">
-      <BrowserRouter>
+      <BrowserRouter basename="/portfolio">
         <Navbar />
         <h1>Welcome to My Portfolio</h1>
         <Routes>
-          <Route path="/portfolio" element={<Home />} />
-          <Route path="/portfolio/about" element={<h1>About Page</h1>} />
-          <Route path="/portfolio/projects" element={<Projects />} />
-          <Route path="/portfolio/contact" element={<h1>Contact Page</h1>} />
-          <Route path="/portfolio/projects/dropdown" element={<Dropdown />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<h1>About Page</h1>} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/contact" element={<h1>Contact Page</h1>} />
+          <Route path="/projects/dropdown" element={<Dropdown />} />
         </Routes>
       </BrowserRouter>
     </div>

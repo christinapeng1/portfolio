@@ -9,16 +9,16 @@ function Navbar() {
       </div>
       <ul className="nav-links">
         <li>
-          <Link to="/portfolio">Home</Link>
+          <Link to="/">Home</Link>
         </li>
         <li>
-          <Link to="/portfolio/about">About</Link>
+          <Link to="/about">About</Link>
         </li>
         <li>
-          <Link to="/portfolio/projects">Projects</Link>
+          <Link to="/projects">Projects</Link>
         </li>
         <li>
-          <Link to="/portfolio/contact">Contact</Link>
+          <Link to="/contact">Contact</Link>
         </li>
       </ul>
     </nav>

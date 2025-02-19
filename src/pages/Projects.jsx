@@ -8,7 +8,7 @@ function Projects() {
       <h1>My Projects</h1>
       <div className="project-list">
         <div className="project-card">
-          <Link to="/portfolio/projects/dropdown">
+          <Link to="/projects/dropdown">
             <h2>Dropdown Menu - Design Case Study</h2>
             <p>Click to learn more about Project 1</p>
           </Link>

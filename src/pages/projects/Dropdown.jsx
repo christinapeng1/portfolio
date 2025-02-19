@@ -7,7 +7,10 @@ import steamKeyboardGif from "../../assets/gifs/steam-games-dropdown-keyboard.gi
 import steamMouseGif from "../../assets/gifs/steam-games-dropdown-mouse.gif"
 import cabKeyboardGif from "../../assets/gifs/cab-dropdown-keyboard.gif"
 import cabMouseGif from "../../assets/gifs/cab-dropdown-mouse.gif"
+import stateModelMouse from "../../assets/images/state-model-dropdown-mouse.png"
+import stateModelKeyboard from "../../assets/images/state-model-dropdown-keyboard.png";
 import Table from "../../components/Table"
+
 
 const input_columns = ["", "Courses @ Brown", "Discord", "Steam"];
 
@@ -431,10 +434,28 @@ function Dropdown() {
 
           <section id="state-models" className="project-section">
             <h2>State Models</h2>
-            <p>
-              Explain the results of the project, how successful it was, and any
-              additional outcomes.
-            </p>
+            <img
+              src={stateModelMouse}
+              alt="State Model for Dropdown Mouse interaction of CAB"
+              style={{
+                width: "100%", // Adjust GIF width
+                height: "auto",
+                borderRadius: "8px",
+                boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
+                outline: "5px solid #333",
+              }}
+            />
+            <img
+              src={stateModelKeyboard}
+              alt="State Model for Dropdown Keyboard interaction of CAB"
+              style={{
+                width: "100%", // Adjust GIF width
+                height: "auto",
+                borderRadius: "8px",
+                boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
+                outline: "5px solid #333",
+              }}
+            />
           </section>
 
           <section id="reflection" className="project-section">
