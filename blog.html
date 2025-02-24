@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Christina Peng</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav id="desktop-nav">
+        <a href="/">Christina Peng</a>
+        <div>
+            <ul class="nav-links">
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#coding">Coding</a></li>
+                <li><a href="#writing">Writing</a></li>
+                <li><a href="#art">Art</a></li>
+                <li><a href="#blog">Blog</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <nav id="hamburger-nav">
+        <a href="/">Christina Peng</a>
+        <div class="hamburger-menu">
+            <div class="hamburger-icon" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        <div class="menu-links">
+            <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+            <li><a href="#coding" onclick="toggleMenu()">Coding</a></li>
+            <li><a href="#writing" onclick="toggleMenu()">Writing</a></li>
+            <li><a href="#art" onclick="toggleMenu()">Art</a></li>
+            <li><a href="#blog" onclick="toggleMenu()">Blog</a></li>
+        </div>
+    </nav>
+
+    <main>
+        <h1>Blog</h1>
+
+        <article>
+            <h2><a href="blog/dropdown-case-study.html">My First Blog Post</a></h2>
+            <p>A short summary of the blog goes here...</p>
+        </article>
+
+        <article>
+            <h2><a href="blog/post2.html">Another Blog Post</a></h2>
+            <p>Another short summary...</p>
+        </article>
+    </main>
+</body>
+</html>
