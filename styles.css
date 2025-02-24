@@ -267,7 +267,7 @@ td:first-child {
 }
 
 /* Hide on small screens */
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
     #quick-nav {
         display: none;
     }
