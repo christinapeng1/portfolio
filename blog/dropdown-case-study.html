@@ -50,19 +50,22 @@
             <li><a href="#input-comparison">Input Comparison</a></li>
             <li><a href="#output-comparison">Output Comparison</a></li>
             <li><a href="#focused-study-discord">Focused Study</a></li>
-            <li><a href="#final-thoughts">Final Thoughts</a></li>
+            <li><a href="#design-philosophy">Design Philosophy</a></li>
+            <li><a href="#conclusion">Conclusion</a></li>
         </ul>
     </nav>
 
     <main>
         <h1>Dropdown Menu - Design Case Study</h1>
-        <p><em>Posted on February 23, 2025</em></p>
+        <p>Posted on February 23, 2025</p>
 
         <article>
 
             <section id="overview">
                 <h2>Overview</h2>
-                <p>Dropdowns are everywhere. Whether you're selecting a drink at the order kiosk, navigating the settings page of your Mac, or scrolling through a very long Terms of Services, these little menus are a staple in web and app design. However, as simple as it seems, designing the perfect dropdown can be tricky.</p>
+                <p>Dropdowns are everywhere. Whether you're selecting a drink at the order kiosk, hovering over the nav bar on
+                    <a href="https://www.nytimes.com/" target="_blank" class="highlight">nytimes.com</a>
+                    , or scrolling through a very long Terms of Services, these little menus are a staple in web and app design. However, as simple as it seems, designing the perfect dropdown can be tricky.</p>
 
                 <!-- <p>It's not bad. BUT for starters, wouldn’t it be nice if you could *search* the fortunes instead of digging through text so tiny and squished you'd need a map and compass to get there? I mean, good luck finding the one where the guy is trapped in a cookie factory. And once you finally make a selection, *nothing happens*—no magic, no fortune, not even a confetti cannon. Just a plain, empty click...</p> -->
 
@@ -250,23 +253,24 @@
                 <img src="../assets/images/default-discord-keyboard-model.png" alt="Discord Status Dropdown with Keyboard input state model">
 
                 <h3>Redesigning the Dropdown</h3>
-                <p>There's a lot to take in from our state models! Firstly, there's a lot of states -- from expanding the menu, hovering over the desired status, saving the status, etc. Maybe we can think of a way to reduce the number of states?</p>
-                <p>What about taking out the 'Save' button after selecting a status? Without the 'Save' button, the status would automatically update as soon as it's selected in the dropdown. That would certainly improve the efficiency of this interaction!</p>
+                <p>From inspecting the state models, we'll notice there's a lot of states -- from expanding the menu, hovering over the desired status, saving the status, etc. As an improvement, maybe we can think of a way to reduce the number of states and improve the user experience?</p>
+                <p>Well, what about taking out the 'Save' button after selecting a status? Without the 'Save' button, the status would automatically update as soon as it's selected in the dropdown. That would certainly improve the efficiency of this interaction!</p>
                 <p>See my design below:</p>
                 <img src="../assets/images/redesigned-discord.png" alt="Redesigned Discord Status Dropdown">
                 <img src="../assets/images/redesigned-discord-mouse-model.png" alt="Redesigned Discord Status Dropdown with Mouse input state model">
                 <img src="../assets/images/redesigned-discord-keyboard-model.png" alt="Redesigned Discord Status Dropdown with Keyboard input state model">
-                <p>However, with every redesign, there are benefits and tradeoffs to consider. I believe this redesign affects learnability, memorability, efficiency, and accessibility in the following ways:<p>
+
+                <h3>Tradeoffs</h3>
+                <p>However, with every redesign, there are trade-offs to consider. In this case, the redesign prioritizes efficiency, memorability, and accessibility at the cost of the interface’s learnability. While auto-saving removes friction, it may not be immediately intuitive for all users. Here’s a breakdown of the key trade-offs:<p>
                 <ul>
                     <li>Learnablity:</li>
                     <ul>
-                        <li>More intuitive for users familiar with auto-saving interfaces</li>
-                        <li>Reduces cognitive load by eliminating an extra step</li>
+                        <li>Less intuitive for users who have not used auto-saving interfaces</li>
                         <li>Some users may not immediately realize their status updates automatically, leading to confusion.</li>
                     </ul>
                     <li>Memorability:</li>
                     <ul>
-                        <li>Once users learn that changes apply instantly, they are likely to remember this behavior for future updates </li>
+                        <li>Once users learn that changes apply instantly, they are likely to remember this behavior for future updates</li>
                         <li>Consistent with modern design patterns, reinforcing memorability through familiarity.</li>
                     </ul>
                     <li>Efficiency:</li>
@@ -283,21 +287,23 @@
                 </ul>
             </section>
 
-            <section id="final-thoughts">
-                <h2>Final Thoughts</h2>
-                <h3>Design Philosophy</h3>
+            <section id="design-philosophy">
+                <h2>Design Philosophy</h2>
                 <p>Designer Kat Holmes once said, "When I think about inclusive design ... it doesn't mean we're designing one thing for all people, it means we are designing a diversity of ways for people to participate in a place with a sense of belonging."</p>
                 <p>This mindset shaped my redesign of Discord’s status dropdown. From my observations of dropdowns in Steam and Courses@Brown, I found that triggering immediate state updates improved usability, efficiency, and accessibility. By removing the need for a "Save" button, my redesign streamlines status selection, reduces unnecessary steps, and makes the process more intuitive. This change not only enhances efficiency but also addresses accessibility concerns related to inefficiency and error handling.</p>
 
                 <p>The change I implemented addresses a mismatch in our world by reducing unnecessary interactions that can be particularly difficult for users with motor impairments. By simplifying the selection process, I created a more inclusive design that accommodates users who may struggle with precise clicking or repetitive motions.</p>
+            </section>
 
-                <h3>Conclusion</h3>
+            <section id="conclusion">
+                <h2>Conclusion</h2>
 
                 <p>In this case study, I discovered that mouse and touch users are often prioritized in UI design since they represent the majority of users. This can disadvantage keyboard and screen reader users, making navigation inefficient or inaccessible.</p>
 
                 <p>For example, Steam’s lack of keyboard accessibility can severely hinder users who rely on keyboard navigation, making game selection a frustrating experience. On the other hand, Courses @ Brown’s dropdown effectively communicates with screen readers, benefiting users with visual impairments by providing detailed selection instructions.</p>
 
                 <p>So, when we go out there and design user interfaces, let's pay attention to all input methods. :)</p>
+
             </section>
 
 
