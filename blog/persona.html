@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <title>Laundry Machine - Persona & Storyboarding</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <nav id="desktop-nav">
+        <a href="/">Christina Peng</a>
+        <div>
+            <ul class="nav-links">
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#coding">Coding</a></li>
+                <li><a href="#writing">Writing</a></li>
+                <li><a href="#art">Art</a></li>
+                <li><a href="#blog">Blog</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <nav id="hamburger-nav">
+        <a href="/">Christina Peng</a>
+        <div class="hamburger-menu">
+            <div class="hamburger-icon" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        <div class="menu-links">
+            <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+            <li><a href="#coding" onclick="toggleMenu()">Coding</a></li>
+            <li><a href="#writing" onclick="toggleMenu()">Writing</a></li>
+            <li><a href="#art" onclick="toggleMenu()">Art</a></li>
+            <li><a href="#blog" onclick="toggleMenu()">Blog</a></li>
+        </div>
+    </nav>
+
+    <nav id="quick-nav">
+        <ul>
+            <li><a href="#problem">The Problem</a></li>
+            <li><a href="#research">Research</a></li>
+            <li><a href="#interview-summaries">Interview Summaries</a></li>
+            <li><a href="#user-personas">User Personas</a></li>
+            <li><a href="#storyboarding">Storyboarding</a></li>
+            <li><a href="#conclusion">Conclusion</a></li>
+        </ul>
+    </nav>
+
+    <main>
+
+        <article>
+            <h1>Laundry Machine - User Study</h1>
+            <p>Posted on March 5, 2025</p>
+
+            <section id="problem">
+                <h2>The Problem</h2>
+                <p>Ever hauled a heavy basket of laundry down the hall only to find every machine taken?</p>
+                <p>As an RA, I've seen how everyday tasks can become unexpectedly difficult in a communal setting—laundry being a prime example. Waiting for an open machine, deciphering the payment system, and figuring out the right settings can quickly become frustrating for a sleep-deprived college student. </p>
+    
+                <figure>
+                    <img src="../assets/images/washers.png" alt="Brown University Washers">
+                </figure>
+
+                <p>Laundry at Brown University is no exception.</p>
+                <p>Over the years, Brown's laundry system has seen a few changes. In Fall 2022, Brown’s laundry rooms saw a notable addition: payment kiosks.</p>
+                 <figure>
+                    <img src="../assets/images/laundry-kiosk-sketch.jpg" alt="Laundry Payment Kiosk Sketch">
+                </figure>
+                <p>The kiosks had been <a href="https://www.browndailyherald.com/article/2022/09/brown-replaces-washing-machines-dryers-in-dorms" target="_blank" class="highlight">installed</a> with the intention of charging students for laundry services. However, following student protests and a <a href="https://www.browndailyherald.com/article/2023/03/laundry-to-remain-free-for-foreseeable-future" target="_blank" class="highlight">petition</a> for free laundry, the University agreed to keep laundry free "for the foreseeable future." While this was a win for students, the kiosks remained in place, bringing with them an entirely new set of procedures for doing laundry at Brown.</p>
+                <figure>
+                    <img src="../assets/images/laundry-machine-sketch.jpg" alt="Laundry Machine Sketch">
+                </figure>
+                <p>Above is my sketch of Brown's laundry machines. At first, they might seem similar to ones from home: there are buttons for different wash/dry modes, a tray for detergent, and a tub for your clothes. But a closer look reveals several unique features. The machines are numbered. There are QR codes you can scan to open the <a href="https://play.google.com/store/apps/details?id=com.cscsw.cscgo&pcampaignid=web_share" target="_blank" class="highlight">CSC GO app</a>, and the timers says "1.75" (left over from when Brown tried to charge students $1.75 per load).</p>
+
+                <p>In this blog, I'll be investigating how people interact with this public interface and create personas that demonstrate their user needs.</p>
+            </section>
+            
+
+            <section id="research">
+                <h2>Research</h2>
+                <p>To begin my investigation, I wanted to speak with students firsthand on their experience using laundry machines. It was a Tuesday night when I made my way to Metcalf and Miller, two bustling first-year dorms at Brown. I wanted to interview first-years because they were the newest to campus, still figuring out the quirks of dorm living. If anyone had fresh, unfiltered reactions to the system, it would be them.</p>
+
+                <p>Drawing from what I learned in <a href="https://www.cs.cmu.edu/~jhm/Readings/Dillman,%20Chapter%204.pdf" target="_blank" class="highlight">Dillman’s The Basics of Asking Good Questions</a>, I carefully designed a set of interview questions:</p>
+
+                <ul>
+                    <li>How often do you use laundry machines like this one?</li>
+                    <li>Can you walk me through the steps you typically follow when using this machine?</li>
+                    <li>What do you find most intuitive about this interface?</li>
+                    <li>Are there any aspects of the interface that you find confusing or challenging?</li>
+                    <li>Have you ever made a mistake while using this interface? If so, what happened?</li>
+                    <li>How do you feel about the layout and organization of the controls?</li>
+                    <li>How easy is it to understand the icons and symbols used on this interface?</li>
+                    <li>How does this interface compare to other laundry machines you've used before?</li>
+                    <li>Is there anything else you would like to add?</li>
+                </ul>
+
+                <p>I grabbed my dinner and waited for someone to enter the laundry room.</p>
+                <figure>
+                    <img src="../assets/images/metcalf-laundry-room.png" alt="Metcalf Hall empty laundry room">
+                </figure>
+
+            <section id="interview-summaries">
+                <h2>Interview Summaries</h2>
+                <p>Between Metcalf and Miller, I interviewed three students. I received verbal consent to record their responses, and I'll be summarizing them one by one. To keep their identities secret, I will name them after my favorite Mario Kart characters: Yoshi, Isabelle, and King Boo.</p>
+
+                <ul>
+                    <li>Yoshi – Uses the laundry machine once a week. Finds the process straightforward and enjoys the QR code feature. No confusion, issues, or desired changes. Prefers simplicity.</li>
+                    <li>Isabelle – Uses the machine weekly, separates clothes into two loads, and combines them in the dryer. Initially struggled with the app, preferring the card kiosk. Dryer gets very hot, sometimes burning clothes. Wishes there were more machines.</li>
+                    <li>King Boo – Uses the machine 1-2 times a week, finds detergent strips convenient. Chooses medium settings by default. Appreciates simple heat settings on dryers but dislikes the touchpad and multiple steps needed to operate the machine. Encountered issues with broken machines and payment kiosk. Also wishes for more machines.</li>
+                </ul>
+
+                <p>From my observations, users generally found the laundry machine interface simple and easy to use, though some encountered minor frustrations. Most users relied on default settings and did not engage much with icons or additional features. A common issue was machine availability, with users wishing for more machines. Some users experienced difficulties with the app or the payment kiosk. Dryers were noted to sometimes be overly hot, and occasional machine malfunctions caused inconvenience.</p>
+            </section>
+
+            <section id="user-personas">
+                <h2>User Personas</h2>
+                <p>I will now construct user personas based on my interviews and observations.</p>
+                <h3>Spaced-Out Kirby</h3>
+                <figure>
+                    <img src="../assets/images/spaced-out-kirby.png" alt="Spaced out kirby persona">
+                </figure>
+                <p>Spaced-out Kirby is a burnt-out college student who just wants to finish her laundry as quickly as possible. She values simplicity and efficiency, doing laundry once a week and preferring to start the machine without overthinking the settings. She represents users who behave like Yoshi from my interviews who care most about doing laundry in the most efficiency way. </p>
+
+                <h4>Interface Problems:</h4>
+                <ul>
+                    <li>The user prefers minimal interaction with the machine but might struggle if additional steps are required (e.g., app malfunctions or kiosk stops working).</li>
+                    <li>They may become frustrated when other users leave laundry unattended, causing delays.</li>
+                    <li>If machines are unavailable, they have to adjust their routine, which can be an inconvenience.</li>
+                </ul>
+                <h3>Techy Mushroom</h3>
+                <figure>
+                    <img src="../assets/images/techy-mushroom.png" alt="Techy mushroom persona">
+                </figure>
+                <p>Techy Mushroom is comfortable using technology and relies on the CSC GO app to start the laundry machines. He often multitasks and scrolls TikTok on his phone while doing laundry. He likes to take a structured approach with his laundry loads, separating clothes into lights and darks. Sometimes, he can be forgetful when it comes to picking up laundry because he's in the middle of doomscrolling. He represents users who are like Isabelle and King Boo from my interviews who care most about their clothes coming out well.</p>
+                <h4>Interface Problems:</h4>
+                <ul>
+                    <li>Finds the kiosk difficult to use, preferring app-based interactions.</li>
+                    <li>The dryer gets too hot, leading to concerns about ruined clothes.</li>
+                    <li>May get distracted by their phone and almost forget their laundry.</li>
+                    <li>Hopes for a smoother, more intuitive interface to avoid frustrations.</li>
+                </ul>
+            </section>
+
+            <section id="storyboarding">
+                <h2>Storyboarding</h2>
+                <p>Finally, I will storyboard the steps it takes for one of my personas to use the laundry machine. I'm going to go with spaced out kirby!</p>
+                <figure>
+                    <img src="../assets/images/storyboard1.png" alt="Storyboard 1-4">
+                </figure>
+                <figure>
+                    <img src="../assets/images/storyboard2.png" alt="Storyboard 5-8">
+                </figure>
+                <figure>
+                    <img src="../assets/images/storyboard3.png" alt="Storyboard 9-12">
+                </figure>
+            </section>
+
+            <section id="conclusion">
+                <h2>Conclusion</h2>
+
+                <p>Understanding user behaviors and pain points is essential for improving everyday interfaces like laundry machines. Through observation and interviews, we created key personas—some seeking simplicity, others relying on technology but facing usability challenges. By designing with user needs in mind, we can create a smoother, more efficient laundry experience for everyone.</p>
+
+            </section>
+
+
+        </article>
+
+
+
+    </main>
+    
+</body>
+</html>
