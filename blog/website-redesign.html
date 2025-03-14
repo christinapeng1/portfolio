@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <title>HowToStudyKorean.com Redesign</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <nav id="desktop-nav">
+        <a href="/">Christina Peng</a>
+        <div>
+            <ul class="nav-links">
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#coding">Coding</a></li>
+                <li><a href="#writing">Writing</a></li>
+                <li><a href="#art">Art</a></li>
+                <li><a href="#blog">Blog</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <nav id="hamburger-nav">
+        <a href="/">Christina Peng</a>
+        <div class="hamburger-menu">
+            <div class="hamburger-icon" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        <div class="menu-links">
+            <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+            <li><a href="#coding" onclick="toggleMenu()">Coding</a></li>
+            <li><a href="#writing" onclick="toggleMenu()">Writing</a></li>
+            <li><a href="#art" onclick="toggleMenu()">Art</a></li>
+            <li><a href="#blog" onclick="toggleMenu()">Blog</a></li>
+        </div>
+    </nav>
+
+    <nav id="quick-nav">
+        <ul>
+            <li><a href="#overview">Overview</a></li>
+            <li><a href="#identifying-the-problem">Identifying the Problem</a></li>
+            <li><a href="#redesign-process">Redesign Process</a></li>
+            <li><a href="#conclusion">Conclusion</a></li>
+        </ul>
+    </nav>
+
+    <main>
+
+        <article>
+            <h1>HowToStudyKorean.com</h1>
+            <p>Posted on March 13, 2025</p>
+
+            <section id="overview">
+                <h2>Overview</h2>
+                <p><a href="https://www.howtostudykorean.com/" target="_blank" class="highlight">How to Study Korean</a> is a website with free lessons for people trying to learn Korean. I used it over the summer when I was trying to self-study Hangul.</p>
+
+                <p>I'm so grateful to the instructor for making these lessons available online for free. As a passion project, I am going to redesign the website based on my experience using it as a student to improve its usability.</p>
+            </section>
+            
+
+            <section id="identifying-the-problem">
+                <h2>Identifying the Problem</h2>
+                <figure>
+                    <img src="../assets/images/howtostudykorean.png" alt="HowtoStudyKorean homepage">
+                </figure>
+
+                <h3>Observations</h3>
+                <ul>
+                    <li>There are limited color contrast</li>
+                    <li>Poor efficiency, have to scroll past multiple layers to enter the lessons</li>
+                    <li>Poor learnability, Unclear user journe; the structure of dividng into units / lessons is a good call like a textbook but it's not made clear in the initial navigation/home page</li>
+                    <li>Good memoriability</li>
+                    <li>Conceptual model</li>
+                </ul>
+
+                <h3>Using WebAIM WAVE</h3>
+                <p>I ran the website into WebAIM Wave. WebAIM detected a lot of problems with color contrast</p>
+                <ul>
+                    <li>5 linked images missing alt text</li>
+                    <li>56 very low contrast errors</li>
+                    <li>9 alerts concerning suspicious alt/link text, 6 redundant title/link text, 1 skipped heading level</li>
+                    <li>5 features</li>
+                    <li>37 structural elements</li>
+                    <li>13 ARIA</li>
+                </ul>
+                <p>I agree with some but not all of the findings. I think it does point out many low contrast errors, and the lack of alt text and accessibility features. I'm not sure about the suspicious alt/link text or what it means by redundant title/link text.</p>
+                 <figure>
+                    <img src="../assets/images/howtostudykorean-webaim.png" alt="HowtoStudyKorean WebAIM results">
+                </figure>
+                
+
+            </section>
+
+            <section id="redesign-process">
+                <h2>Redesign Process</h2>
+                <h3>Visual Style Guide</h3>
+                <figure>
+                    <img src="../assets/images/howtostudykorean-visual-style-guide.png" alt="HowtoStudyKorean Visual Style Guide">
+                </figure>
+                <h3>Initial Sketches</h3>
+                <figure>
+                    <img src="../assets/images/initial-sketch-desktop.jpg" alt="HowtoStudyKorean Redesign Sketch Desktop">
+                    <img src="../assets/images/initial-sketch-mobile.jpg" alt="HowtoStudyKorean Redesign Sketch Mobile">
+                </figure>
+
+                <h3>Annotated Mockups</h3>
+                <figure>
+                    <img src="../assets/images/HowToStudyKorean-desktop-mockup.png" alt="HowtoStudyKorean Redesign Sketch Desktop mockup">
+                </figure>
+                <figure>
+                    <img src="../assets/images/HowToStudyKorean-mobile-mockup.png" alt="HowtoStudyKorean Redesign Sketch Mobile mockup">
+                </figure>
+                <figure>
+                    <img src="../assets/images/HowToStudyKorean-tablet-mockup.png" alt="HowtoStudyKorean Redesign Sketch Tablet mockup">
+                </figure>
+            
+            </section>
+
+            <section id="conclusion">
+                <h2>Conclusion</h2>
+
+            </section>
+
+
+        </article>
+
+
+
+    </main>
+    
+</body>
+</html>
