@@ -1,140 +1,450 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Forum&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
 
-    <title>HowToStudyKorean.com Redesign</title>
-    <link rel="stylesheet" href="../styles.css">
-</head>
-<body>
+    <title>A Reimagination of HowToStudyKorean dot com</title>
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body>
     <nav id="desktop-nav">
-        <a href="/">Christina Peng</a>
-        <div>
-            <ul class="nav-links">
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#coding">Coding</a></li>
-                <li><a href="#writing">Writing</a></li>
-                <li><a href="#art">Art</a></li>
-                <li><a href="#blog">Blog</a></li>
-            </ul>
-        </div>
+      <a href="/">Christina Peng</a>
+      <div>
+        <ul class="nav-links">
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#coding">Coding</a></li>
+          <li><a href="#writing">Writing</a></li>
+          <li><a href="#art">Art</a></li>
+          <li><a href="#blog">Blog</a></li>
+        </ul>
+      </div>
     </nav>
 
     <nav id="hamburger-nav">
-        <a href="/">Christina Peng</a>
-        <div class="hamburger-menu">
-            <div class="hamburger-icon" onclick="toggleMenu()">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
+      <a href="/">Christina Peng</a>
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
         </div>
-        <div class="menu-links">
-            <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
-            <li><a href="#coding" onclick="toggleMenu()">Coding</a></li>
-            <li><a href="#writing" onclick="toggleMenu()">Writing</a></li>
-            <li><a href="#art" onclick="toggleMenu()">Art</a></li>
-            <li><a href="#blog" onclick="toggleMenu()">Blog</a></li>
-        </div>
+      </div>
+      <div class="menu-links">
+        <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+        <li><a href="#coding" onclick="toggleMenu()">Coding</a></li>
+        <li><a href="#writing" onclick="toggleMenu()">Writing</a></li>
+        <li><a href="#art" onclick="toggleMenu()">Art</a></li>
+        <li><a href="#blog" onclick="toggleMenu()">Blog</a></li>
+      </div>
     </nav>
 
     <nav id="quick-nav">
-        <ul>
-            <li><a href="#overview">Overview</a></li>
-            <li><a href="#identifying-the-problem">Identifying the Problem</a></li>
-            <li><a href="#redesign-process">Redesign Process</a></li>
-            <li><a href="#conclusion">Conclusion</a></li>
-        </ul>
+      <ul>
+        <li><a href="#how-it-all-started">How it all Started</a></li>
+        <li><a href="#usability-problems">Usability Problems</a></li>
+        <li><a href="#accessibility-problems">Accessibility Problems</a></li>
+        <li><a href="#initial-sketches">Initial Sketches</a></li>
+        <li><a href="#visual-style-guide">Visual Style Guide</a></li>
+        <li><a href="#conclusion">Conclusion</a></li>
+      </ul>
     </nav>
 
     <main>
+      <article>
+        <h1>A Reimagination of HowToStudyKorean dot com</h1>
+        <p>Posted on March 13, 2025</p>
 
-        <article>
-            <h1>HowToStudyKorean.com</h1>
-            <p>Posted on March 13, 2025</p>
+        <figure>
+          <img
+            src="../assets/images/howtostudykorean.png"
+            alt="HowtoStudyKorean homepage"
+          />
+        </figure>
 
-            <section id="overview">
-                <h2>Overview</h2>
-                <p><a href="https://www.howtostudykorean.com/" target="_blank" class="highlight">How to Study Korean</a> is a website with free lessons for people trying to learn Korean. I used it over the summer when I was trying to self-study Hangul.</p>
+        <section id="how-it-all-started">
+          <h2>How it all Started</h2>
+          <p>
+            <a href="https://www.howtostudykorean.com/" target="_blank"
+              >How to Study Korean</a
+            >
+            is a free language-learning website for people trying to study
+            Korean. It offers free lessons, workbooks, audio tutorials, and
+            more. I frequented this website over winter break when I was trying
+            to learn Korean. The lessons were comprehensive, and I loved the
+            personal anecdotes 선생님 (teacher) would include to make the
+            learning more digestible.
+          </p>
 
-                <p>I'm so grateful to the instructor for making these lessons available online for free. As a passion project, I am going to redesign the website based on my experience using it as a student to improve its usability.</p>
-            </section>
-            
+          <p>
+            While I found the content incredibly valuable, the site's design
+            felt outdated. The navigation wasn't as intuitive as it could be for
+            beginners trying to stay motivated. I saw this as a great
+            opportunity to reimagine the home page with a more modern,
+            user-friendly approach that keeps the charm of the original site
+            while improving usability.
+          </p>
+          <p>
+            I created a final prototype of the redesign, which you can check out
+            <a
+              href="https://christinapeng1.github.io/howtostudykorean/"
+              target="_blank"
+              >here</a
+            >.
+          </p>
+        </section>
 
-            <section id="identifying-the-problem">
-                <h2>Identifying the Problem</h2>
-                <figure>
-                    <img src="../assets/images/howtostudykorean.png" alt="HowtoStudyKorean homepage">
-                </figure>
+        <section id="usability-problems">
+          <h2>Usability Problems</h2>
+          <p>
+            First, I looked for problems with the current website to understand
+            what needed fixing. My analysis is based on four criteria:
+            efficiency, learnability, memorability, and conceptual model:
+          </p>
+          <table>
+            <tr>
+              <th>Criterion</th>
+              <th>Identified Problems</th>
+            </tr>
+            <tr>
+              <td>Efficiency</td>
+              <td>
+                <span>
+                  - Cluttered homepage makes it difficult to find key
+                  sections.</span
+                ><br />- Hidden search bar limits quick navigation.<br />- Have
+                to click through multiple layers to visit a lesson.
+              </td>
+            </tr>
+            <tr>
+              <td>Learnability</td>
+              <td>
+                <span
+                  >- Unclear user journey and limited guidance for new users.<br />-
+                  Difficult for new users to understand what to click on
+                  first.</span
+                >
+              </td>
+            </tr>
+            <tr>
+              <td>Memorability</td>
+              <td>
+                - No persistent navigation cues or progress tracking.<br />-
+                Users returning after a break may have difficulty remembering
+                which lesson they left off at.
+              </td>
+            </tr>
+            <tr>
+              <td>Conceptual Model</td>
+              <td>
+                - The site layout does not align with standard learning
+                platforms.<br />- Lessons are grouped in numerical ranges
+                instead of individually segmented by topic.
+              </td>
+            </tr>
+          </table>
+          <p>
+            Together, these issues make it harder for learners to stay focused,
+            find content quickly, or return to where they left off.
+          </p>
+        </section>
 
-                <h3>Observations</h3>
-                <ul>
-                    <li>There are limited color contrast</li>
-                    <li>Poor efficiency, have to scroll past multiple layers to enter the lessons</li>
-                    <li>Poor learnability, Unclear user journe; the structure of dividng into units / lessons is a good call like a textbook but it's not made clear in the initial navigation/home page</li>
-                    <li>Good memoriability</li>
-                    <li>Conceptual model</li>
-                </ul>
+        <section id="accessibility-problems">
+          <h2>Accessibility Problems</h2>
+          <p>
+            Additionally, I ran the website through
+            <a href="https://wave.webaim.org/" target="_blank">WebAIM Wave</a>,
+            a web accessibility evaluation tool for people with disabilities.
+            Here's what it found:
+          </p>
+          <table>
+            <tr>
+              <th>Issue</th>
+              <th>Details</th>
+            </tr>
+            <tr>
+              <td>Missing alternative text</td>
+              <td>
+                <span
+                  >- 5 linked images have no alt attributes<br />- Limited
+                  screen reader access for images.</span
+                >
+              </td>
+            </tr>
+            <tr>
+              <td>Low contrast text</td>
+              <td>
+                <span
+                  >- 57 very low contrast errors<br />- Several text elements
+                  (especially links) don’t meet WCAG contrast ratio
+                  standards.</span
+                >
+              </td>
+            </tr>
+            <tr>
+              <td>Empty links</td>
+              <td>
+                <span
+                  >- 2 empty links <br />- Some links are visually present but
+                  contain no readable text.</span
+                >
+              </td>
+            </tr>
+            <tr>
+              <td>Redundant links and headings</td>
+              <td>
+                <span
+                  >- 4 redundant links<br />- 2 redundant title text<br />- 1
+                  skipped heading level<br />- Inconsistent heading levels and
+                  redundant links create confusion for screen readers and
+                  assistive tools.</span
+                >
+              </td>
+            </tr>
+            <tr>
+              <td>Suspicious link or alternative text</td>
+              <td>
+                <span
+                  >- 1 suspicious link text; contains extraneous text or may not
+                  make sense out of context.<br />- 1 suspicious alternative
+                  text; does not provide the same information conveyed by the
+                  image.</span
+                >
+              </td>
+            </tr>
+          </table>
+          <p>
+            You can view the full report
+            <a
+              href="https://wave.webaim.org/report#/https://www.howtostudykorean.com/"
+              target="_blank"
+              >here</a
+            >.
+          </p>
+          <p>
+            I think most of the issues flagged by WAVE are valid and highlight
+            key problems in the site's accessibility. Missing alt text and
+            low-contrast text make it difficult for users with visual
+            impairments. Structural issues—like empty or improperly nested
+            headings—disrupt the page's semantic flow, hindering screen reader
+            navigation and overall usability.
+          </p>
+        </section>
 
-                <h3>Using WebAIM WAVE</h3>
-                <p>I ran the website into WebAIM Wave. WebAIM detected a lot of problems with color contrast</p>
-                <ul>
-                    <li>5 linked images missing alt text</li>
-                    <li>56 very low contrast errors</li>
-                    <li>9 alerts concerning suspicious alt/link text, 6 redundant title/link text, 1 skipped heading level</li>
-                    <li>5 features</li>
-                    <li>37 structural elements</li>
-                    <li>13 ARIA</li>
-                </ul>
-                <p>I agree with some but not all of the findings. I think it does point out many low contrast errors, and the lack of alt text and accessibility features. I'm not sure about the suspicious alt/link text or what it means by redundant title/link text.</p>
-                 <figure>
-                    <img src="../assets/images/howtostudykorean-webaim.png" alt="HowtoStudyKorean WebAIM results">
-                </figure>
-                
+        <section id="initial-sketches">
+          <h2>Initial Sketches</h2>
+          <p>
+            To kick off the redesign process, I started with a few concept
+            sketches:
+          </p>
+          <figure>
+            <img
+              src="../assets/images/initial-sketch-desktop.jpg"
+              alt="HowtoStudyKorean Redesign Sketch Desktop"
+            />
+            <img
+              src="../assets/images/initial-sketch-mobile.jpg"
+              alt="HowtoStudyKorean Redesign Sketch Mobile"
+            />
+          </figure>
+          <p>While sketching the redesigned site, these were my goals:</p>
+          <ul>
+            <li>Make lessons directly accessible from the home page</li>
+            <li>Highlight the site's search functionality</li>
+            <li>Add a direct user path for new users coming to the site</li>
+            <li>
+              Make it easier for returning users to pick up where they left off
+            </li>
+          </ul>
+        </section>
 
-            </section>
+        <section id="high-fidelity-mockups">
+          <h2>High-Fidelity Mockups</h2>
+          <p>
+            Next, I transformed my sketches into high-fidelity mockups for
+            varying screen sizes. Using Figma, I made mockups of my designs for
+            Desktop, Tablet, and Mobile:
+          </p>
+          <figure>
+            <img
+              src="../assets/images/howtostudykorean-desktop-mockup.png"
+              alt="HowtoStudyKorean Redesign Sketch Desktop mockup"
+            />
+          </figure>
+          <figure>
+            <img
+              src="../assets/images/howtostudykorean-tablet-mockup.png"
+              alt="HowtoStudyKorean Redesign Sketch Tablet mockup"
+            />
+          </figure>
+          <figure>
+            <img
+              src="../assets/images/howtostudykorean-mobile-mockup.png"
+              alt="HowtoStudyKorean Redesign Sketch Mobile mockup"
+            />
+          </figure>
+          <p>
+            The goal of my mockups was to think through how the structure and
+            flow of information should shift depending on the screen size.
+            Here's a summary of my key design choices:
+          </p>
+          <ul>
+            <li>
+              The original color scheme (red, white, black) and overall
+              structure are retained across all breakpoints.
+            </li>
+            <li>
+              Top navigation is replaced with a vertical left nav for a
+              textbook-style layout.
+            </li>
+            <li>
+              A persistent CTA button ("Begin from..."/"Continue from...") helps
+              users resume learning. Enlarges and turns red on hover.
+            </li>
+            <li>
+              “Additional Resources” are converted into tappable cards to drive
+              interaction.
+            </li>
+            <li>Left nav becomes a hamburger menu on tablet/mobile.</li>
+            <li>
+              On smaller screens, the search bar moves to the top and expands to
+              emphasize search functionality.
+            </li>
+          </ul>
+        </section>
 
-            <section id="redesign-process">
-                <h2>Redesign Process</h2>
-                <h3>Visual Style Guide</h3>
-                <figure>
-                    <img src="../assets/images/howtostudykorean-visual-style-guide.png" alt="HowtoStudyKorean Visual Style Guide">
-                </figure>
-                <h3>Initial Sketches</h3>
-                <figure>
-                    <img src="../assets/images/initial-sketch-desktop.jpg" alt="HowtoStudyKorean Redesign Sketch Desktop">
-                    <img src="../assets/images/initial-sketch-mobile.jpg" alt="HowtoStudyKorean Redesign Sketch Mobile">
-                </figure>
+        <section id="visual-style-guide">
+          <h2>Visual Style Guide</h2>
+          <p>
+            I also put together a visual style guide for my redesign. I tried to
+            stick pretty close to the original site so it feels familiar.
+          </p>
+          <figure>
+            <img
+              src="../assets/images/howtostudykorean-visual-style-guide.png"
+              alt="HowtoStudyKorean Visual Style Guide"
+            />
+          </figure>
+        </section>
 
-                <h3>Annotated Mockups</h3>
-                <figure>
-                    <img src="../assets/images/HowToStudyKorean-desktop-mockup.png" alt="HowtoStudyKorean Redesign Sketch Desktop mockup">
-                </figure>
-                <figure>
-                    <img src="../assets/images/HowToStudyKorean-mobile-mockup.png" alt="HowtoStudyKorean Redesign Sketch Mobile mockup">
-                </figure>
-                <figure>
-                    <img src="../assets/images/HowToStudyKorean-tablet-mockup.png" alt="HowtoStudyKorean Redesign Sketch Tablet mockup">
-                </figure>
-            
-            </section>
+        <section id="development">
+          <h2>Development</h2>
+          <p>
+            Click
+            <a
+              href="https://christinapeng1.github.io/howtostudykorean/"
+              target="_blank"
+              >here</a
+            >
+            to view the final redesign!
+          </p>
+          <p>
+            The images below showcase the redesign across three screen sizes:
+          </p>
+          <ul>
+            <li>Mobile – 430 × 932 (iPhone Pro Max)</li>
+            <li>Tablet – 820 × 1180 (iPad Air)</li>
+            <li>Desktop – 2560 × 1664</li>
+          </ul>
 
-            <section id="conclusion">
-                <h2>Conclusion</h2>
+          <figure class="mockup-row">
+            <img
+              src="../assets/images/mobile-mock.png"
+              alt="HowToStudyKorean.com Redesigned Mobile Mockup"
+            />
+            <img
+              src="../assets/images/tablet-mock.png"
+              alt="HowToStudyKorean.com Redesigned Tablet Mockup"
+            />
+          </figure>
+          <figure class="mockup-row">
+            <img
+              src="../assets/images/mobile-nav-mock.png"
+              alt="HowToStudyKorean.com Redesigned Mobile Mockup"
+            />
+            <img
+              src="../assets/images/tablet-nav-mock.png"
+              alt="HowToStudyKorean.com Redesigned Tablet Mockup"
+            />
+          </figure>
+          <img
+            src="../assets/images/desktop-mock.png"
+            alt="HowToStudyKorean.com Redesigned Desktop Mockup"
+          />
 
-            </section>
+          <p>
+            I made the site using HTML, CSS, and JavaScript. I implemented a
+            custom hamburger menu for tablet and mobile navigation, making the
+            experience smoother and more intuitive on smaller screens. I also
+            tested different font sizes and language settings to ensure the
+            layout remains readable and functional, even when content scales.
+          </p>
 
+          <p>
+            The redesign addresses earlier usability concerns—like cluttered
+            layout and confusing navigation—by introducing clearer visual
+            hierarchy, better spacing, and more prominent calls to action. It
+            also addresses accessibility concerns by increasing text contrast,
+            ensuring all links are descriptive, and adding meaningful alt text
+            to images. Together, these changes make the site not only more
+            intuitive to navigate but also more inclusive for users with diverse
+            needs.
+          </p>
+        </section>
 
-        </article>
+        <section id="conclusion">
+          <h2>Conclusion</h2>
+          <p>
+            Redesigning <em>How to Study Korean</em> was both a fun and
+            meaningful challenge. It pushed me to think critically about
+            usability, accessibility, and the nuances of responsive design. From
+            auditing the original interface to building high-fidelity mockups
+            and developing a fully functional, responsive page, I learned how
+            even small design decisions—like button placement or visual
+            hierarchy—can significantly impact the user experience.
+          </p>
 
-
-
+          <p>
+            Ultimately, this project is a reflection of my approach to design:
+            content-first, user-centered, and accessibility-aware. I hope this
+            reimagination makes the site feel more approachable for new learners
+            while supporting the needs of returning users. Thanks for following
+            along!
+          </p>
+        </section>
+      </article>
     </main>
-    
-</body>
+
+    <div id="image-modal" class="modal">
+      <img class="modal-content" id="modal-img" />
+    </div>
+
+    <script>
+      const modal = document.getElementById("image-modal");
+      const modalImg = document.getElementById("modal-img");
+
+      // Open modal when image clicked
+      document.querySelectorAll("article img").forEach((img) => {
+        img.addEventListener("click", () => {
+          modal.style.display = "flex";
+          modalImg.src = img.src;
+          modalImg.alt = img.alt;
+        });
+      });
+
+      // Close modal when clicking outside the image
+      modal.addEventListener("click", (e) => {
+        if (e.target === modal) {
+          modal.style.display = "none";
+        }
+      });
+    </script>
+  </body>
 </html>
