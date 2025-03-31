@@ -189,7 +189,6 @@ li {
 aside {
     flex: 1;
     position: sticky;
-    top: 20px; /* Stays at the top when scrolling */
     left: 0;
     width: 250px; /* Adjust width as needed */
     height: fit-content;
@@ -200,7 +199,7 @@ aside {
     background-size: cover;
     border: 10px solid #c2a66d; /* Gold-like border */
     border-radius: 20px;
-    font-family: 'EB Garamond', Georgia, serif;
+    font-family: 'Forum', 'EB Garamond', Georgia, serif;
     font-weight: bold;
     text-align: center;
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
@@ -235,7 +234,7 @@ td:first-child {
 #quick-nav {
     position: fixed;
     right: 20px;
-    top: 35%;
+    top: 45%;
     transform: translateY(-50%);
     padding: 10px 15px;
     border-radius: 8px;
