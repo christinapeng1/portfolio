@@ -15,6 +15,45 @@ html {
     scroll-behavior: smooth;
 }
 
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  padding: 4rem 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  flex-wrap: wrap; /* allows it to stack on smaller screens */
+}
+
+.profile-img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.hero-text {
+  max-width: 600px;
+}
+
+.hero-text h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero-text p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.hero-text a {
+  color: #0077cc;
+  text-decoration: none;
+}
+
 body {
     font-family: 'Avenir Next', system-ui, 'Times New Roman', serif;
     background-color: var(--background-color);
@@ -83,6 +122,72 @@ nav {
     transition: all 0.3 ease-in-out;
 }
 
+.blog-section {
+  padding: 4rem 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.blog-section h1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.blog-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.blog-card {
+  padding: 1.5rem;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  transition: all 0.2s ease;
+  background-color: #fff;
+}
+
+.blog-card:hover {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transform: translateY(-5px);
+}
+
+.blog-card h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.blog-card a {
+  text-decoration: none;
+  color: #222;
+}
+
+.blog-card p {
+  font-size: 0.95rem;
+  color: #444;
+}
+
+.blog-card .date {
+  font-size: 0.8rem;
+  color: #999;
+  display: block;
+  margin-top: 1rem;
+}
+
+.blog-card-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.blog-card-link:hover .blog-card {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transform: translateY(-5px);
+  transition: 0.2s ease;
+}
+
+
 /* Blog Post Styles */
 main {
     display: flex;
@@ -143,20 +248,20 @@ article img:hover {
 h1 {
     font-size: 48px;
     font-weight: 400;
-    font-family: 'Forum', Georgia, 'Times New Roman', serif;
+    font-family: 'Zen Kaku Gothic New', Georgia, 'Times New Roman', serif;
 }
 
 h2 {
     font-size: 36px;
     font-weight: 400;
-    font-family: 'Forum', Georgia, 'Times New Roman', serif;
+    font-family: 'Zen Kaku Gothic New', Georgia, 'Times New Roman', serif;
     margin-bottom: 0.5em;
 }
 
 h3 {
     font-size: 20px;
     font-weight: 400;
-    font-family: 'Forum', Georgia, 'Times New Roman', serif;
+    font-family: 'Zen Kaku Gothic New', Georgia, 'Times New Roman', serif;
     margin-top: 0.8em;
 }
 
@@ -173,7 +278,7 @@ section {
 
 select {
     margin-bottom: 0.8em;
-    font-family: 'Forum', Georgia, 'Times New Roman', serif;
+    font-family: 'Zen Kaku Gothic New', Georgia, 'Times New Roman', serif;
 }
 
 ul {
@@ -199,7 +304,7 @@ aside {
     background-size: cover;
     border: 10px solid #c2a66d; /* Gold-like border */
     border-radius: 20px;
-    font-family: 'Forum', 'EB Garamond', Georgia, serif;
+    font-family: 'Zen Kaku Gothic New', 'EB Garamond', Georgia, serif;
     font-weight: bold;
     text-align: center;
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
@@ -253,7 +358,7 @@ td:first-child {
 #quick-nav a {
     color: rgb(0, 0, 0);
     text-decoration: none;
-    font-family: 'Forum', sans-serif;
+    font-family: 'Zen Kaku Gothic New', sans-serif;
     display: block;
     padding: 10px 10px;
     transition: 0.3s;
