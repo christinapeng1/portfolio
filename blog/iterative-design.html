@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Forum&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Zen+Kaku+Gothic+New&display=swap" rel="stylesheet">
+
+    <title>Iterative Design: Spark AI Report</title>
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body>
+    <nav id="desktop-nav">
+      <a href="/">Christina Peng</a>
+      <div>
+        <ul class="nav-links">
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#coding">Coding</a></li>
+          <li><a href="#writing">Writing</a></li>
+          <li><a href="#art">Art</a></li>
+          <li><a href="../blog.html">Blog</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <nav id="hamburger-nav">
+      <a href="/">Christina Peng</a>
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+      <div class="menu-links">
+        <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+        <li><a href="#coding" onclick="toggleMenu()">Coding</a></li>
+        <li><a href="#writing" onclick="toggleMenu()">Writing</a></li>
+        <li><a href="#art" onclick="toggleMenu()">Art</a></li>
+        <li><a href="#blog" onclick="toggleMenu()">Blog</a></li>
+      </div>
+    </nav>
+
+    <nav id="quick-nav">
+      <ul>
+        <li><a href="#what-is-the-goal-of-design">What is the goal of design?</a></li>
+        <li><a href="#redesigning-the-spark-ai-report">Redesigning the Spark AI Report</a></li>
+        <li><a href="#understanding-the-problem">Understanding the Problem</a></li>
+        <li><a href="#initial-sketches">Initial Sketches</a></li>
+        <li><a href="#low-fi-wireframe">Low-Fi Wireframe</a></li>
+        <li><a href="#high-fi-prototype">High-Fi Prototype</a></li>
+        <li><a href="#conclusion">Conclusion</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <article>
+        <h1>Iterative Design: Spark AI Report</h1>
+        <p>Posted on April 16, 2025</p>
+
+        <section id="what-is-the-goal-of-design">
+          <h2>What is the goal of design? And how should we approach designing a product from the ground up?</h2>
+          <p>These questions are best addressed through the lens of <em>Iterative Design</em> — a design philosophy that emphasizes building, testing, and refining through multiple stages. Rather than trying to create a perfect product in one go, Iterative Design encourages starting with rough prototypes and improving them gradually through feedback and evaluation. Since it’s difficult for anyone to create a flawless design all at once, this philosophy utilizes trial and error as an essential part of the creative process, allowing us to explore a broader width of possible ideas.
+          </p>
+          <p>There are many ways to apply Iterative Design, but here’s a simple workflow that captures the core idea. Between each stage, one should employ a variety of evaluation methods to try and improve upon the design:</p>
+          <p><span class="highlight"><strong>Sketches → Low-Fidelity Wireframe → High-Fidelity Prototype → Final Product</strong></span></p>
+          <ul>
+            <li><strong>Sketches</strong>: Begin by creating as many different sketches as possible. The goal isn’t to perfect each sketch, but to explore a wide range of ideas. The rougher, the better — focusing on core concepts helps the creator stay flexible and avoid getting too attached to any one sketch.</li>
+            <li><strong>Low-Fidelity Wireframe</strong>: Review all the sketches, analyze their strengths and weaknesses, and then combine the best aspects into one or more wireframes. These wireframes serve as basic, structural representations of the product. They should convey the overall vision without getting bogged down in details like precise sizes or colors.</li>
+            <li><strong>High-Fidelity Prototype</strong>: From the wireframes, select the most promising design and refine it into a high-fidelity prototype. This version should closely resemble the final product — detailed enough that developers could build from it without needing further clarification. At this stage, user testing and stakeholder feedback are critical for validation and refinement.</li>
+            <li><strong>Final Product</strong>: Once the prototype has been tested and finalized, you’re ready to move forward with the actual product — polished, functional, and ready for launch.</li>
+          </ul>
+          <p>
+            To put this process into practice, we applied Iterative Design while building a brand-new user interface from scratch in collaboration with a startup: Spark AI.
+          </p>
+        </section>
+
+        <section id="redesigning-the-spark-ai-report">
+          <h2>Redesigning the Spark AI Report</h2>
+          <p>
+            Spark AI is a startup that leverages artificial intelligence to provide meaningful insights on real-world assets—think properties, parcels of land, or infrastructure. One of its core products is a tool that helps users assess whether a piece of land is suitable for solar development. It does this by combining environmental data, zoning regulations, and satellite imagery into one easy-to-understand report.
+          </p>
+          <p>However, the existing report interface has several usability issues. The content is dense, poorly structured, and text-heavy—making it hard for users to extract key insights. To address this, Spark AI invited our team of four Brown University students to revamp the report experience. Our mission: make it clearer, more engaging, and easier to act on!</p>
+        </section>
+
+        <section id="understanding-the-problem">
+          <h2>Understanding the Problem</h2>
+          <p>
+            Before beginning the redesign, we wanted to understand the product and its users. Our team met with the founders of Spark AI to get an in-depth walkthrough of the current report experience.
+          </p>
+            <div class="article-gif-container">
+                <figure>
+                    <img src="../assets/images/iterative-design/spark-ai-current-interface-1.webp" alt="Spark AI Current Interface 1">
+                    <figcaption>Currently, this is what the report interface looks like. After searching by locality, the user would receive a report of the parcel.</figcaption>
+                </figure>
+                <figure>
+                    <img src="../assets/images/iterative-design/spark-ai-current-interface-2.webp" alt="Spark AI Current Interface 2">
+                    <figcaption>The report details information such as the APN, zoning jurisdiction, permitted uses, community sentiment, and more.</figcaption>
+                </figure>
+            </div>
+          <p>
+            In our meeting, we learned that the report is primarily used by renewable energy developers and investors to assess whether a piece of land is viable for a solar project. These users are interested in:
+          </p>
+          <ul>
+            <li>Zoning laws and local permitting requirements</li>
+            <li>Community sentiment—are local residents or governments supportive of solar development?</li>
+            <li>Precedent—have other solar projects been approved in the surrounding area?</li>
+            <li>Credible sourcing—clear citations that verify the information presented</li>
+          </ul>
+          <p>
+            Currently, all of this data is packed into a text-heavy report that’s difficult to scan, navigate, or act on. The Spark team encouraged us to rethink the interface from a user experience perspective—introducing stronger visual hierarchy, more digestible formats (like tables, cards, or visualizations), and clearer ways to surface key insights.
+          </p>
+        </section>
+
+        <section id="initial-sketches">
+          <h2>Initial Sketches</h2>
+          <p>
+            With that challenge in mind, each team member brainstormed and sketched early concepts of the report. We worked independently so we could explore a wider range of ideas before aligning on a shared design direction.
+          </p>
+          <p>Bokai's Sketches:</p>
+          <ul>
+            <li>Focused on implementing a hierarchical layout that can smooth user experience</li>
+            <li>Employed collapsable menus and buttons that expand to more detailed views - making sure we present a readable and useful at-a-glance summary.</li>
+            <li>Made pages for document diligence and bulk report that integrate with other services (i.e. SparkGPT)</li>
+          </ul>
+          <figure>
+            <img
+              src="../assets/images/iterative-design/bokai-sketches.webp"
+              alt="Bokai's Sketches: Bulk Reports, Homepage/report generation, report details, and document dilligence pages"
+            />
+          </figure>
+          <p>Christina's Sketches:</p>
+          <ul>
+            <li>Focused on modular and collapsible design to reduce cognitive load</li>
+            <li>Used components like tabs, accordions, and tables to break up dense content and make insights easier to extract.</li>
+            <li>Adapted layout elements (like map placement) across desktop, tablet, and mobile for responsibility across screen sizes.</li>
+          </ul>
+          <figure>
+            <img
+              src="../assets/images/iterative-design/christina-report-zoning.webp"
+              alt="Christina's Sketches: Zoning Report in various screen sizes"
+            />
+          </figure>
+          <figure>
+            <img
+              src="../assets/images/iterative-design/christina-sentiment-permitting-pages.webp"
+              alt="Christina's Sketches: Sentiment and Permitting tabs in the report"
+            />
+          </figure>
+          <figure>
+            <img
+              src="../assets/images/iterative-design/christina-bulk-report-doc-diligence.webp"
+              alt="Christina's Sketches: Bulk report and document dilligence pages"
+            />
+          </figure>
+          <p>Max's Sketches:</p>
+          <ul>
+            <li>Reorganized report structure to ensure components display in parsable card views</li>
+            <li>Utilized eye-catching primary colors to summarize large amounts of details in digestible manners</li>
+            <li>In general, made the user interface more aesthetically pleasing and less daunting</li>
+          </ul>
+          <figure>
+            <img
+              src="../assets/images/iterative-design/max-sketches.webp"
+              alt="Max's Sketches: SparkGPT, Zoning Reports, and Launch Dashboard pages"
+            />
+          </figure>
+          <p>Tim's Sketches:</p>
+          <ul>
+            <li>Focused on a dashboard layout to make information easily accessible to users</li>
+            <li>Simplified the UI to allow each card in the grid layout to be expandable for further information</li>
+          </ul>
+          <figure>
+            <img
+              src="../assets/images/iterative-design/tim-map-view.webp"
+              alt="Tim's Sketches: Map view page of the report"
+            />
+          </figure>
+          <figure>
+            <img
+              src="../assets/images/iterative-design/tim-report-view.webp"
+              alt="Tim's Sketches: Map view page of the report"
+            />
+          </figure>
+          <figure>
+            <img
+              src="../assets/images/iterative-design/tim-spark-gpt.webp"
+              alt="Tim's Sketches: Map view page of the report"
+            />
+          </figure>
+        </section>
+
+        <section id="low-fi-wireframe">
+            <h2>Low-Fi Wireframe</h2>
+            <p>After reviewing our sketches and identifying their strengths (use of color, expandable cards, and a collapsible layout), we combined the best ideas into a low-fidelity wireframe for Spark AI. Our goal was to focus on layout and functionality so that the core vision could stand out.</p>
+            <figure>
+                <img
+                src="../assets/images/iterative-design/wireframe-search-screen.webp"
+                alt="Spark AI Wireframe Search Screen"
+                />
+            </figure>
+            <ul>
+                <li>We wanted a bold, title statement to make it clear to users the purpose of the Spark.AI application</li>
+                <li>Kept the old sidebar on the left, while simplifying the text and information in the main layout of the page on the right. </li>
+            </ul>
+             <figure>
+                <img
+                src="../assets/images/iterative-design/wireframe-report-page.webp"
+                alt="Spark AI Report Details Screen"
+                />
+            </figure>
+            <ul>
+                <li>Interactive map view allows users to click on specific parcels to access reports</li>
+                <li>The sidebar can be collapsed to allow for a larger screen, allowing for a smoother user experience</li>
+                <li>Color coded sentiment analysis allows users to easily find the information needed for the zone they are interested in</li>
+                <li>The color coded document types also makes it significantly easier for users to narrow down the specific/relevant documents they would like to access to know more about the parcel of interest</li>
+                <li>The zoning detail card can expand out for a more fleshed out analysis</li>
+            </ul>
+            <figure>
+                <img
+                src="../assets/images/iterative-design/wireframe-document-dilligence.webp"
+                alt="Spark AI Document Dilligence Screen"
+                />
+            </figure>
+            <ul>
+                <li>Document diligence page shows how we plan to cluster zoning information together into cards, allowing users to click each one for further information</li>
+                <li>Created the chat function near the top of the page, making it clear to users where to input the zoning information to get answers from the Spark AI</li>
+            </ul>
+            <p>Each screen in the wireframe is designed to directly address a specific user need—from exploring zoning details to filtering documents quickly.</p>
+            <div style="position: relative; padding-bottom: 56.25%; height: 0;"><iframe src="https://www.loom.com/embed/f1aa17634776476b90f8e407b72a3fc7?sid=11bda6ac-98f6-4fdf-bc9b-23b2f848ba0a" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+            <h3>Feedback on our Wireframe</h3>
+            <p>After sharing our low-fidelity wireframe with the Spark AI team, we received enthusiastic and constructive feedback. Here's a summary:</p>
+           
+            <table>
+            <tr>
+              <th>Feature</th>
+              <th>Feedback</th>
+            </tr>
+            <tr>
+              <td>Search</td>
+              <td>
+                <span>❤️ Liked how prominently we featured the search function, noting that it felt inviting and accessible to users</span>
+              </td>
+            </tr>
+            <tr>
+              <td>Expandable Cards</td>
+              <td>
+                <span
+                  >❤️ Liked the concept of progressively revealing data—such as Zoning or Permitted Use—within expandable cards<br>
+                  ❤️ Supported idea of having dedicated space within cards for common questions<br>
+                  💡 Suggested adding quick 'good/bad' metrics to cards in addition to color indicators<br>
+                  💡 Cards needed more populated information.
+                  </span
+                >
+              </td>
+            </tr>
+            <tr>
+              <td>SparkGPT</td>
+              <td><span>
+                ❤️ Liked that there were multiple entry points to SparkGPT<br>
+                💡 ‘SparkGPT’ name felt too technical; suggested more approachable alternatives like 'Chat with this Town'
+                </span>
+              </td>
+            </tr>
+            <tr>
+              <td>Overall</td>
+              <td><span>
+                💡 Lo-Fi prototype felt barebones; more content was needed<br>
+                💡 Encouraged full development of the reports page with additional screens. Advised focusing less on the Document Diligence and SparkGPT screens
+                </span>
+              </td>
+            </tr>
+          </table>
+           <p>Overall, the Spark team was very supportive of the direction we’re taking with the UI, and encouraged us to continue iterating on these ideas as we move toward the Hi-Fi prototype.</p>
+           <p>Reflecting on the sketching and wireframing process, we saw how each iteration helped clarify the user experience. By combining ideas from multiple sketches, we created a wireframe that balanced structure, clarity, and interaction. Still, we recognized areas for growth—like better content richness and clearer visual cues—which guided our decisions in the next phase of prototyping.</p>
+        </section>
+
+        <section id="high-fi-prototype">
+          <h2>High-Fi Prototype</h2>
+          <p>
+            Based on the feedback we received, we primarily focused on retooling our initial prototype for the reports page. The primary critique we received from our client was that our Lo-Fi prototype was a bit on the more barebones side. The “card” dashboard idea was effective in making the information more visually digestible, but should be populated with a bit more content and information.
+          </p>
+          <p>As a result, we incorporated several key changes into our Hi-Fi prototype. We improved the content density within the report cards by adding relevant text for each section and introduced sentiment analysis to make parcel evaluation clearer and more actionable. In the wireframe critique, the Spark team told us to focus less on Document Diligence and SparkGPT features, so we omitted them in our Hi-Fi Prototype. Instead, we added more screens to make the report page fully functional.</p>
+        <p>
+            Click
+            <a
+              href="https://www.figma.com/proto/mHRpi5436RtSsW7O8RxTce/Spark-AI-Reports--Hi-Fi-Prototype-?node-id=0-1&t=sxclbGS5ImMI2gyn-1"
+              target="_blank"
+              >here</a
+            >
+            to access our prototype!
+          </p>
+          <div style="position: relative; padding-bottom: 62.5%; height: 0;"><iframe src="https://www.loom.com/embed/6471f9549cad4e16a56ddcd5bea73bb2?sid=d8c64652-7157-45e5-a80f-5853ca8971c3" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+          <h3>Design Notes</h3>
+          <p>In making the prototype, we stuck to various design practices in order to produce a professional model. We used Figma layout features and abided by a predetermined set of fonts and styles for text sections and major components. We focused on alignment, consistent spacing, and visual hierarchy to ensure the prototype looked and behaved like a production-ready tool.</p>
+          <p>Our prototype aims to address the startup’s goal of helping users quickly assess zoning and parcel information by consolidating relevant data into an intuitive, visual format.</p>
+          <p>To showcase, here are some side-by-side comparisons of our wireframe and prototype:</p>
+          <div class="article-gif-container">
+                <figure>
+                    <img src="../assets/images/iterative-design/wireframe-search-screen.webp" alt="Spark AI Wireframe Search Screen">
+                </figure>
+                <figure>
+                    <img src="../assets/images/iterative-design/hi-fi-search.webp" alt="Spark AI Prototype Search Screen">
+                </figure>
+            </div>
+            <div class="article-gif-container">
+                <figure>
+                    <img src="../assets/images/iterative-design/wireframe-report-screen.webp" alt="Spark AI Wireframe Report Screen">
+                </figure>
+                <figure>
+                    <img src="../assets/images/iterative-design/hi-fi-reports-page.webp" alt="Spark AI Prototype Report Screen">
+                </figure>
+            </div>
+            <div class="article-gif-container">
+                <figure>
+                    <img src="../assets/images/iterative-design/wireframe-zoning-card.webp" alt="Spark AI Wireframe Report Screen">
+                </figure>
+                <figure>
+                    <img src="../assets/images/iterative-design/hi-fi-zoning-card.webp" alt="Spark AI Prototype Report Screen">
+                </figure>
+            </div>
+            <p>We also implemented expandable windows for the various interactable cards:</p>
+            <figure>
+                <img src="../assets/images/iterative-design/hi-fi-parcel-card.webp" alt="Spark AI Prototype Parcel Card Expanded">
+            </figure>
+            <figure>
+                <img src="../assets/images/iterative-design/hi-fi-ai-card.webp" alt="Spark AI Prototype AI Card Expanded">
+            </figure>
+            <figure>
+                <img src="../assets/images/iterative-design/hi-fi-zoning-card-expanded.webp" alt="Spark AI Prototype Zoning Card Expanded">
+            </figure>
+            <figure>
+                <img src="../assets/images/iterative-design/hi-fi-permitted-uses-card.webp" alt="Spark AI Prototype Permitted Uses Card Expanded">
+            </figure>
+
+          <h3>Feedback on our Prototype</h3>
+            <p>Here's a compiled table of the feedback we received on the Hi-Fi prototype, formatted by feature and including emojis to denote the type of feedback (❤️ = positive, 💡 = suggestion).</p>
+            <table>
+            <tr>
+              <th>Feature</th>
+              <th>Feedback</th>
+            </tr>
+            <tr>
+              <td>Information Hierarchy</td>
+              <td><span>
+                ❤️ Appreciated the simplified experience and thoughtful information hierarchy
+                </span>
+              </td>
+            </tr>
+            <tr>
+              <td>Search</td>
+              <td>
+                <span>❤️ Liked how prominently search was featured on the homepage to encourage early queries<br>
+                💡 Questioned if other features are visible enough by comparison</span>
+              </td>
+            </tr>
+
+            <tr>
+              <td>Map View</td>
+              <td><span>
+                💡 Show multiple views (e.g. bird's-eye, zoning map) more clearly
+                </span>
+              </td>
+            </tr>
+
+            <tr>
+              <td>Expandable Cards</td>
+              <td>
+                <span
+                  >❤️ Liked the organization and expandable card structure<br>💡 Suggested adding more qualitative data with text and hyperlinks<br>💡 Critical info like AHJ, zoning link, and district should be visible at the top level<br>💡 Consider expanding sentiment analysis for more insight
+                  </span
+                >
+              </td>
+            </tr>
+            
+            <tr>
+              <td>Content Quality</td>
+              <td><span>
+                💡 Unclear if the high-level information shown is sufficient for users deciding on investment<br>💡 Consider whether content summary gives users what they need
+                </span>
+              </td>
+            </tr>
+            <tr>
+              <td>Relevant Articles Table</td>
+              <td><span>
+                💡 Users may want to show/hide additional columns like company name<br>💡 Suggested letting users customize which columns appear in the table
+                </span>
+              </td>
+            </tr>
+            <tr>
+              <td>Past Projects Section</td>
+              <td><span>
+                💡 Suggested adding a 'Past Projects' section in the report
+                </span>
+              </td>
+            </tr>
+          </table>
+          <p>Overall, the feedback was very positive, and the Spark team wanted to continue working with us to iterate on our Hi-Fi prototype. Moving forward, we plan to expose key zoning details upfront, add a 'Past Projects' section, and allow users to customize the columns displayed in the Relevant Articles table.</p>
+        </section>
+
+        <section id="conclusion">
+          <h2>Conclusion</h2>
+          <p>Designing for Spark AI reminded us that clarity doesn’t come from adding more — it comes from understanding what actually matters to the user. Each round of iteration pushed us to cut noise, highlight what’s essential, and question our own assumptions. Our prototype still has its gaps, but that’s the point of iterative design — there’s always something to improve. We’re excited by what we’ve built so far, and even more excited by what’s still left to figure out.</p>
+        </section>
+      </article>
+    </main>
+
+    <div id="image-modal" class="modal">
+      <img class="modal-content" id="modal-img" />
+    </div>
+
+    <script>
+      const modal = document.getElementById("image-modal");
+      const modalImg = document.getElementById("modal-img");
+
+      // Open modal when image clicked
+      document.querySelectorAll("article img").forEach((img) => {
+        img.addEventListener("click", () => {
+          modal.style.display = "flex";
+          modalImg.src = img.src;
+          modalImg.alt = img.alt;
+        });
+      });
+
+      // Close modal when clicking outside the image
+      modal.addEventListener("click", (e) => {
+        if (e.target === modal) {
+          modal.style.display = "none";
+        }
+      });
+    </script>
+  </body>
+</html>

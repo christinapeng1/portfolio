@@ -252,17 +252,18 @@ h1 {
 }
 
 h2 {
-    font-size: 36px;
+    font-size: 28px;
     font-weight: 400;
     font-family: 'Zen Kaku Gothic New', Georgia, 'Times New Roman', serif;
     margin-bottom: 0.5em;
 }
 
 h3 {
-    font-size: 20px;
+    font-size: 24px;
     font-weight: 400;
     font-family: 'Zen Kaku Gothic New', Georgia, 'Times New Roman', serif;
     margin-top: 0.8em;
+    margin-bottom: 0.5em;
 }
 
 p {
