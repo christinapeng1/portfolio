@@ -1,0 +1,109 @@
+.content {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  font-family: 'Avenir Next', Georgia, 'Times New Roman', serif;
+  font-size: 16px;
+  color: #000000;
+}
+.content__container {
+  display: inline-block;
+  overflow: hidden;
+  height: 26px;
+}
+.content__container__text {
+  display: inline;
+  float: left;
+  margin: 0;
+}
+.content__container__list {
+  padding-left: 0;
+  margin: 0;
+  text-align: left;
+  list-style: none;
+  -webkit-animation-name: change;
+  -webkit-animation-duration: 26s;
+  -webkit-animation-iteration-count: infinite;
+  animation-name: change;
+  animation-duration: 26s;
+  animation-iteration-count: infinite;
+}
+.content__container__list__item {
+  line-height: 26px;
+  margin: 0;
+}
+
+@-webkit-keyframes opacity {
+  0%, 100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes change {
+  0%, 10% {
+    transform: translate3d(0, 0%, 0); /* item 1 */
+  }
+  12.5%, 22.5% {
+    transform: translate3d(0, -12.5%, 0); /* item 2 */
+  }
+  25%, 35% {
+    transform: translate3d(0, -25%, 0); /* item 3 */
+  }
+  37.5%, 47.5% {
+    transform: translate3d(0, -37.5%, 0); /* item 4 */
+  }
+  50%, 60% {
+    transform: translate3d(0, -50%, 0); /* item 5 */
+  }
+  62.5%, 72.5% {
+    transform: translate3d(0, -62.5%, 0); /* item 6 */
+  }
+  75%, 85% {
+    transform: translate3d(0, -75%, 0); /* item 7 */
+  }
+  87.5%, 97.5% {
+    transform: translate3d(0, -87.5%, 0); /* item 8 */
+  }
+  100% {
+    transform: translate3d(0, 0%, 0); /* reset smoothly */
+  }
+}
+@keyframes opacity {
+  0%, 100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+@keyframes change {
+  0%, 10% {
+    transform: translate3d(0, 0%, 0); /* item 1 */
+  }
+  12.5%, 22.5% {
+    transform: translate3d(0, -12.5%, 0); /* item 2 */
+  }
+  25%, 35% {
+    transform: translate3d(0, -25%, 0); /* item 3 */
+  }
+  37.5%, 47.5% {
+    transform: translate3d(0, -37.5%, 0); /* item 4 */
+  }
+  50%, 60% {
+    transform: translate3d(0, -50%, 0); /* item 5 */
+  }
+  62.5%, 72.5% {
+    transform: translate3d(0, -62.5%, 0); /* item 6 */
+  }
+  75%, 85% {
+    transform: translate3d(0, -75%, 0); /* item 7 */
+  }
+  87.5%, 97.5% {
+    transform: translate3d(0, -87.5%, 0); /* item 8 */
+  }
+  100% {
+    transform: translate3d(0, 0%, 0); /* reset smoothly */
+  }
+}

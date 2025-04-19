@@ -11,6 +11,7 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+    <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="mediaqueries.css">
 
@@ -48,23 +49,33 @@
         </div>
     </nav>
 
-    <main>
         <div class="hero">
             <!-- 👇 Replace with your actual image path -->
             <img src="assets/images/christina-profile.png" alt="Christina Peng" class="profile-img"/>
 
             <div class="hero-text">
-                <h1>hi, i'm christina!</h1>
+                <h1>hey, i'm christina!</h1>
+                <p>Incoming SDE Intern @ Amazon, DevPlat Engineering Intern at Hume AI</p>
                 <p>
-                I'm a third-year student at Brown University studying Computer Science and English!
-                Feel free to contact me at <a href="mailto:christina_peng@brown.edu">christina_peng@brown.edu</a>.
+                Junior at Brown University studying Computer Science and English.
                 </p>
-
-                <div class="social-icons">
-                <a href="https://github.com/YOUR_USERNAME" target="_blank"><i class="fab fa-github"></i></a>
-                <a href="https://linkedin.com/in/YOUR_LINKEDIN" target="_blank"><i class="fab fa-linkedin"></i></a>
-                <a href="https://youtube.com/YOUR_CHANNEL" target="_blank"><i class="fab fa-youtube"></i></a>
+                <!-- <p>Contact me at <a href="mailto:christina_peng@brown.edu">christina_peng@brown.edu</a></p> -->
+                <div class="content">
+                    <div class="content__container">
+                        <ul class="content__container__list">
+                            <li class="content__container__list__item">I'm a software engineer and product designer.</li>
+                            <li class="content__container__list__item">I try to make conversations with AI feel more human.</li>
+                            <li class="content__container__list__item">I learn by building, breaking, and watching way too much YouTube.</li>
+                            <li class="content__container__list__item">I believe the best interfaces feel like stories.</li>
+                            <li class="content__container__list__item">I study psychology (via Town of Salem).</li>
+                            <li class="content__container__list__item">I have a soft spot for elephants inside boa constrictors.</li>
+                            <li class="content__container__list__item">I recently mastered the egg-fried rice.</li>
+                            <li class="content__container__list__item">Probably gaming or drawing in my free time.</li>
+                        </ul>
+                    </div>
                 </div>
+                
+
             </div>
         </div>
 
@@ -90,7 +101,15 @@
         </section> -->
 
 
-    </main>
+    <script>
+        const list = document.querySelector('.content__container__list');
+        list.addEventListener('animationiteration', () => {
+            list.style.animation = 'none';
+            list.offsetHeight; // Trigger reflow
+            list.style.transform = 'translateY(0%)';
+            list.style.animation = null;
+        });
+    </script>
     
 </body>
 </html>

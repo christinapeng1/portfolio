@@ -44,9 +44,8 @@ html {
 }
 
 .hero-text p {
-  font-size: 1rem;
+  font-size: 18px;
   line-height: 1.6;
-  margin-bottom: 1.5rem;
 }
 
 .hero-text a {
