@@ -50,8 +50,9 @@ a:hover {
 .profile-img {
   width: 200px;
   height: 200px;
+  border-radius: 10%;
   object-fit: cover;
-  border-radius: 50%;
+
   flex-shrink: 0;
 }
 
@@ -76,11 +77,24 @@ a:hover {
 
 /* NAVBAR */
 nav {
+    position: sticky;
+    top: 0;
+    background-color: inherit;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    height: 17vh;
+    height: 10vh;
+    z-index: 3;
 }
+
+nav a,
+.nav-links li,
+.nav-links {
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+}
+
 
 .nav-links {
     display: flex;
@@ -89,13 +103,33 @@ nav {
 }
 
 .nav-links a {
-    color: rgb(0, 0, 0);
+    text-decoration: none;
+    padding: 6px 12px;
+    display: inline-block;
+    color: inherit;
+    border: 2px solid transparent;
+    font-weight: normal;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+}
+
+.nav-links a .icon {
+  display: none;
+  margin-left: 5px;
+}
+
+.nav-links a:hover .icon {
+  display: inline;
 }
 
 .nav-links a.active {
-  color: rgb(64, 12, 207);
-  transform: translateY(-3px);
-  background-color: white;
+  font-weight: bold;
+  border: 2px solid rgba(255, 255, 255, 0.6); /* Light border box */
+  background-color: rgba(255, 255, 255, 0.1); /* Optional light background */
+}
+
+.nav-links a.active .icon {
+    display: inline;
 }
 
 /* HAMBURGER MENU */
@@ -245,13 +279,13 @@ main {
   gap: 4rem;
   padding: 4rem;
 }
+
 .card {
   background-color: white;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  text-align: left;
 }
 
 .card:hover {
@@ -281,7 +315,7 @@ main {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
-  z-index: 2;
+  z-index: 1;
 }
 
 .skill-badges span {
@@ -295,6 +329,24 @@ main {
   letter-spacing: 0.5px;
 }
 
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  height: 0;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
 .divider {
     display: flex;
     justify-content: space-between;
@@ -304,8 +356,12 @@ main {
 
 .divider img {
     height: 80px; /* Adjust as needed */
+    transition: transform 0.3s ease;
 }
 
+.divider img:hover {
+    transform: translateY(-5px);
+}
 
 article {
     max-width: 700px;
@@ -350,6 +406,10 @@ article img:hover {
     font-size: 1rem; /* Size of the caption text */
     color: #333; /* Caption color */
     line-height: 1.4; /* Space between lines of text in the caption */
+}
+
+.section-header {
+    text-align: center;
 }
 
 h1 {
@@ -480,7 +540,7 @@ td:first-child {
 .modal {
     display: none; 
     position: fixed;
-    z-index: 999;
+    z-index: 1;
     top: 0;
     left: 0;
     width: 100vw;
@@ -506,7 +566,7 @@ td:first-child {
     font-size: 40px;
     font-weight: bold;
     cursor: pointer;
-    z-index: 1000;
+    z-index: 2;
     transition: color 0.2s;
 }
 

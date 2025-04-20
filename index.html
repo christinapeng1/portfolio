@@ -17,21 +17,23 @@
     <link rel="icon" href="assets/images/undertale-heart.png" 
     type="image/jpeg">
     <link rel="preload" as="image" href="/assets/images/undertale-heart-16x16.png">
+    <audio id="click-sound" src="assets/sounds/undertale-select.mp3" preload="auto"></audio>
+    <audio id="squeak-sound" src="assets/sounds/mouse_sqek.mp3" preload="auto"></audio>
 
 
 
-    <title>Portfolio</title>
+    <title>Christina Peng</title>
 </head>
 <body>
     <nav id="desktop-nav">
         <a href="/">Christina Peng</a>
         <div>
             <ul class="nav-links">
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#coding">Coding</a></li>
-                <li><a href="#writing">Writing</a></li>
-                <li><a href="#art">Art</a></li>
-                <li><a href="blog.html">Blog</a></li>
+                <li><a href="#work">
+                    <span class="icon"><img src="assets/images/undertale-heart-16x16.png" alt="Undertale heart icon"></span> Work
+                </a></li>
+                <li><a href="#play"><span class="icon"><img src="assets/images/undertale-heart-16x16.png" alt="Undertale heart icon"></span> Play</a></li>
+                <li><a href="https://drive.google.com/file/d/1l--lo2mM3sAu00RzKTfASK3rJM8Gys_R/view?usp=sharing" target="_blank"><span class="icon"><img src="assets/images/undertale-heart-16x16.png" alt="Undertale heart icon"></span> Resume</a></li>
             </ul>
         </div>
     </nav>
@@ -46,7 +48,6 @@
             </div>
         </div>
         <div class="menu-links">
-            <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
             <li><a href="#coding" onclick="toggleMenu()">Coding</a></li>
             <li><a href="#writing" onclick="toggleMenu()">Writing</a></li>
             <li><a href="#art" onclick="toggleMenu()">Art</a></li>
@@ -56,7 +57,7 @@
 
         <div class="hero">
             <div class="hero-text">
-                <h1>Knowing the mouse is just a few lines of code away from the cheese... fills <span class="highlight" id="engineer">Christina Peng</span> with <span class="highlight" id="determination">determination</span>.</h1>
+                <h1>Knowing the mouse is just a few lines of code away from the cheese fills <span class="highlight" id="engineer">Christina Peng</span> with <span class="highlight" id="determination">determination</span>.</h1>
                 <p>Currently at <a href="https://www.hume.ai/" target="_blank"
               >Hume AI ↗</a
             >, Incoming SDE Intern @ Amazon ↗</p>
@@ -79,13 +80,12 @@
                 </div>
             </div>
         </div>
-        <div class="divider">
-            <img src="assets/images/undertale-mouse.png" alt="Mouse on the left">
-            <img src="assets/images/undertale-cheese.png" alt="Cheese on the right">
-        </div>
 
-        <!-- SECTION 2: Skills -->
-        <section id="skills">
+        <section id="work">
+            <div class="divider">
+                <img src="assets/images/undertale-mouse.png" alt="Mouse on the left" class="squeaky-mouse">
+                <img src="assets/images/undertale-cheese.png" alt="Cheese on the right">
+            </div>
             <div class="card-grid">
                 <a href="https://character-craft.vercel.app/" target="_blank" class="card-link">
                     <div class="card">
@@ -150,6 +150,48 @@
 
         </section>
 
+        <section id="play">
+            <h1>Fun Stuff</h1>
+            <div class="card-grid">
+                <div class="card">
+                    <div class="video-container">
+                        <iframe
+                        src="https://www.youtube.com/embed/vjKd50HrA6I?rel=0"
+                        title="YouTube video"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="video-container">
+                        <iframe
+                        src="https://www.youtube.com/embed/HY4SyhwDX_E?si=vFlQkdn3XIfit32I?rel=0"
+                        title="YouTube video"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="video-container">
+                        <iframe
+                        src="https://www.youtube.com/embed/D8PedzqxoSc?si=UXiE2YzP7-kpozQW?rel=0"
+                        title="YouTube video"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+    
+            </div>
+        </section>
+
         <!-- Blog Section -->
         <!-- <section id="blog">
             <h2>Latest Blog Posts</h2>
@@ -168,6 +210,37 @@
 
 
     <script>
+        const squeak = document.getElementById("squeak-sound");
+        const mouseImg = document.querySelector(".squeaky-mouse");
+
+        if (mouseImg) {
+            mouseImg.addEventListener("click", () => {
+            squeak.currentTime = 0;
+            squeak.play();
+            });
+        }
+        const clickSound = document.getElementById("click-sound");
+        const links = document.querySelectorAll("a");
+
+        links.forEach(link => {
+            link.addEventListener("click", function (event) {
+            // If link opens in a new tab or jumps to an anchor, we still want the sound to play first
+            if (clickSound) {
+                clickSound.currentTime = 0; // rewind if it's still playing
+                clickSound.play();
+            }
+            });
+        });
+
+        const navLinks = document.querySelectorAll('.nav-links a');
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', function () {
+            navLinks.forEach(l => l.classList.remove('active')); // remove from others
+            this.classList.add('active'); // add to clicked
+            });
+        });
+        
         const list = document.querySelector('.content__container__list');
         list.addEventListener('animationiteration', () => {
             list.style.animation = 'none';
@@ -175,6 +248,7 @@
             list.style.transform = 'translateY(0%)';
             list.style.animation = null;
         });
+        
     </script>
     
 </body>
