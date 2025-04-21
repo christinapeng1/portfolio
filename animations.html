@@ -82,7 +82,7 @@
     </nav>
 
     <nav id="hamburger-nav">
-      <a href="/">Christina Peng</a>
+      <a href="index.html" class="home">Christina Peng</a>
       <div class="hamburger-menu">
         <div class="hamburger-icon" onclick="toggleMenu()">
           <span></span>
@@ -91,24 +91,40 @@
         </div>
       </div>
       <div class="menu-links">
-        <li><a href="#coding" onclick="toggleMenu()">Coding</a></li>
-        <li><a href="#writing" onclick="toggleMenu()">Writing</a></li>
-        <li><a href="#art" onclick="toggleMenu()">Art</a></li>
-        <li><a href="blog.html" onclick="toggleMenu()">Blog</a></li>
+        <li>
+          <a href="index.html#work">
+            <span class="icon"
+              ><img
+                src="assets/images/undertale-heart.webp"
+                alt="Undertale heart icon"
+            /></span>
+            Work
+          </a>
+        </li>
+        <li>
+          <a href="animations.html"
+            ><span class="icon"
+              ><img
+                src="assets/images/undertale-heart.webp"
+                alt="Undertale heart icon"
+            /></span>
+            Animations</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://drive.google.com/file/d/1l--lo2mM3sAu00RzKTfASK3rJM8Gys_R/view?usp=sharing"
+            target="_blank"
+            ><span class="icon"
+              ><img
+                src="assets/images/undertale-heart.webp"
+                alt="Undertale heart icon"
+            /></span>
+            Resume</a
+          >
+        </li>
       </div>
     </nav>
-    <div class="divider">
-      <img
-        src="assets/images/undertale-mouse.webp"
-        alt="Mouse on the left"
-        class="squeaky-mouse"
-      />
-      <h1>Animations</h1>
-      <img
-        src="assets/images/undertale-cheese.webp"
-        alt="Cheese on the right"
-      />
-    </div>
 
     <section id="play">
       <div class="card-grid">
@@ -154,6 +170,13 @@
     </section>
 
     <script>
+      function toggleMenu() {
+        const menu = document.querySelector(".menu-links");
+        const icon = document.querySelector(".hamburger-icon");
+        menu.classList.toggle("open");
+        icon.classList.toggle("open");
+      }
+      
       const squeak = document.getElementById("squeak-sound");
       const mouseImg = document.querySelector(".squeaky-mouse");
 
