@@ -8,19 +8,25 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Forum&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Zen+Kaku+Gothic+New&display=swap" rel="stylesheet">
 
-    <title>I like dropdown menus</title>
+    <title>Dropdown Menus</title>
     <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../mediaqueries.css">
+    <link rel="icon" href="../assets/images/undertale-heart.png" 
+    type="image/jpeg">
+    <link rel="preload" as="image" href="../assets/images/undertale-heart-16x16.png">
+    <audio id="click-sound" src="../assets/sounds/undertale-select.mp3" preload="auto"></audio>
+    <audio id="squeak-sound" src="../assets/sounds/mouse_sqek.mp3" preload="auto"></audio>
 </head>
 <body>
     <nav id="desktop-nav">
-        <a href="/">Christina Peng</a>
+        <a href="../index.html">Christina Peng</a>
         <div>
             <ul class="nav-links">
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#coding">Coding</a></li>
-                <li><a href="#writing">Writing</a></li>
-                <li><a href="#art">Art</a></li>
-                <li><a href="../blog.html">Blog</a></li>
+                <li><a href="../index.html#work">
+                    <span class="icon"><img src="../assets/images/undertale-heart-16x16.png" alt="Undertale heart icon"></span> Work
+                </a></li>
+                <li><a href="../animations.html"><span class="icon"><img src="../assets/images/undertale-heart-16x16.png" alt="Undertale heart icon"></span> Animations</a></li>
+                <li><a href="https://drive.google.com/file/d/1l--lo2mM3sAu00RzKTfASK3rJM8Gys_R/view?usp=sharing" target="_blank"><span class="icon"><img src="../assets/images/undertale-heart-16x16.png" alt="Undertale heart icon"></span> Resume</a></li>
             </ul>
         </div>
     </nav>
@@ -58,7 +64,7 @@
     <main>
 
         <article>
-            <h1>I like dropdown menus</h1>
+            <h1>Dropdown Menus</h1>
             <p>Posted on February 23, 2025</p>
 
             <section id="overview">
@@ -66,8 +72,6 @@
                 <p>Dropdowns are everywhere. Whether you're selecting a drink at the order kiosk, hovering over the nav bar on
                     <a href="https://www.nytimes.com/" target="_blank" class="highlight">nytimes.com</a>
                     , or scrolling through a very long Terms of Services, these little menus are a staple in web and app design. However, as simple as it seems, designing the perfect dropdown can be tricky.</p>
-
-                <!-- <p>It's not bad. BUT for starters, wouldn’t it be nice if you could *search* the fortunes instead of digging through text so tiny and squished you'd need a map and compass to get there? I mean, good luck finding the one where the guy is trapped in a cookie factory. And once you finally make a selection, *nothing happens*—no magic, no fortune, not even a confetti cannon. Just a plain, empty click...</p> -->
 
                 <p>In this case study, I'll explore how different design choices affect a dropdown's usability, accessibility, and user experience. I'll compare how dropdown menus are used in three of my favorite applications — 
                 <a href="https://cab.brown.edu/" target="_blank" class="highlight">Courses @ Brown</a>, 
@@ -249,16 +253,16 @@
             <section id="focused-study-discord">
                 <h2>Focused Study: Discord 'Update Status' Dropdown</h2>
                 <p>Next, let's choose one of these applications to focus on. I'll be choosing Discord and mapping out how a user may interact with its dropdown menu via mouse and keyboard:</p>
-                <img src="../assets/images/default-discord-mouse-model.png" alt="Discord Status Dropdown with Mouse input state model">
-                <img src="../assets/images/default-discord-keyboard-model.png" alt="Discord Status Dropdown with Keyboard input state model">
+                <img src="../assets/images/dropdown-menu/default-discord-mouse-model.png" alt="Discord Status Dropdown with Mouse input state model">
+                <img src="../assets/images/dropdown-menu/default-discord-keyboard-model.png" alt="Discord Status Dropdown with Keyboard input state model">
 
                 <h3>Redesigning the Dropdown</h3>
                 <p>From inspecting the state models, we'll notice there's a lot of states -- from expanding the menu, hovering over the desired status, saving the status, etc. As an improvement, maybe we can think of a way to reduce the number of states and improve the user experience?</p>
                 <p>Well, what about taking out the 'Save' button after selecting a status? Without the 'Save' button, the status would automatically update as soon as it's selected in the dropdown. That would certainly improve the efficiency of this interaction!</p>
                 <p>See my design below:</p>
-                <img src="../assets/images/redesigned-discord.png" alt="Redesigned Discord Status Dropdown">
-                <img src="../assets/images/redesigned-discord-mouse-model.png" alt="Redesigned Discord Status Dropdown with Mouse input state model">
-                <img src="../assets/images/redesigned-discord-keyboard-model.png" alt="Redesigned Discord Status Dropdown with Keyboard input state model">
+                <img src="../assets/images/dropdown-menu/redesigned-discord.png" alt="Redesigned Discord Status Dropdown">
+                <img src="../assets/images/dropdown-menu/redesigned-discord-mouse-model.png" alt="Redesigned Discord Status Dropdown with Mouse input state model">
+                <img src="../assets/images/dropdown-menu/redesigned-discord-keyboard-model.png" alt="Redesigned Discord Status Dropdown with Keyboard input state model">
 
                 <h3>Tradeoffs</h3>
                 <p>However, with every redesign, there are trade-offs to consider. In this case, the redesign prioritizes efficiency, memorability, and accessibility at the cost of the interface’s learnability. While auto-saving removes friction, it may not be immediately intuitive for all users. Here’s a breakdown of the key trade-offs:<p>

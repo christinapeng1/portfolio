@@ -8,19 +8,25 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Forum&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Zen+Kaku+Gothic+New&display=swap" rel="stylesheet">
 
-    <title>Laundry machine users have personality</title>
+    <title>Laundry Machine Personas</title>
     <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../mediaqueries.css">
+    <link rel="icon" href="../assets/images/undertale-heart.png" 
+    type="image/jpeg">
+    <link rel="preload" as="image" href="../assets/images/undertale-heart-16x16.png">
+    <audio id="click-sound" src="../assets/sounds/undertale-select.mp3" preload="auto"></audio>
+    <audio id="squeak-sound" src="../assets/sounds/mouse_sqek.mp3" preload="auto"></audio>
 </head>
 <body>
     <nav id="desktop-nav">
-        <a href="/">Christina Peng</a>
+        <a href="../index.html">Christina Peng</a>
         <div>
             <ul class="nav-links">
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#coding">Coding</a></li>
-                <li><a href="#writing">Writing</a></li>
-                <li><a href="#art">Art</a></li>
-                <li><a href="../blog.html">Blog</a></li>
+                <li><a href="../index.html#work">
+                    <span class="icon"><img src="../assets/images/undertale-heart-16x16.png" alt="Undertale heart icon"></span> Work
+                </a></li>
+                <li><a href="../animations.html"><span class="icon"><img src="../assets/images/undertale-heart-16x16.png" alt="Undertale heart icon"></span> Animations</a></li>
+                <li><a href="https://drive.google.com/file/d/1l--lo2mM3sAu00RzKTfASK3rJM8Gys_R/view?usp=sharing" target="_blank"><span class="icon"><img src="../assets/images/undertale-heart-16x16.png" alt="Undertale heart icon"></span> Resume</a></li>
             </ul>
         </div>
     </nav>
@@ -66,17 +72,17 @@
                 <p>As an RA, I've seen how everyday tasks can become unexpectedly difficult in a communal setting—laundry being a prime example. Waiting for an open machine, deciphering the payment system, and figuring out the right settings can quickly become frustrating for a sleep-deprived college student. </p>
     
                 <figure>
-                    <img src="../assets/images/washers.png" alt="Brown University Washers">
+                    <img src="../assets/images/laundry-personas/washers.png" alt="Brown University Washers">
                 </figure>
 
                 <p>Laundry at Brown University is no exception.</p>
                 <p>Over the years, Brown's laundry system has seen a few changes. In Fall 2022, Brown’s laundry rooms saw a notable addition: payment kiosks.</p>
                  <figure>
-                    <img src="../assets/images/laundry-kiosk-sketch.jpg" alt="Laundry Payment Kiosk Sketch">
+                    <img src="../assets/images/laundry-personas/laundry-kiosk-sketch.jpg" alt="Laundry Payment Kiosk Sketch">
                 </figure>
                 <p>The kiosks had been <a href="https://www.browndailyherald.com/article/2022/09/brown-replaces-washing-machines-dryers-in-dorms" target="_blank" class="highlight">installed</a> with the intention of charging students for laundry services. However, following student protests and a <a href="https://www.browndailyherald.com/article/2023/03/laundry-to-remain-free-for-foreseeable-future" target="_blank" class="highlight">petition</a> for free laundry, the University agreed to keep laundry free "for the foreseeable future." While this was a win for students, the kiosks remained in place, bringing with them an entirely new set of procedures for doing laundry at Brown.</p>
                 <figure>
-                    <img src="../assets/images/laundry-machine-sketch.jpg" alt="Laundry Machine Sketch">
+                    <img src="../assets/images/laundry-personas/laundry-machine-sketch.jpg" alt="Laundry Machine Sketch">
                 </figure>
                 <p>Above is my sketch of Brown's laundry machines. At first, they might seem similar to ones from home: there are buttons for different wash/dry modes, a tray for detergent, and a tub for your clothes. But a closer look reveals several unique features. The machines are numbered. There are QR codes you can scan to open the <a href="https://play.google.com/store/apps/details?id=com.cscsw.cscgo&pcampaignid=web_share" target="_blank" class="highlight">CSC GO app</a>, and the timers says "1.75" (left over from when Brown tried to charge students $1.75 per load).</p>
 
@@ -104,7 +110,7 @@
 
                 <p>I grabbed my dinner and waited for someone to enter the laundry room.</p>
                 <figure>
-                    <img src="../assets/images/metcalf-laundry-room.png" alt="Metcalf Hall empty laundry room">
+                    <img src="../assets/images/laundry-personas/metcalf-laundry-room.png" alt="Metcalf Hall empty laundry room">
                 </figure>
 
             <section id="interview-summaries">
@@ -125,7 +131,7 @@
                 <p>I will now construct user personas based on my interviews and observations.</p>
                 <h3>Spaced-Out Kirby</h3>
                 <figure>
-                    <img src="../assets/images/spaced-out-kirby.png" alt="Spaced out kirby persona">
+                    <img src="../assets/images/laundry-personas/spaced-out-kirby.png" alt="Spaced out kirby persona">
                 </figure>
                 <p>Spaced-out Kirby is a burnt-out college student who just wants to finish her laundry as quickly as possible. She values simplicity and efficiency, doing laundry once a week and preferring to start the machine without overthinking the settings. She represents users who behave like Yoshi from my interviews who care most about doing laundry in the most efficiency way. </p>
 
@@ -137,7 +143,7 @@
                 </ul>
                 <h3>Techy Mushroom</h3>
                 <figure>
-                    <img src="../assets/images/techy-mushroom.png" alt="Techy mushroom persona">
+                    <img src="../assets/images/laundry-personas/techy-mushroom.png" alt="Techy mushroom persona">
                 </figure>
                 <p>Techy Mushroom is comfortable using technology and relies on the CSC GO app to start the laundry machines. He often multitasks and scrolls TikTok on his phone while doing laundry. He likes to take a structured approach with his laundry loads, separating clothes into lights and darks. Sometimes, he can be forgetful when it comes to picking up laundry because he's in the middle of doomscrolling. He represents users who are like Isabelle and King Boo from my interviews who care most about their clothes coming out well.</p>
                 <h4>Interface Problems:</h4>
@@ -153,13 +159,13 @@
                 <h2>Storyboarding</h2>
                 <p>Finally, I will storyboard the steps it takes for one of my personas to use the laundry machine. I'm going to go with spaced out kirby!</p>
                 <figure>
-                    <img src="../assets/images/storyboard1.png" alt="Storyboard frames">
+                    <img src="../assets/images/laundry-personas/storyboard1.png" alt="Storyboard frames">
                 </figure>
                 <figure>
-                    <img src="../assets/images/storyboard2.png" alt="Storyboard frames">
+                    <img src="../assets/images/laundry-personas/storyboard2.png" alt="Storyboard frames">
                 </figure>
                 <figure>
-                    <img src="../assets/images/storyboard3.png" alt="Storyboard frames">
+                    <img src="../assets/images/laundry-personas/storyboard3.png" alt="Storyboard frames">
                 </figure>
             </section>
 
