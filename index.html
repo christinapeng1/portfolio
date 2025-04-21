@@ -48,10 +48,11 @@
             </div>
         </div>
         <div class="menu-links">
-            <li><a href="#coding" onclick="toggleMenu()">Coding</a></li>
-            <li><a href="#writing" onclick="toggleMenu()">Writing</a></li>
-            <li><a href="#art" onclick="toggleMenu()">Art</a></li>
-            <li><a href="blog.html" onclick="toggleMenu()">Blog</a></li>
+            <li><a href="#work">
+                    <span class="icon"><img src="assets/images/undertale-heart-16x16.png" alt="Undertale heart icon"></span> Work
+                </a></li>
+                <li><a href="animations.html"><span class="icon"><img src="assets/images/undertale-heart-16x16.png" alt="Undertale heart icon"></span> Animations</a></li>
+                <li><a href="https://drive.google.com/file/d/1l--lo2mM3sAu00RzKTfASK3rJM8Gys_R/view?usp=sharing" target="_blank"><span class="icon"><img src="assets/images/undertale-heart-16x16.png" alt="Undertale heart icon"></span> Resume</a></li>
         </div>
     </nav>
 
@@ -179,6 +180,13 @@
 
 
     <script>
+        function toggleMenu() {
+            const menu = document.querySelector(".menu-links");
+            const icon = document.querySelector(".hamburger-icon");
+            menu.classList.toggle("open");
+            icon.classList.toggle("open");
+        }
+
         const squeak = document.getElementById("squeak-sound");
         const mouseImg = document.querySelector(".squeaky-mouse");
 

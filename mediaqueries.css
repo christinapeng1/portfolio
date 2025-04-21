@@ -1,8 +1,148 @@
-@media screen and (max-width: 600px) {
-    #desktop-nav {
-        display: none
-    }
-    #hamburger-nav {
-        display: flex;
-    }
+/* ========== SMALL SCREENS (phones) ========== */
+@media screen and (max-width: 767px) {
+  /* Navbar */
+  #desktop-nav {
+    display: none;
+  }
+
+  #hamburger-nav {
+    display: flex;
+  }
+
+  .content{
+    display: none;
+  }
+
+  h1 {
+    font-size: 32px;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
+  h3 {
+    font-size: 16px;
+  }
+  
+  p {
+    font-size: 14px;
+  }
+
+  li {
+    font-size: 14px;
+  }
+
+ table {
+  font-size: 14px;
+ }
+
+ .article-gif-container figcaption {
+  font-size: 14px;
+ }
+
+  /* Hero section */
+  .hero-text h1 {
+    font-size: 32px;
+  }
+
+  .hero-text p {
+    font-size: 18px;
+    line-height: 1.6;
+  }
+
+  /* Card grid */
+  .card-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 1rem 1rem;
+  }
+
+  /* Mockup row */
+  .mockup-row img {
+    height: 300px;
+    width: 100%;
+  }
+
+  /* Divider images */
+  .divider {
+    padding: 1rem;
+  }
+
+  .divider img {
+    height: 30px;
+  }
+
+  /* Article */
+  article {
+    padding: 1rem;
+    margin-left: 0;
+  }
+
+  /* Quick nav */
+  #quick-nav {
+    display: none;
+  }
+
+  /* Aside/sidebar */
+  aside {
+    width: 100%;
+    margin: 1rem 0;
+    position: static;
+  }
+}
+
+/* ========== MEDIUM SCREENS (tablets) ========== */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .hero {
+    flex-direction: row;
+    gap: 1rem;
+  }
+
+  .card-grid {
+    grid-template-columns: 1fr;
+    padding: 3rem;
+  }
+
+  .mockup-row img {
+    height: 400px;
+  }
+
+  .divider {
+    padding: 1rem 2rem;
+  }
+
+  article {
+    padding: 2rem;
+    margin-left: 0;
+  }
+
+  aside {
+    width: 100%;
+    margin: 1rem 0;
+  }
+}
+
+/* ========== LARGE SCREENS (desktops) ========== */
+@media screen and (min-width: 1200px) {
+  .card-grid {
+    grid-template-columns: repeat(3, 1fr);
+    padding: 4rem 6rem;
+  }
+
+  .hero {
+    gap: 3rem;
+  }
+
+  .divider img {
+    height: 100px;
+  }
+
+  .mockup-row img {
+    height: 600px;
+  }
+
+  article {
+    margin-left: -80px;
+  }
 }
