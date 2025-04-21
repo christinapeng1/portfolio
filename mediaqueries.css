@@ -93,7 +93,7 @@
 }
 
 /* ========== MEDIUM SCREENS (tablets) ========== */
-@media screen and (min-width: 768px) and (max-width: 1024px) {
+@media screen and (min-width: 768px) and (max-width: 1100px) {
   .hero {
     flex-direction: row;
     gap: 1rem;
@@ -121,10 +121,14 @@
     width: 100%;
     margin: 1rem 0;
   }
+
+  #quick-nav {
+    display: none;
+  }
 }
 
 /* ========== LARGE SCREENS (desktops) ========== */
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1500px) {
   .card-grid {
     grid-template-columns: repeat(3, 1fr);
     padding: 4rem 6rem;

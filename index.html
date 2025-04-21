@@ -1,248 +1,371 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Forum&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Zen+Kaku+Gothic+New&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Forum&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Zen+Kaku+Gothic+New&display=swap"
+      rel="stylesheet"
+    />
 
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-    <link rel="stylesheet" href="index.css">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="mediaqueries.css">
-    <link rel="icon" href="assets/images/undertale-heart.png" 
-    type="image/jpeg">
-    <link rel="preload" as="image" href="/assets/images/undertale-heart-16x16.png">
-    <audio id="click-sound" src="assets/sounds/undertale-select.mp3" preload="auto"></audio>
-    <audio id="squeak-sound" src="assets/sounds/mouse_sqek.mp3" preload="auto"></audio>
-
-
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+    <link
+      rel="icon"
+      href="assets/images/undertale-heart.webp"
+      type="image/jpeg"
+    />
+    <link rel="preload" as="image" href="/assets/images/undertale-heart.webp" />
+    <audio
+      id="click-sound"
+      src="assets/sounds/undertale-select.mp3"
+      preload="auto"
+    ></audio>
+    <audio
+      id="squeak-sound"
+      src="assets/sounds/mouse_sqek.mp3"
+      preload="auto"
+    ></audio>
 
     <title>Christina Peng</title>
-</head>
-<body>
+  </head>
+  <body>
     <nav id="desktop-nav">
-        <a href="index.html">Christina Peng</a>
-        <div>
-            <ul class="nav-links">
-                <li><a href="#work">
-                    <span class="icon"><img src="assets/images/undertale-heart-16x16.png" alt="Undertale heart icon"></span> Work
-                </a></li>
-                <li><a href="animations.html"><span class="icon"><img src="assets/images/undertale-heart-16x16.png" alt="Undertale heart icon"></span> Animations</a></li>
-                <li><a href="https://drive.google.com/file/d/1l--lo2mM3sAu00RzKTfASK3rJM8Gys_R/view?usp=sharing" target="_blank"><span class="icon"><img src="assets/images/undertale-heart-16x16.png" alt="Undertale heart icon"></span> Resume</a></li>
-            </ul>
-        </div>
+      <a href="index.html">Christina Peng</a>
+      <div>
+        <ul class="nav-links">
+          <li>
+            <a href="#work">
+              <span class="icon"
+                ><img
+                  src="assets/images/undertale-heart.webp"
+                  alt="Undertale heart icon"
+              /></span>
+              Work
+            </a>
+          </li>
+          <li>
+            <a href="animations.html"
+              ><span class="icon"
+                ><img
+                  src="assets/images/undertale-heart.webp"
+                  alt="Undertale heart icon"
+              /></span>
+              Animations</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://drive.google.com/file/d/1l--lo2mM3sAu00RzKTfASK3rJM8Gys_R/view?usp=sharing"
+              target="_blank"
+              ><span class="icon"
+                ><img
+                  src="assets/images/undertale-heart.webp"
+                  alt="Undertale heart icon"
+              /></span>
+              Resume</a
+            >
+          </li>
+        </ul>
+      </div>
     </nav>
 
     <nav id="hamburger-nav">
-        <a href="/">Christina Peng</a>
-        <div class="hamburger-menu">
-            <div class="hamburger-icon" onclick="toggleMenu()">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
+      <a href="/">Christina Peng</a>
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
         </div>
-        <div class="menu-links">
-            <li><a href="#work">
-                    <span class="icon"><img src="assets/images/undertale-heart-16x16.png" alt="Undertale heart icon"></span> Work
-                </a></li>
-                <li><a href="animations.html"><span class="icon"><img src="assets/images/undertale-heart-16x16.png" alt="Undertale heart icon"></span> Animations</a></li>
-                <li><a href="https://drive.google.com/file/d/1l--lo2mM3sAu00RzKTfASK3rJM8Gys_R/view?usp=sharing" target="_blank"><span class="icon"><img src="assets/images/undertale-heart-16x16.png" alt="Undertale heart icon"></span> Resume</a></li>
-        </div>
+      </div>
+      <div class="menu-links">
+        <li>
+          <a href="#work">
+            <span class="icon"
+              ><img
+                src="assets/images/undertale-heart.webp"
+                alt="Undertale heart icon"
+            /></span>
+            Work
+          </a>
+        </li>
+        <li>
+          <a href="animations.html"
+            ><span class="icon"
+              ><img
+                src="assets/images/undertale-heart.webp"
+                alt="Undertale heart icon"
+            /></span>
+            Animations</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://drive.google.com/file/d/1l--lo2mM3sAu00RzKTfASK3rJM8Gys_R/view?usp=sharing"
+            target="_blank"
+            ><span class="icon"
+              ><img
+                src="assets/images/undertale-heart.webp"
+                alt="Undertale heart icon"
+            /></span>
+            Resume</a
+          >
+        </li>
+      </div>
     </nav>
 
-        <div class="hero">
-            <div class="hero-text">
-                <h1>Knowing the mouse might one day hack the code and get the cheese... It fills <span class="highlight" id="engineer">Christina Peng</span> with <span class="highlight" id="determination">determination</span>.</h1>
-                <p>Currently at <a href="https://www.hume.ai/" target="_blank"
-              >Hume AI ↗</a
-            >, Incoming SDE Intern at Amazon ↗</p>
-                <p>
-                Junior at Brown University studying Computer Science and English.
-                <!-- <p>Contact me at <a href="mailto:christina_peng@brown.edu">christina_peng@brown.edu</a></p> -->
-                <div class="content">
-                    <div class="content__container">
-                        <ul class="content__container__list">
-                            <li class="content__container__list__item">I'm a developer with a focus in AI.</li>
-                            <li class="content__container__list__item">I try to make conversations with AI feel more human.</li>
-                            <li class="content__container__list__item">I learn by building, breaking, and watching way too much YouTube.</li>
-                            <li class="content__container__list__item">I believe the best interfaces tell stories.</li>
-                            <li class="content__container__list__item">I study psychology (via Town of Salem).</li>
-                            <li class="content__container__list__item">I dream about elephants inside boa constrictors.</li>
-                            <li class="content__container__list__item">I recently mastered the egg-fried rice.</li>
-                            <li class="content__container__list__item">Probably gaming or drawing in my free time.</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+    <div class="hero">
+      <div class="hero-text">
+        <h1>
+          Knowing the mouse might one day hack the code and get the cheese... It
+          fills <span class="highlight" id="engineer">Christina Peng</span> with
+          <span class="highlight" id="determination">determination</span>.
+        </h1>
+        <p>
+          Currently at
+          <a href="https://www.hume.ai/" target="_blank">Hume AI ↗</a>, Incoming
+          SDE Intern at Amazon ↗
+        </p>
+        <p>
+          Junior at Brown University studying Computer Science and English.
+          <!-- <p>Contact me at <a href="mailto:christina_peng@brown.edu">christina_peng@brown.edu</a></p> -->
+        </p>
+
+        <div class="content">
+          <div class="content__container">
+            <ul class="content__container__list">
+              <li class="content__container__list__item">
+                I'm a developer with a focus in AI.
+              </li>
+              <li class="content__container__list__item">
+                I try to make conversations with AI feel more human.
+              </li>
+              <li class="content__container__list__item">
+                I learn by building, breaking, and watching way too much
+                YouTube.
+              </li>
+              <li class="content__container__list__item">
+                I believe the best interfaces tell stories.
+              </li>
+              <li class="content__container__list__item">
+                I study psychology (via Town of Salem).
+              </li>
+              <li class="content__container__list__item">
+                I dream about elephants inside boa constrictors.
+              </li>
+              <li class="content__container__list__item">
+                I recently mastered the egg-fried rice.
+              </li>
+              <li class="content__container__list__item">
+                Probably gaming or drawing in my free time.
+              </li>
+            </ul>
+          </div>
         </div>
+      </div>
+    </div>
 
-        <section id="work">
-            <div class="divider">
-                <img src="assets/images/undertale-mouse.png" alt="Mouse on the left" class="squeaky-mouse">
-                <img src="assets/images/undertale-cheese.png" alt="Cheese on the right">
+    <section id="work">
+      <div class="divider">
+        <img
+          src="assets/images/undertale-mouse.webp"
+          alt="Mouse on the left"
+          class="squeaky-mouse"
+        />
+        <img
+          src="assets/images/undertale-cheese.webp"
+          alt="Cheese on the right"
+        />
+      </div>
+      <div class="card-grid">
+        <a
+          href="https://character-craft.vercel.app/"
+          target="_blank"
+          class="card-link"
+        >
+          <div class="card">
+            <div class="image-container">
+              <img
+                src="assets/images/character-craft.webp"
+                alt="Character Craft AI Writing Assistant"
+              />
+              <div class="skill-badges">
+                <span>Empathic Voice Interface</span>
+                <span>WebGL</span>
+                <span>React</span>
+                <span>JavaScript</span>
+                <span>TypeScript</span>
+                <span>CSS</span>
+              </div>
             </div>
-            <div class="card-grid">
-                <a href="https://character-craft.vercel.app/" target="_blank" class="card-link">
-                    <div class="card">
-                        <div class="image-container">
-                            <img src="assets/images/character-craft.png" alt="Character Craft AI Writing Assistant">
-                            <div class="skill-badges">
-                                <span>Empathic Voice Interface</span>
-                                <span>WebGL</span>
-                                <span>React</span>
-                                <span>JavaScript</span>
-                                <span>TypeScript</span>
-                                <span>CSS</span>
-                            </div>
-                        </div>
-                        <div class="card-info">
-                            <p class="title">Character Craft</p>
-                            <h3 class="tagline">A Voice-Powered Writing Assistant That Understands Emotion</h3>
-                        </div>
-                    </div>
-                </a>
-            
-
-                <a href="blog/iterative-design.html" class="card-link">
-                    <div class="card">
-                        <div class="image-container">
-                            <img src="assets/images/spark-ai.png" alt="Character Craft AI Writing Assistant">
-                            <div class="skill-badges">
-                                <span>Iterative Design</span>
-                                <span>Figma</span>
-                            </div>
-                        </div>
-                        <div class="card-info">
-                            <p class="title">Case Study</p>
-                            <h3 class="tagline">Reimagining the Spark AI Report</h3>
-                        </div>
-                    </div>
-                </a>
-
-                <a href="blog/website-redesign.html" class="card-link">
-                    <div class="card">
-                        <div class="image-container">
-                            <img src="assets/images/website-redesign/desktop-mock.png" alt="How To Study Korean Website Redesign Thumbnail">
-                            <div class="skill-badges">
-                                <span>Responsive Design</span>
-                                <span>HTML</span>
-                                <span>CSS</span>
-                                <span>Figma</span>
-                            </div>
-                        </div>
-                        <div class="card-info">
-                            <p class="title">Case Study</p>
-                            <h3 class="tagline">How to Study Korean: Responsive Website Redesign</h3>
-                        </div>
-                    </div>
-                </a>
-
-                <a href="blog/laundry-personas.html" class="card-link">
-                    <div class="card">
-                        <div class="image-container">
-                            <img src="assets/images/laundry-persona-thumbnail.png" alt="Laundry Persona Study Thumbnail">
-                            <div class="skill-badges">
-                                <span>Figma</span>
-                                <span>Storyboarding</span>
-                                <span>Interviews</span>
-                            </div>
-                        </div>
-                        <div class="card-info">
-                            <p class="title">User Study</p>
-                            <h3 class="tagline">Laundry Machine Personas</h3>
-                        </div>
-                    </div>
-                </a>
-
-                <a href="blog/dropdown-case-study.html" class="card-link">
-                    <div class="card">
-                        <div class="image-container">
-                            <img src="assets/images/spark-ai.png" alt="Dropdown Menu Case Study Thumbnail">
-                            <div class="skill-badges">
-                                <span>Figma</span>
-                                <span>State Modeling</span>
-                            </div>
-                        </div>
-                        <div class="card-info">
-                            <p class="title">Case Study</p>
-                            <h3 class="tagline">Dropdown Menus</h3>
-                        </div>
-                    </div>
-                </a>
+            <div class="card-info">
+              <p class="title">Character Craft</p>
+              <h3 class="tagline">
+                A Voice-Powered Writing Assistant That Understands Emotion
+              </h3>
             </div>
-        </section>
+          </div>
+        </a>
 
+        <a href="blog/iterative-design.html" class="card-link">
+          <div class="card">
+            <div class="image-container">
+              <img
+                src="assets/images/spark-ai.webp"
+                alt="Character Craft AI Writing Assistant"
+              />
+              <div class="skill-badges">
+                <span>Iterative Design</span>
+                <span>Figma</span>
+              </div>
+            </div>
+            <div class="card-info">
+              <p class="title">Case Study</p>
+              <h3 class="tagline">Reimagining the Spark AI Report</h3>
+            </div>
+          </div>
+        </a>
+
+        <a href="blog/website-redesign.html" class="card-link">
+          <div class="card">
+            <div class="image-container">
+              <img
+                src="assets/images/website-redesign/desktop-mock.webp"
+                alt="How To Study Korean Website Redesign Thumbnail"
+              />
+              <div class="skill-badges">
+                <span>Responsive Design</span>
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>Figma</span>
+              </div>
+            </div>
+            <div class="card-info">
+              <p class="title">Case Study</p>
+              <h3 class="tagline">
+                How to Study Korean: Responsive Website Redesign
+              </h3>
+            </div>
+          </div>
+        </a>
+
+        <a href="blog/laundry-personas.html" class="card-link">
+          <div class="card">
+            <div class="image-container">
+              <img
+                src="assets/images/laundry-persona-thumbnail.webp"
+                alt="Laundry Persona Study Thumbnail"
+              />
+              <div class="skill-badges">
+                <span>Figma</span>
+                <span>Storyboarding</span>
+                <span>Interviews</span>
+              </div>
+            </div>
+            <div class="card-info">
+              <p class="title">User Study</p>
+              <h3 class="tagline">Laundry Machine Personas</h3>
+            </div>
+          </div>
+        </a>
+
+        <a href="blog/dropdown-case-study.html" class="card-link">
+          <div class="card">
+            <div class="image-container">
+              <img
+                src="assets/images/spark-ai.webp"
+                alt="Dropdown Menu Case Study Thumbnail"
+              />
+              <div class="skill-badges">
+                <span>Figma</span>
+                <span>State Modeling</span>
+              </div>
+            </div>
+            <div class="card-info">
+              <p class="title">Case Study</p>
+              <h3 class="tagline">Dropdown Menus</h3>
+            </div>
+          </div>
+        </a>
+      </div>
+    </section>
 
     <script>
-        function toggleMenu() {
-            const menu = document.querySelector(".menu-links");
-            const icon = document.querySelector(".hamburger-icon");
-            menu.classList.toggle("open");
-            icon.classList.toggle("open");
-        }
+      function toggleMenu() {
+        const menu = document.querySelector(".menu-links");
+        const icon = document.querySelector(".hamburger-icon");
+        menu.classList.toggle("open");
+        icon.classList.toggle("open");
+      }
 
-        const squeak = document.getElementById("squeak-sound");
-        const mouseImg = document.querySelector(".squeaky-mouse");
+      const squeak = document.getElementById("squeak-sound");
+      const mouseImg = document.querySelector(".squeaky-mouse");
 
-        if (mouseImg) {
-            mouseImg.addEventListener("click", () => {
-            squeak.currentTime = 0;
-            squeak.play();
-            });
-        }
-        const clickSound = document.getElementById("click-sound");
-        const links = document.querySelectorAll("a");
-
-        links.forEach(link => {
-            link.addEventListener("click", function (event) {
-            // If link opens in a new tab or jumps to an anchor, we still want the sound to play first
-            if (clickSound) {
-                clickSound.currentTime = 0; // rewind if it's still playing
-                clickSound.play();
-            }
-            });
+      if (mouseImg) {
+        mouseImg.addEventListener("click", () => {
+          squeak.currentTime = 0;
+          squeak.play();
         });
+      }
+      const clickSound = document.getElementById("click-sound");
+      const links = document.querySelectorAll("a");
 
-        window.addEventListener('DOMContentLoaded', () => {
-            const navLinks = document.querySelectorAll('.nav-links a');
-            const currentUrl = window.location.href;
-
-            navLinks.forEach(link => {
-                const linkUrl = link.href;
-
-                // Remove 'active' class first
-                link.classList.remove('active');
-
-                // Exact match or pathname+hash match
-                if (
-                    linkUrl === currentUrl || 
-                    (link.pathname === window.location.pathname && link.hash === window.location.hash)
-                ) {
-                    link.classList.add('active');
-                }
-
-                // Optional: fallback for just pathname match (ignoring hash)
-                else if (link.pathname === window.location.pathname && !link.hash) {
-                    link.classList.add('active');
-                }
-            });
+      links.forEach((link) => {
+        link.addEventListener("click", function (event) {
+          // If link opens in a new tab or jumps to an anchor, we still want the sound to play first
+          if (clickSound) {
+            clickSound.currentTime = 0; // rewind if it's still playing
+            clickSound.play();
+          }
         });
-        
-        const list = document.querySelector('.content__container__list');
-        list.addEventListener('animationiteration', () => {
-            list.style.animation = 'none';
-            list.offsetHeight; // Trigger reflow
-            list.style.transform = 'translateY(0%)';
-            list.style.animation = null;
+      });
+
+      window.addEventListener("DOMContentLoaded", () => {
+        const navLinks = document.querySelectorAll(".nav-links a");
+        const currentUrl = window.location.href;
+
+        navLinks.forEach((link) => {
+          const linkUrl = link.href;
+
+          // Remove 'active' class first
+          link.classList.remove("active");
+
+          // Exact match or pathname+hash match
+          if (
+            linkUrl === currentUrl ||
+            (link.pathname === window.location.pathname &&
+              link.hash === window.location.hash)
+          ) {
+            link.classList.add("active");
+          }
+
+          // Optional: fallback for just pathname match (ignoring hash)
+          else if (link.pathname === window.location.pathname && !link.hash) {
+            link.classList.add("active");
+          }
         });
-        
+      });
+
+      const list = document.querySelector(".content__container__list");
+      list.addEventListener("animationiteration", () => {
+        list.style.animation = "none";
+        list.offsetHeight; // Trigger reflow
+        list.style.transform = "translateY(0%)";
+        list.style.animation = null;
+      });
     </script>
-    
-</body>
+  </body>
 </html>

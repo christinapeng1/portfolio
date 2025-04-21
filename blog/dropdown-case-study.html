@@ -1,320 +1,596 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Forum&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Zen+Kaku+Gothic+New&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Forum&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Zen+Kaku+Gothic+New&display=swap"
+      rel="stylesheet"
+    />
 
     <title>Dropdown Menus</title>
-    <link rel="stylesheet" href="../styles.css">
-    <link rel="stylesheet" href="../mediaqueries.css">
-    <link rel="icon" href="../assets/images/undertale-heart.png" 
-    type="image/jpeg">
-    <link rel="preload" as="image" href="../assets/images/undertale-heart-16x16.png">
-    <audio id="click-sound" src="../assets/sounds/undertale-select.mp3" preload="auto"></audio>
-    <audio id="squeak-sound" src="../assets/sounds/mouse_sqek.mp3" preload="auto"></audio>
-</head>
-<body>
+    <link rel="stylesheet" href="../styles.css" />
+    <link rel="stylesheet" href="../mediaqueries.css" />
+    <link
+      rel="icon"
+      href="../assets/images/undertale-heart.webp"
+      type="image/jpeg"
+    />
+    <link
+      rel="preload"
+      as="image"
+      href="../assets/images/undertale-heart.webp"
+    />
+    <audio
+      id="click-sound"
+      src="../assets/sounds/undertale-select.mp3"
+      preload="auto"
+    ></audio>
+    <audio
+      id="squeak-sound"
+      src="../assets/sounds/mouse_sqek.mp3"
+      preload="auto"
+    ></audio>
+  </head>
+  <body>
     <nav id="desktop-nav">
-        <a href="../index.html">Christina Peng</a>
-        <div>
-            <ul class="nav-links">
-                <li><a href="../index.html#work">
-                    <span class="icon"><img src="../assets/images/undertale-heart-16x16.png" alt="Undertale heart icon"></span> Work
-                </a></li>
-                <li><a href="../animations.html"><span class="icon"><img src="../assets/images/undertale-heart-16x16.png" alt="Undertale heart icon"></span> Animations</a></li>
-                <li><a href="https://drive.google.com/file/d/1l--lo2mM3sAu00RzKTfASK3rJM8Gys_R/view?usp=sharing" target="_blank"><span class="icon"><img src="../assets/images/undertale-heart-16x16.png" alt="Undertale heart icon"></span> Resume</a></li>
-            </ul>
-        </div>
+      <a href="../index.html">Christina Peng</a>
+      <div>
+        <ul class="nav-links">
+          <li>
+            <a href="../index.html#work">
+              <span class="icon"
+                ><img
+                  src="../assets/images/undertale-heart.webp"
+                  alt="Undertale heart icon"
+              /></span>
+              Work
+            </a>
+          </li>
+          <li>
+            <a href="../animations.html"
+              ><span class="icon"
+                ><img
+                  src="../assets/images/undertale-heart.webp"
+                  alt="Undertale heart icon"
+              /></span>
+              Animations</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://drive.google.com/file/d/1l--lo2mM3sAu00RzKTfASK3rJM8Gys_R/view?usp=sharing"
+              target="_blank"
+              ><span class="icon"
+                ><img
+                  src="../assets/images/undertale-heart.webp"
+                  alt="Undertale heart icon"
+              /></span>
+              Resume</a
+            >
+          </li>
+        </ul>
+      </div>
     </nav>
 
     <nav id="hamburger-nav">
-        <a href="/">Christina Peng</a>
-        <div class="hamburger-menu">
-            <div class="hamburger-icon" onclick="toggleMenu()">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
+      <a href="/">Christina Peng</a>
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
         </div>
-        <div class="menu-links">
-            <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
-            <li><a href="#coding" onclick="toggleMenu()">Coding</a></li>
-            <li><a href="#writing" onclick="toggleMenu()">Writing</a></li>
-            <li><a href="#art" onclick="toggleMenu()">Art</a></li>
-            <li><a href="#blog" onclick="toggleMenu()">Blog</a></li>
-        </div>
+      </div>
+      <div class="menu-links">
+        <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+        <li><a href="#coding" onclick="toggleMenu()">Coding</a></li>
+        <li><a href="#writing" onclick="toggleMenu()">Writing</a></li>
+        <li><a href="#art" onclick="toggleMenu()">Art</a></li>
+        <li><a href="#blog" onclick="toggleMenu()">Blog</a></li>
+      </div>
     </nav>
 
     <nav id="quick-nav">
-        <ul>
-            <li><a href="#overview">Overview</a></li>
-            <li><a href="#research">Research</a></li>
-            <li><a href="#input-comparison">Input Comparison</a></li>
-            <li><a href="#output-comparison">Output Comparison</a></li>
-            <li><a href="#focused-study-discord">Focused Study</a></li>
-            <li><a href="#design-philosophy">Design Philosophy</a></li>
-            <li><a href="#conclusion">Conclusion</a></li>
-        </ul>
+      <ul>
+        <li><a href="#overview">Overview</a></li>
+        <li><a href="#research">Research</a></li>
+        <li><a href="#input-comparison">Input Comparison</a></li>
+        <li><a href="#output-comparison">Output Comparison</a></li>
+        <li><a href="#focused-study-discord">Focused Study</a></li>
+        <li><a href="#design-philosophy">Design Philosophy</a></li>
+        <li><a href="#conclusion">Conclusion</a></li>
+      </ul>
     </nav>
 
     <main>
+      <article>
+        <h1>Dropdown Menus</h1>
+        <p>Posted on February 23, 2025</p>
 
-        <article>
-            <h1>Dropdown Menus</h1>
-            <p>Posted on February 23, 2025</p>
+        <section id="overview">
+          <h2>Overview</h2>
+          <p>
+            Dropdowns are everywhere. Whether you're selecting a drink at the
+            order kiosk, hovering over the nav bar on
+            <a href="https://www.nytimes.com/" target="_blank" class="highlight"
+              >nytimes.com</a
+            >
+            , or scrolling through a very long Terms of Services, these little
+            menus are a staple in web and app design. However, as simple as it
+            seems, designing the perfect dropdown can be tricky.
+          </p>
 
-            <section id="overview">
-                <h2>Overview</h2>
-                <p>Dropdowns are everywhere. Whether you're selecting a drink at the order kiosk, hovering over the nav bar on
-                    <a href="https://www.nytimes.com/" target="_blank" class="highlight">nytimes.com</a>
-                    , or scrolling through a very long Terms of Services, these little menus are a staple in web and app design. However, as simple as it seems, designing the perfect dropdown can be tricky.</p>
+          <p>
+            In this case study, I'll explore how different design choices affect
+            a dropdown's usability, accessibility, and user experience. I'll
+            compare how dropdown menus are used in three of my favorite
+            applications —
+            <a href="https://cab.brown.edu/" target="_blank" class="highlight"
+              >Courses @ Brown</a
+            >,
+            <a
+              href="https://store.steampowered.com/"
+              target="_blank"
+              class="highlight"
+              >Steam</a
+            >, and
+            <a href="https://discord.com" target="_blank" class="highlight"
+              >Discord</a
+            >.
+          </p>
 
-                <p>In this case study, I'll explore how different design choices affect a dropdown's usability, accessibility, and user experience. I'll compare how dropdown menus are used in three of my favorite applications — 
-                <a href="https://cab.brown.edu/" target="_blank" class="highlight">Courses @ Brown</a>, 
-                <a href="https://store.steampowered.com/" target="_blank" class="highlight">Steam</a>, and 
-                <a href="https://discord.com" target="_blank" class="highlight">Discord</a>.</p>
+          <p>Before we jump in, here's a dropdown for you to play with:</p>
 
-                 <p>Before we jump in, here's a dropdown for you to play with:</p>
+          <select name="dropdown-example" id="fortune-select">
+            <option value="">🍪 Click me for a fortune cookie!</option>
+            <option value="dream">
+              A dream you have will soon become a reality.
+            </option>
+            <option value="hardwork">
+              Your hard work is about to pay off.
+            </option>
+            <option value="confucious">
+              Confucious say: He who has hope, has everything.
+            </option>
+            <option value="joy">You will soon bring joy to someone.</option>
+            <option value="comfort">
+              You will spend many years in comfort and material wealth.
+            </option>
+            <option value="enterprises">
+              Beware of all enterprises that require new clothes.
+            </option>
+            <option value="squirrels">
+              Beware of overambitious squirrels stealing your snacks.
+            </option>
+            <option value="wealth">
+              To know a person’s real wealth, ask how happy they are.
+            </option>
+            <option value="help">
+              Help! I'm being held prisoner in a fortune cookie factory.
+            </option>
+          </select>
+        </section>
 
-                <select name="dropdown-example" id="fortune-select">
-                    <option value="">🍪 Click me for a fortune cookie!</option>
-                    <option value="dream">A dream you have will soon become a reality.</option>
-                    <option value="hardwork">Your hard work is about to pay off.</option>
-                    <option value="confucious">Confucious say: He who has hope, has everything.</option>
-                    <option value="joy">You will soon bring joy to someone.</option>
-                    <option value="comfort">You will spend many years in comfort and material wealth.</option>
-                    <option value="enterprises">Beware of all enterprises that require new clothes.</option>
-                    <option value="squirrels">Beware of overambitious squirrels stealing your snacks.</option>
-                    <option value="wealth">To know a person’s real wealth, ask how happy they are.</option>
-                    <option value="help">Help! I'm being held prisoner in a fortune cookie factory.</option>
-                </select>
-            </section>
+        <section id="research">
+          <h2>Research</h2>
+          <p>
+            First, let's take a look at how dropdown menus work in different
+            applications.
+          </p>
+          <p>I will be using the following input methods:</p>
+          <ul>
+            <li>Mouse / Trackpad</li>
+            <li>Keyboard</li>
+            <li>Mobile / Touchscreen</li>
+          </ul>
 
-            <section id="research">
-                <h2>Research</h2>
-                <p>First, let's take a look at how dropdown menus work in different applications.</p>
-                <p>I will be using the following input methods: </p>
-                <ul>
-                    <li>Mouse / Trackpad</li>
-                    <li>Keyboard</li>
-                    <li>Mobile / Touchscreen</li>
-                </ul>
+          <h3>Courses @ Brown</h3>
+          <p>
+            Dropdown menus in C@B are used to filter for courses by class year
+            and department.
+          </p>
 
-                <h3>Courses @ Brown</h3>
-                <p>Dropdown menus in C@B are used to filter for courses by class year and department.</p>
+          <div class="article-gif-container">
+            <figure>
+              <img
+                src="../assets/gifs/cab-mouse.gif"
+                alt="CAB Dropdown with Mouse input"
+              />
+              <figcaption>
+                Selecting 'Winter 2025' on the dropdown menu with mouse input.
+              </figcaption>
+            </figure>
+            <figure>
+              <img
+                src="../assets/gifs/cab-keyboard.gif"
+                alt="CAB Dropdown with Keyboard input"
+              />
+              <figcaption>
+                Selecting 'Fall 2024' on the dropdown menu with keyboard input.
+              </figcaption>
+            </figure>
+          </div>
 
-                <div class="article-gif-container">
-                    <figure>
-                        <img src="../assets/gifs/cab-mouse.gif" alt="CAB Dropdown with Mouse input">
-                        <figcaption>Selecting 'Winter 2025' on the dropdown menu with mouse input.</figcaption>
-                    </figure>
-                    <figure>
-                        <img src="../assets/gifs/cab-keyboard.gif" alt="CAB Dropdown with Keyboard input">
-                        <figcaption>Selecting 'Fall 2024' on the dropdown menu with keyboard input.</figcaption>
-                    </figure>
-                </div>
+          <h4>Notes</h4>
+          <ul>
+            <li>
+              Long list of options make it difficult to choose/tab through
+              options at the bottom of the dropdown
+            </li>
+            <li>Option has a blue background in its hovered state</li>
+            <li>Option is selected after mouse click release</li>
+            <li>Dropdown text signals the currently selected state</li>
+            <li>Dropdown selection immediately takes effect</li>
+            <li>
+              Great screenreader compatibility - detailed instructions like 'You
+              are currently on a menu item. To choose this menu item, press
+              Control-Option-Space. To exit, press Escape.'
+            </li>
+          </ul>
 
-                <h4>Notes</h4>
-                <ul>
-                    <li>Long list of options make it difficult to choose/tab through options at the bottom of the dropdown</li>
-                    <li>Option has a blue background in its hovered state</li>
-                    <li>Option is selected after mouse click release</li>
-                    <li>Dropdown text signals the currently selected state</li>
-                    <li>Dropdown selection immediately takes effect</li>
-                    <li>Great screenreader compatibility - detailed instructions like 'You are currently on a menu item. To choose this menu item, press Control-Option-Space. To exit, press Escape.'</li>
-                </ul>
+          <h3>Steam</h3>
+          <p>
+            Steam is a digital storefront for buying and playing video games. It
+            employs a dropdown menu for game selection.
+          </p>
 
-                <h3>Steam</h3>
-                <p>Steam is a digital storefront for buying and playing video games. It employs a dropdown menu for game selection.</p>
+          <div class="article-gif-container">
+            <figure>
+              <img
+                src="../assets/gifs/steam-games-dropdown-mouse.gif"
+                alt="Steam Dropdown with Mouse input"
+              />
+              <figcaption>
+                Clicking through games in my Steam library
+              </figcaption>
+            </figure>
+            <figure>
+              <img
+                src="../assets/gifs/steam-games-dropdown-keyboard.gif"
+                alt="Steam Dropdown with Keyboard input"
+              />
+              <figcaption>
+                Pressing the up-and-down arrow keys to navigate through games in
+                my Steam library
+              </figcaption>
+            </figure>
+          </div>
 
-                <div class="article-gif-container">
-                    <figure>
-                        <img src="../assets/gifs/steam-games-dropdown-mouse.gif" alt="Steam Dropdown with Mouse input">
-                        <figcaption>Clicking through games in my Steam library</figcaption>
-                    </figure>
-                    <figure>
-                        <img src="../assets/gifs/steam-games-dropdown-keyboard.gif" alt="Steam Dropdown with Keyboard input">
-                        <figcaption>Pressing the up-and-down arrow keys to navigate through games in my Steam library</figcaption>
-                    </figure>
-                </div>
+          <h4>Notes</h4>
+          <ul>
+            <li>
+              Contains a search function that allows quickly searching for a
+              game when the list is too long
+            </li>
+            <li>Game has a light blue highlight in its hovered state</li>
+            <li>Game is selected after mouse click release</li>
+            <li>
+              Dropdown can be collapsed by clicking the `minus` sign next to
+              `All`
+            </li>
+            <li>Dropdown selection immediately takes effect</li>
+            <li>
+              Focus order is hard to understand -- difficult to begin tabbing
+              through the games list as a keyboard-only user
+            </li>
+            <li>Impossible to tab into search bar as a keyboard-only user</li>
+            <li>Poor screenreader compatibility</li>
+          </ul>
 
-                <h4>Notes</h4>
-                <ul>
-                    <li>Contains a search function that allows quickly searching for
-                    a game when the list is too long</li>
-                    <li>Game has a light blue highlight in its hovered state</li>
-                    <li>Game is selected after mouse click release</li>
-                    <li>Dropdown can be collapsed by clicking the `minus` sign next
-                    to `All`</li>
-                    <li>Dropdown selection immediately takes effect</li>
-                    <li>Focus order is hard to understand -- difficult to begin
-                    tabbing through the games list as a keyboard-only user</li>
-                    <li>Impossible to tab into search bar as a keyboard-only user</li>
-                    <li>Poor screenreader compatibility</li>
-                </ul>
+          <h3>Discord</h3>
+          <p>
+            Discord is a voice, video, and chat app used by people to hang out
+            with their friends and communities. Users can update their status on
+            Discord through a dropdown menu.
+          </p>
 
-                <h3>Discord</h3>
-                <p>Discord is a voice, video, and chat app used by people to hang out with their friends and communities. Users can update their status on Discord through a dropdown menu.</p>
+          <div class="article-gif-container">
+            <figure>
+              <img
+                src="../assets/gifs/discord-status-dropdown-mouse.gif"
+                alt="Discord Dropdown with Mouse input"
+              />
+              <figcaption>
+                Changing from the status 'Idle' to the status 'Online' via mouse
+                input
+              </figcaption>
+            </figure>
+            <figure>
+              <img
+                src="../assets/gifs/discord-status-dropdown-keyboard.gif"
+                alt="Discord Dropdown with Keyboard input"
+              />
+              <figcaption>
+                Changing from the status 'Online' to the status 'Idle' via
+                keyboard input
+              </figcaption>
+            </figure>
+          </div>
 
-                <div class="article-gif-container">
-                    <figure>
-                        <img src="../assets/gifs/discord-status-dropdown-mouse.gif" alt="Discord Dropdown with Mouse input">
-                        <figcaption>Changing from the status 'Idle' to the status 'Online' via mouse input</figcaption>
-                    </figure>
-                    <figure>
-                        <img src="../assets/gifs/discord-status-dropdown-keyboard.gif" alt="Discord Dropdown with Keyboard input">
-                        <figcaption>Changing from the status 'Online' to the status 'Idle' via keyboard input</figcaption>
-                    </figure>
-                </div>
+          <h4>Notes</h4>
+          <ul>
+            <li>
+              Having only 4 status types make it easy to select/tab through
+              quickly
+            </li>
+            <li>
+              Inefficient - must tab through 5 layers to reach the status update
+              component
+            </li>
+            <li>
+              Unfriendly to error - any mistake in tabbing through the
+              components requires retabbing through them again
+            </li>
+            <li>Dropdown text signals the currently selected state</li>
+            <li>Status has a lighter gray background in its hovered state</li>
+            <li>Status is selected after mouse click release</li>
+            <li>Must press `Save` for the status to take effect</li>
+            <li>
+              Great screenreader compatibility - clear instructions like 'You
+              are currently on a selectable' and 'Online, not selected'
+            </li>
+          </ul>
+        </section>
 
-                <h4>Notes</h4>
-                <ul>
-                    <li>Having only 4 status types make it easy to select/tab through
-                    quickly</li>
-                    <li>Inefficient - must tab through 5 layers to reach the status update
-                    component</li>
-                    <li>Unfriendly to error - any mistake in tabbing through the
-                    components requires retabbing through them again</li>
-                    <li>Dropdown text signals the currently selected state</li>
-                    <li>Status has a lighter gray background in its hovered state</li>
-                    <li>Status is selected after mouse click release</li>
-                    <li>Must press `Save` for the status to take effect</li>
-                    <li>Great screenreader compatibility - clear instructions like 'You are currently on a selectable' and 'Online, not selected'</li>
-                </ul>
-            </section>
+        <section id="input-comparison">
+          <h2>Input Comparison</h2>
+          <p>I organized my findings about input methods in the table below:</p>
 
-            <section id="input-comparison">
-                <h2>Input Comparison</h2>
-                <p>I organized my findings about input methods in the table below:</p>
+          <table>
+            <tr>
+              <th></th>
+              <th>Courses @ Brown</th>
+              <th>Discord</th>
+              <th>Steam</th>
+            </tr>
+            <tr>
+              <td>Mouse or Trackpad</td>
+              <td>
+                <span>🟡</span><br />Options are too small relative to the
+                viewport height, making them difficult to select.
+              </td>
+              <td><span>✅</span><br />Easy to navigate.</td>
+              <td><span>✅</span><br />Easy to navigate.</td>
+            </tr>
+            <tr>
+              <td>Keyboard</td>
+              <td>
+                <span>🟡</span><br />Inefficient to tab through due to amount of
+                options.
+              </td>
+              <td>
+                <span>🟡</span><br />Unclear whether `space` or `enter`
+                confirmed selection; inefficient & unfriendly to error
+              </td>
+              <td>
+                <span>❌</span><br />Very difficult to tab into the games
+                dropdown.
+              </td>
+            </tr>
+            <tr>
+              <td>Mobile or Touchscreen</td>
+              <td><span>✅</span><br />Easy to navigate.</td>
+              <td><span>✅</span><br />Easy to navigate.</td>
+              <td>N/A</td>
+            </tr>
+          </table>
+        </section>
 
-                <table>
-                    <tr>
-                        <th></th>
-                        <th>Courses @ Brown</th>
-                        <th>Discord</th>
-                        <th>Steam</th>
-                    </tr>
-                    <tr>
-                        <td>Mouse or Trackpad</td>
-                        <td><span>🟡</span><br>Options are too small relative to the viewport height, making them difficult to select.</td>
-                        <td><span>✅</span><br>Easy to navigate.</td>
-                        <td><span>✅</span><br>Easy to navigate.</td>
-                    </tr>
-                    <tr>
-                        <td>Keyboard</td>
-                        <td><span>🟡</span><br>Inefficient to tab through due to amount of options.</td>
-                        <td><span>🟡</span><br>Unclear whether `space` or `enter` confirmed selection; inefficient & unfriendly to error</td>
-                        <td><span>❌</span><br>Very difficult to tab into the games dropdown.</td>
-                    </tr>
-                    <tr>
-                        <td>Mobile or Touchscreen</td>
-                        <td><span>✅</span><br>Easy to navigate.</td>
-                        <td><span>✅</span><br>Easy to navigate.</td>
-                        <td>N/A</td>
-                    </tr>
-                </table>
-            </section>
+        <section id="output-comparison">
+          <h2>Output Comparison</h2>
+          <p>Here are my findings about outputs:</p>
+          <table>
+            <tr>
+              <th></th>
+              <th>Courses @ Brown</th>
+              <th>Discord</th>
+              <th>Steam</th>
+            </tr>
+            <tr>
+              <td>Visual Cues for State Changes</td>
+              <td>
+                <span>✅</span><br />Expanded state when selecting an option;
+                Collapsed state after selection, changes dropdown text.
+              </td>
+              <td>
+                <span>✅</span><br />Expanded state when selecting an option;
+                Collapsed state after selection, changes dropdown text and
+                status icon.
+              </td>
+              <td>
+                <span>✅</span><br />Light blue highlight on the selected game's
+                dropdown text, with the game displayed on the right.
+              </td>
+            </tr>
+            <tr>
+              <td>Logical Focus Order</td>
+              <td><span>✅</span><br />Top-down focus order.</td>
+              <td><span>✅</span><br />Top-down focus order.</td>
+              <td>
+                <span>❌</span><br />Difficult to navigate, some components are
+                excluded from the focus order.
+              </td>
+            </tr>
+            <tr>
+              <td>Screenreader Compatibility</td>
+              <td>
+                <span>✅</span><br />Clear about which dropdown option is being
+                considered; provides instructions for how to select each option.
+              </td>
+              <td>
+                <span>✅</span><br />Clear about which dropdown option is being
+                considered.
+              </td>
+              <td>
+                <span>❌</span><br />Only message from the screenreader is 'You
+                are currently on a window'.
+              </td>
+            </tr>
+          </table>
+        </section>
 
-            <section id="output-comparison">
-                <h2>Output Comparison</h2>
-                <p>Here are my findings about outputs:</p>
-                <table>
-                    <tr>
-                        <th></th>
-                        <th>Courses @ Brown</th>
-                        <th>Discord</th>
-                        <th>Steam</th>
-                    </tr>
-                    <tr>
-                        <td>Visual Cues for State Changes</td>
-                        <td><span>✅</span><br>Expanded state when selecting an option; Collapsed state after selection, changes dropdown text.</td>
-                        <td><span>✅</span><br>Expanded state when selecting an option; Collapsed state after selection, changes dropdown text and status icon.</td>
-                        <td><span>✅</span><br>Light blue highlight on the selected game's dropdown text, with the game displayed on the right.</td>
-                    </tr>
-                    <tr>
-                        <td>Logical Focus Order</td>
-                        <td><span>✅</span><br>Top-down focus order.</td>
-                        <td><span>✅</span><br>Top-down focus order.</td>
-                        <td><span>❌</span><br>Difficult to navigate, some components are excluded from the focus order.</td>
-                    </tr>
-                    <tr>
-                        <td>Screenreader Compatibility</td>
-                        <td><span>✅</span><br>Clear about which dropdown option is being considered; provides instructions for how to select each option.</td>
-                        <td><span>✅</span><br>Clear about which dropdown option is being considered.</td>
-                        <td><span>❌</span><br>Only message from the screenreader is 'You are currently on a window'.</td>
-                    </tr>
-                </table>
-            </section>
+        <section id="focused-study-discord">
+          <h2>Focused Study: Discord 'Update Status' Dropdown</h2>
+          <p>
+            Next, let's choose one of these applications to focus on. I'll be
+            choosing Discord and mapping out how a user may interact with its
+            dropdown menu via mouse and keyboard:
+          </p>
+          <img
+            src="../assets/images/dropdown-menu/default-discord-mouse-model.png"
+            alt="Discord Status Dropdown with Mouse input state model"
+          />
+          <img
+            src="../assets/images/dropdown-menu/default-discord-keyboard-model.png"
+            alt="Discord Status Dropdown with Keyboard input state model"
+          />
 
-            <section id="focused-study-discord">
-                <h2>Focused Study: Discord 'Update Status' Dropdown</h2>
-                <p>Next, let's choose one of these applications to focus on. I'll be choosing Discord and mapping out how a user may interact with its dropdown menu via mouse and keyboard:</p>
-                <img src="../assets/images/dropdown-menu/default-discord-mouse-model.png" alt="Discord Status Dropdown with Mouse input state model">
-                <img src="../assets/images/dropdown-menu/default-discord-keyboard-model.png" alt="Discord Status Dropdown with Keyboard input state model">
+          <h3>Redesigning the Dropdown</h3>
+          <p>
+            From inspecting the state models, we'll notice there's a lot of
+            states -- from expanding the menu, hovering over the desired status,
+            saving the status, etc. As an improvement, maybe we can think of a
+            way to reduce the number of states and improve the user experience?
+          </p>
+          <p>
+            Well, what about taking out the 'Save' button after selecting a
+            status? Without the 'Save' button, the status would automatically
+            update as soon as it's selected in the dropdown. That would
+            certainly improve the efficiency of this interaction!
+          </p>
+          <p>See my design below:</p>
+          <img
+            src="../assets/images/dropdown-menu/redesigned-discord.png"
+            alt="Redesigned Discord Status Dropdown"
+          />
+          <img
+            src="../assets/images/dropdown-menu/redesigned-discord-mouse-model.png"
+            alt="Redesigned Discord Status Dropdown with Mouse input state model"
+          />
+          <img
+            src="../assets/images/dropdown-menu/redesigned-discord-keyboard-model.png"
+            alt="Redesigned Discord Status Dropdown with Keyboard input state model"
+          />
 
-                <h3>Redesigning the Dropdown</h3>
-                <p>From inspecting the state models, we'll notice there's a lot of states -- from expanding the menu, hovering over the desired status, saving the status, etc. As an improvement, maybe we can think of a way to reduce the number of states and improve the user experience?</p>
-                <p>Well, what about taking out the 'Save' button after selecting a status? Without the 'Save' button, the status would automatically update as soon as it's selected in the dropdown. That would certainly improve the efficiency of this interaction!</p>
-                <p>See my design below:</p>
-                <img src="../assets/images/dropdown-menu/redesigned-discord.png" alt="Redesigned Discord Status Dropdown">
-                <img src="../assets/images/dropdown-menu/redesigned-discord-mouse-model.png" alt="Redesigned Discord Status Dropdown with Mouse input state model">
-                <img src="../assets/images/dropdown-menu/redesigned-discord-keyboard-model.png" alt="Redesigned Discord Status Dropdown with Keyboard input state model">
+          <h3>Tradeoffs</h3>
+          <p>
+            However, with every redesign, there are trade-offs to consider. In
+            this case, the redesign prioritizes efficiency, memorability, and
+            accessibility at the cost of the interface’s learnability. While
+            auto-saving removes friction, it may not be immediately intuitive
+            for all users. Here’s a breakdown of the key trade-offs:
+          </p>
+          <p></p>
+          <ul>
+            <li>Learnablity:</li>
+            <ul>
+              <li>
+                Less intuitive for users who have not used auto-saving
+                interfaces
+              </li>
+              <li>
+                Some users may not immediately realize their status updates
+                automatically, leading to confusion.
+              </li>
+            </ul>
+            <li>Memorability:</li>
+            <ul>
+              <li>
+                Once users learn that changes apply instantly, they are likely
+                to remember this behavior for future updates
+              </li>
+              <li>
+                Consistent with modern design patterns, reinforcing memorability
+                through familiarity.
+              </li>
+            </ul>
+            <li>Efficiency:</li>
+            <ul>
+              <li>
+                Removes an unnecessary step, reducing time and effort to update
+                the status.
+              </li>
+              <li>
+                Eliminates frustration from forgetting to click "Save" and
+                losing updates.
+              </li>
+              <li>
+                Users who frequently change their mind might prefer a "Save"
+                button to finalize changes when they’re ready rather than
+                triggering multiple unnecessary updates.
+              </li>
+            </ul>
+            <li>Accessibility:</li>
+            <ul>
+              <li>
+                Reducing clicks can make the process easier for users with motor
+                impairments.
+              </li>
+              <li>
+                Users relying on assistive technology (e.g., screen readers) may
+                need clear feedback that changes have been saved.
+              </li>
+            </ul>
+          </ul>
+        </section>
 
-                <h3>Tradeoffs</h3>
-                <p>However, with every redesign, there are trade-offs to consider. In this case, the redesign prioritizes efficiency, memorability, and accessibility at the cost of the interface’s learnability. While auto-saving removes friction, it may not be immediately intuitive for all users. Here’s a breakdown of the key trade-offs:<p>
-                <ul>
-                    <li>Learnablity:</li>
-                    <ul>
-                        <li>Less intuitive for users who have not used auto-saving interfaces</li>
-                        <li>Some users may not immediately realize their status updates automatically, leading to confusion.</li>
-                    </ul>
-                    <li>Memorability:</li>
-                    <ul>
-                        <li>Once users learn that changes apply instantly, they are likely to remember this behavior for future updates</li>
-                        <li>Consistent with modern design patterns, reinforcing memorability through familiarity.</li>
-                    </ul>
-                    <li>Efficiency:</li>
-                    <ul>
-                        <li>Removes an unnecessary step, reducing time and effort to update the status.</li>
-                        <li>Eliminates frustration from forgetting to click "Save" and losing updates.</li>
-                        <li>Users who frequently change their mind might prefer a "Save" button to finalize changes when they’re ready rather than triggering multiple unnecessary updates.</li>
-                    </ul>
-                    <li>Accessibility:</li>
-                    <ul>
-                        <li>Reducing clicks can make the process easier for users with motor impairments.</li>
-                        <li>Users relying on assistive technology (e.g., screen readers) may need clear feedback that changes have been saved.</li>
-                    </ul>
-                </ul>
-            </section>
+        <section id="design-philosophy">
+          <h2>Design Philosophy</h2>
+          <p>
+            Designer Kat Holmes once said, "When I think about inclusive design
+            ... it doesn't mean we're designing one thing for all people, it
+            means we are designing a diversity of ways for people to participate
+            in a place with a sense of belonging."
+          </p>
+          <p>
+            This mindset shaped my redesign of Discord’s status dropdown. From
+            my observations of dropdowns in Steam and Courses@Brown, I found
+            that triggering immediate state updates improved usability,
+            efficiency, and accessibility. By removing the need for a "Save"
+            button, my redesign streamlines status selection, reduces
+            unnecessary steps, and makes the process more intuitive. This change
+            not only enhances efficiency but also addresses accessibility
+            concerns related to inefficiency and error handling.
+          </p>
 
-            <section id="design-philosophy">
-                <h2>Design Philosophy</h2>
-                <p>Designer Kat Holmes once said, "When I think about inclusive design ... it doesn't mean we're designing one thing for all people, it means we are designing a diversity of ways for people to participate in a place with a sense of belonging."</p>
-                <p>This mindset shaped my redesign of Discord’s status dropdown. From my observations of dropdowns in Steam and Courses@Brown, I found that triggering immediate state updates improved usability, efficiency, and accessibility. By removing the need for a "Save" button, my redesign streamlines status selection, reduces unnecessary steps, and makes the process more intuitive. This change not only enhances efficiency but also addresses accessibility concerns related to inefficiency and error handling.</p>
+          <p>
+            The change I implemented addresses a mismatch in our world by
+            reducing unnecessary interactions that can be particularly difficult
+            for users with motor impairments. By simplifying the selection
+            process, I created a more inclusive design that accommodates users
+            who may struggle with precise clicking or repetitive motions.
+          </p>
+        </section>
 
-                <p>The change I implemented addresses a mismatch in our world by reducing unnecessary interactions that can be particularly difficult for users with motor impairments. By simplifying the selection process, I created a more inclusive design that accommodates users who may struggle with precise clicking or repetitive motions.</p>
-            </section>
+        <section id="conclusion">
+          <h2>Conclusion</h2>
 
-            <section id="conclusion">
-                <h2>Conclusion</h2>
+          <p>
+            In this case study, I discovered that mouse and touch users are
+            often prioritized in UI design since they represent the majority of
+            users. This can disadvantage keyboard and screen reader users,
+            making navigation inefficient or inaccessible.
+          </p>
 
-                <p>In this case study, I discovered that mouse and touch users are often prioritized in UI design since they represent the majority of users. This can disadvantage keyboard and screen reader users, making navigation inefficient or inaccessible.</p>
+          <p>
+            For example, Steam’s lack of keyboard accessibility can severely
+            hinder users who rely on keyboard navigation, making game selection
+            a frustrating experience. On the other hand, Courses @ Brown’s
+            dropdown effectively communicates with screen readers, benefiting
+            users with visual impairments by providing detailed selection
+            instructions.
+          </p>
 
-                <p>For example, Steam’s lack of keyboard accessibility can severely hinder users who rely on keyboard navigation, making game selection a frustrating experience. On the other hand, Courses @ Brown’s dropdown effectively communicates with screen readers, benefiting users with visual impairments by providing detailed selection instructions.</p>
-
-                <p>So, when we go out there and design user interfaces, let's pay attention to all input methods. :)</p>
-
-            </section>
-
-
-        </article>
-
-
-
+          <p>
+            So, when we go out there and design user interfaces, let's pay
+            attention to all input methods. :)
+          </p>
+        </section>
+      </article>
     </main>
-</body>
+  </body>
 </html>
