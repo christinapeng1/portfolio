@@ -337,7 +337,7 @@ main {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0px 60px; /* Add space around the images */
+  padding: 10px 60px; /* Add space around the images */
 }
 
 .divider img {
@@ -577,7 +577,7 @@ td:first-child {
 .timeline {
   border-left: 3px solid #444;
   position: relative;
-  max-width: 700px;
+  max-width: 685px;
   margin: auto;
 }
 
