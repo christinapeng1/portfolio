@@ -70,10 +70,52 @@
       </div>
     </nav>
 
-    <section id="about">
+    <section id="animations">
       <h1 class="section-title">About</h1>
     </section>
 
+    <section id="play">
+      <div class="card-grid">
+        <div class="card">
+          <div class="video-container">
+            <iframe
+              src="https://www.youtube.com/embed/vjKd50HrA6I?rel=0"
+              title="YouTube video"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            >
+            </iframe>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="video-container">
+            <iframe
+              src="https://www.youtube.com/embed/HY4SyhwDX_E?si=vFlQkdn3XIfit32I?rel=0"
+              title="YouTube video"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            >
+            </iframe>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="video-container">
+            <iframe
+              src="https://www.youtube.com/embed/D8PedzqxoSc?si=UXiE2YzP7-kpozQW?rel=0"
+              title="YouTube video"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            >
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </section>
     <script>
 
       const squeak = document.getElementById("squeak-sound");
@@ -124,13 +166,6 @@
         });
       });
 
-      const list = document.querySelector(".content__container__list");
-      list.addEventListener("animationiteration", () => {
-        list.style.animation = "none";
-        list.offsetHeight; // Trigger reflow
-        list.style.transform = "translateY(0%)";
-        list.style.animation = null;
-      });
     </script>
   </body>
 </html>
