@@ -768,3 +768,53 @@ td:first-child {
 .tag.state {
   background-color: #59576a;
 }
+
+.character-card {
+  display: flex;
+  align-items: center;
+  color: #000000;
+  border-radius: 15px;
+  padding: 30px;
+  max-width: 700px;
+  margin: 50px auto;
+  border: 2px solid black;
+}
+
+.character-img img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 2px solid black;
+  object-fit: cover;
+}
+
+.character-info {
+  margin-left: 30px;
+}
+
+.character-info h2 {
+  margin: 0;
+  font-size: 2em;
+  color: #000000; /* Gold for a game-like flair */
+}
+
+.character-info .title {
+  font-style: italic;
+  color: #000000;
+  margin-bottom: 15px;
+}
+
+.stats {
+  list-style: none;
+  padding: 0;
+}
+
+.stats li {
+  margin-bottom: 10px;
+  font-size: 1.1em;
+}
+
+.stats li strong {
+  color: #000000;
+}
+
