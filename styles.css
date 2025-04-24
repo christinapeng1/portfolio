@@ -52,7 +52,7 @@ a:hover {
 }
 
 .hero-text {
-  max-width: 700px;
+  max-width: 650px;
 }
 
 .hero-text h1 {
@@ -150,7 +150,7 @@ nav a,
   align-items: center;
   justify-content: left;
   position: relative;
-  max-width: 700px;
+  max-width: 650px;
   margin: auto;
   gap: 30px;
 }
@@ -577,7 +577,7 @@ td:first-child {
 .timeline {
   border-left: 3px solid #444;
   position: relative;
-  max-width: 685px;
+  max-width: 635px;
   margin: auto;
 }
 
@@ -657,13 +657,13 @@ td:first-child {
 
 .section-title {
   position: relative;
-  max-width: 700px;
+  max-width: 650px;
   margin: auto;
 }
 
 .design-log {
   position: relative;
-  max-width: 700px;
+  max-width: 650px;
   margin: auto;
 }
 
@@ -775,7 +775,7 @@ td:first-child {
   color: #000000;
   border-radius: 15px;
   padding: 30px;
-  max-width: 700px;
+  max-width: 650px;
   margin: 50px auto;
   border: 2px solid black;
 }
@@ -817,4 +817,3 @@ td:first-child {
 .stats li strong {
   color: #000000;
 }
-
