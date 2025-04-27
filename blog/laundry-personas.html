@@ -7,6 +7,13 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Forum&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Zen+Kaku+Gothic+New&display=swap" rel="stylesheet">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
 
     <title>Laundry Machine Personas</title>
     <link rel="stylesheet" href="../styles.css">
@@ -19,28 +26,40 @@
 </head>
 <body>
     <nav id="desktop-nav">
-      <a href="../index.html"><img src="../assets/images/undertale-heart.webp" alt="Return home icon" class="home-icon"></a>
-      <div>
+      <div class="nav-links-container">
         <ul class="nav-links">
           <li>
             <a href="../index.html">
-              Home
+              <img src="../assets/images/undertale-heart.webp" alt="Undertale Heart" class="icon"> Home
             </a>
           </li>
           <li>
             <a href="../projects.html"
               >
-              Projects</a
+              <img src="../assets/images/undertale-heart.webp" alt="Undertale Heart" class="icon"> Projects</a
             >
           </li>
           <li>
             <a
               href="../about.html"
               >
-              About</a
+              <img src="../assets/images/undertale-heart.webp" alt="Undertale Heart" class="icon"> About</a
             >
           </li>
         </ul>
+      </div>
+      <div class="social-links-container">
+          <a href="mailto:christina_peng@brown.edu" target="_blank">
+            <i class="fa fa-envelope"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/christina-peng/" target="_blank">
+            <div class="social-link">
+              <i class="fab fa-linkedin"></i>
+            </div>
+          </a>
+          <a href="https://github.com/christinapeng1" target="_blank">
+            <i class="fab fa-github"></i>
+          </a>
       </div>
     </nav>
 
@@ -168,23 +187,14 @@
                 <h2>Conclusion</h2>
 
                 <p>Understanding user behaviors and pain points is essential for improving everyday interfaces like laundry machines. Through observation and interviews, we created key personas—some seeking simplicity, others relying on technology but facing usability challenges. By designing with user needs in mind, we can create a smoother, more efficient laundry experience for everyone.</p>
-
             </section>
-
-
         </article>
-
-
-
     </main>
+    <div id="image-modal" class="modal">
+      <img class="modal-content" id="modal-img" />
+    </div>
+
     <script>
-      function toggleMenu() {
-        const menu = document.querySelector(".menu-links");
-        const icon = document.querySelector(".hamburger-icon");
-        menu.classList.toggle("open");
-        icon.classList.toggle("open");
-      }
-      
       const modal = document.getElementById("image-modal");
       const modalImg = document.getElementById("modal-img");
 

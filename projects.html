@@ -67,7 +67,7 @@
       </div>
       <div class="social-links-container">
           <a href="mailto:christina_peng@brown.edu" target="_blank">
-            <i class="fab fa-github"></i>
+            <i class="fa fa-envelope"></i>
           </a>
           <a href="https://www.linkedin.com/in/christina-peng/" target="_blank">
             <div class="social-link">
@@ -113,7 +113,40 @@
                 <span class="tag webgl">WebGL</span>
                 <span class="tag react">React</span>
               </div>
-              <button class="expand-btn">Read More</button>
+              <button class="expand-btn">Click me to read more...</button>
+            </div>
+            
+          </div>
+          <div class="project-body">
+            <p>To be filled out.</p>
+          </div>
+        </div>
+        <div class="project">
+          <div class="project-info">
+            <div class="project-image">
+              <img
+                src="assets/images/image-classifier.webp"
+                alt="Character Craft AI Writing Assistant"
+              />
+            </div>
+            <div class="project-details">
+              <div class="project-title">
+                <h2>Image Classifier</h2>
+              </div>
+              <div class="project-description">
+                <p>Upload the image of a penguin, puffin, or pufferfish to see what the model predicts. Explore the notebook below to try it yourself and learn how I built it.</p>
+              </div>
+              <ul class="project-links">
+                <li>
+                  <a href="https://character-craft.vercel.app/" target="_blank">
+                  <i class="fa-solid fa-book"></i> Colab Notebook</a>
+                </li>
+              </ul>
+              <div class="tech-stack">
+                <span class="tag fastai">Fastai</span>
+                <span class="tag resnet18">ResNet18</span>
+              </div>
+              <button class="expand-btn">Click me to read more...</button>
             </div>
             
           </div>
@@ -124,46 +157,15 @@
         
 
       </div>
-      <!-- <div class="card-grid">
-        <a
-          href="https://character-craft.vercel.app/"
-          target="_blank"
-          class="card-link"
-        >
-          <div class="card">
-            <div class="image-container">
-              <img
-                src="assets/images/character-craft.webp"
-                alt="Character Craft AI Writing Assistant"
-              />
-              <div class="skill-badges">
-                <span>Empathic Voice Interface</span>
-                <span>WebGL</span>
-                <span>React</span>
-                <span>JavaScript</span>
-                <span>TypeScript</span>
-                <span>CSS</span>
-              </div>
-            </div>
-            <div class="card-info">
-              <p class="title">Character Craft</p>
-              <h3 class="tagline">
-                A Voice-Powered Writing Assistant That Understands Emotion
-              </h3>
-            </div>
-          </div>
-        </a>
-      </div> -->
     </section>
+    </article>
+
+
+    <div id="image-modal" class="modal">
+      <img class="modal-content" id="modal-img" />
+    </div>
 
     <script>
-      function toggleMenu() {
-        const menu = document.querySelector(".menu-links");
-        const icon = document.querySelector(".hamburger-icon");
-        menu.classList.toggle("open");
-        icon.classList.toggle("open");
-      }
-
       const squeak = document.getElementById("squeak-sound");
       const mouseImg = document.querySelector(".squeaky-mouse");
 
@@ -212,13 +214,32 @@
         });
       });
 
+      const modal = document.getElementById("image-modal");
+      const modalImg = document.getElementById("modal-img");
+
+      // Open modal when image clicked
+      document.querySelectorAll(".project-image img").forEach((img) => {
+        img.addEventListener("click", () => {
+          modal.style.display = "flex";
+          modalImg.src = img.src;
+          modalImg.alt = img.alt;
+        });
+      });
+
+      // Close modal when clicking outside the image
+      modal.addEventListener("click", (e) => {
+        if (e.target === modal) {
+          modal.style.display = "none";
+        }
+      });
+
       const expandButtons = document.querySelectorAll('.expand-btn');
 
       expandButtons.forEach(btn => {
         btn.addEventListener('click', () => {
           const project = btn.closest('.project');
           project.classList.toggle('expanded');
-          btn.textContent = project.classList.contains('expanded') ? 'Collapse' : 'Expand';
+          btn.textContent = project.classList.contains('expanded') ? 'Click me to collapse!' : 'Click me to read more...';
         });
       });
     </script>

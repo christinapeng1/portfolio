@@ -5,6 +5,26 @@
   }
 
   /* Navbar */
+  .nav-links-container {
+    margin-left: 10px;
+  }
+
+  .nav-links {
+    gap: 0.5rem;
+  }
+
+  .nav-links a .icon {
+    display: none;
+  }
+
+  .social-links-container {
+    gap: 1rem;
+  }
+
+  .social-links-container i {
+    font-size: 16px;
+  }
+
   h1 {
     font-size: 32px;
   }
@@ -98,6 +118,20 @@
     margin: 1rem 0;
     position: static;
   }
+  .project {
+    border-bottom: 3px solid #444;
+    border-left: none;
+  }
+
+  .project-info {
+    flex-direction: column; /* Stack vertically */
+    align-items: center; /* Optional: center the image and text */
+  }
+
+  .project-image img {
+    max-width: 100%; /* Make sure the image scales properly */
+    height: auto;
+  }
 }
 
 
@@ -184,4 +218,6 @@
   article {
     margin-left: -80px;
   }
+
+
 }
