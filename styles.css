@@ -2,7 +2,7 @@
 
 :root {
   --text-color: #1a1c20;
-  --link-color: #bf0101;
+  --link-color: #af1010;
   --background-color: #fcf6f8;
 }
 
@@ -83,7 +83,7 @@ nav {
   top: 0;
   background-color: inherit;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   height: 10vh;
   z-index: 3;
@@ -125,7 +125,8 @@ nav a,
 
 .nav-links a:hover .icon {
   visibility: visible;
-  transform: translateY(-5px);
+  width: 14px;
+  height: 14px;
 }
 
 .nav-links a.active {
@@ -135,6 +136,8 @@ nav a,
 
 .nav-links a.active .icon {
   visibility: visible;
+  width: 14px;
+  height: 14px;
 }
 
 .home-icon {
@@ -145,14 +148,19 @@ nav a,
   transform: translateY(-5px);
 }
 
+.nav-links-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 410px;
+}
+
 .social-links-container {
   display: flex;
   align-items: center;
-  justify-content: left;
-  position: relative;
-  max-width: 650px;
+  justify-content: center;
   margin: auto;
-  gap: 30px;
+  gap: 2rem;
 }
 
 
@@ -737,6 +745,10 @@ td:first-child {
 }
 
 /* Specific color coding for each skill */
+.tag.react {
+  background-color: #0471ba; /* blue */
+}
+
 .tag.html {
   background-color: #3498db; /* blue */
 }
@@ -744,6 +756,15 @@ td:first-child {
 .tag.css {
   background-color: #27ae60; /* green */
 }
+
+.tag.interview {
+  background-color: #53bb93;
+}
+
+.tag.webgl {
+  background-color: #249775; /* blue */
+}
+
 
 .tag.design {
   background-color: #e67e22; /* orange */
@@ -753,12 +774,12 @@ td:first-child {
   background-color: #fc3e4a;
 }
 
-.tag.figma {
-  background-color: #fa2da5;
+.tag.evi {
+  background-color: #af6da4; /* blue */
 }
 
-.tag.interview {
-  background-color: #53bb93;
+.tag.figma {
+  background-color: #fa2da5;
 }
 
 .tag.storyboarding {
@@ -774,7 +795,6 @@ td:first-child {
   align-items: center;
   color: #000000;
   border-radius: 15px;
-  padding: 30px;
   max-width: 650px;
   margin: 50px auto;
   border: 2px solid black;
@@ -816,4 +836,99 @@ td:first-child {
 
 .stats li strong {
   color: #000000;
+}
+
+.projects-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.project {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: box-shadow 0.3s ease;
+}
+
+.project:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.project-info {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+  align-items: flex-start;
+}
+
+.project-image img {
+  width: 500px;  /* adjust as needed */
+  height: auto;
+  border-radius: 4px;
+}
+
+.project-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  flex: 1; /* Take up remaining space */
+}
+
+.project-title {
+  font-weight: bold;
+  margin-bottom: 0;
+}
+
+.project-description p {
+  margin: 0;
+}
+
+.project-links {
+  list-style: none;
+  padding: 0;
+  margin: 0.5rem 0;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.tech-stack img {
+  width: 24px;
+  height: 24px;
+}
+
+.expand-btn {
+  align-self: flex-start;
+  padding: 0.5rem 1rem;
+  border: none;
+  background-color: #333;
+  color: white;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.expand-btn:hover {
+  background-color: #555;
+}
+
+/* Expandable section */
+.project-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease;
+  padding: 0 1rem;
+}
+
+.project.expanded .project-body {
+  max-height: 500px; /* or large enough to fit your content */
+  padding: 1rem;
 }
