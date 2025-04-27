@@ -16,7 +16,7 @@ html {
 }
 
 body {
-  font-family: "Zen Kaku Gothic New", system-ui, "Times New Roman", serif;
+  font-family: "Zen Kaku Gothic New", system-ui, system-ui, serif;
   background-color: var(--background-color);
 }
 
@@ -33,12 +33,10 @@ a:hover {
 
 .hero {
   display: flex;
-  align-items: center;
-  justify-content: center;
   gap: 2rem;
   padding: 2rem 2rem;
-  max-width: 1000px;
-  margin: 0 auto;
+  max-width: 650px;
+  margin: auto;
   flex-wrap: wrap;
 }
 
@@ -167,7 +165,6 @@ nav a,
 .social-links-container i {
   font-size: 24px;
 }
-
 
 /* Blog Post Styles */
 main {
@@ -347,6 +344,19 @@ article {
   margin-left: -80px; /* Slightly shift left */
 }
 
+article h1{
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+article h2{
+  text-align: center;
+}
+
+article h3{
+  text-align: center;
+}
+
 article img {
   max-width: 100%; /* Ensure images do not exceed the container width */
   height: auto; /* Maintain aspect ratio */
@@ -391,21 +401,21 @@ article img:hover {
 
 h1 {
   font-size: 48px;
-  font-weight: 400;
-  font-family: "Zen Kaku Gothic New", Georgia, "Times New Roman", serif;
+  font-weight: 700;
+  font-family: "Zen Kaku Gothic New", "Avenir", system-ui, serif;
 }
 
 h2 {
   font-size: 28px;
   font-weight: 400;
-  font-family: "Zen Kaku Gothic New", Georgia, "Times New Roman", serif;
+  font-family: "Zen Kaku Gothic New", "Avenir", system-ui, serif;
   margin-bottom: 0.5em;
 }
 
 h3 {
   font-size: 24px;
   font-weight: 400;
-  font-family: "Zen Kaku Gothic New", Georgia, "Times New Roman", serif;
+  font-family: "Zen Kaku Gothic New", Georgia, system-ui, serif;
   margin-top: 0.8em;
   margin-bottom: 0.5em;
 }
@@ -423,7 +433,7 @@ section {
 
 select {
   margin-bottom: 0.8em;
-  font-family: "Zen Kaku Gothic New", Georgia, "Times New Roman", serif;
+  font-family: "Zen Kaku Gothic New", Georgia, system-ui, serif;
 }
 
 ul {
@@ -652,13 +662,13 @@ td:first-child {
   margin: auto;
 }
 
-.design-log {
+.blog {
   position: relative;
   max-width: 650px;
   margin: auto;
 }
 
-.design-log a {
+.blog a {
   color: black;
 }
 
@@ -760,11 +770,11 @@ td:first-child {
   background-color: #fc3e4a;
 }
 
-.tag.evi{
+.tag.evi {
   background-color: #af6da4; /* blue */
 }
 
-.tag.resnet18{
+.tag.resnet18 {
   background-color: #5a1e90; /* blue */
 }
 
@@ -850,7 +860,7 @@ td:first-child {
 }
 
 .project-image img {
-  max-width: 500px;  /* adjust as needed */
+  max-width: 500px; /* adjust as needed */
   height: auto;
   border-radius: 4px;
   transition: transform 0.3s ease, filter 0.3s ease;

@@ -1,6 +1,6 @@
 /* ========== SMALL SCREENS (phones) ========== */
 @media screen and (max-width: 768px) {
-  .content{
+  .content {
     display: none;
   }
 
@@ -38,7 +38,7 @@
   h3 {
     font-size: 16px;
   }
-  
+
   p {
     font-size: 14px;
   }
@@ -47,13 +47,13 @@
     font-size: 14px;
   }
 
- table {
-  font-size: 14px;
- }
+  table {
+    font-size: 14px;
+  }
 
- .article-gif-container figcaption {
-  font-size: 14px;
- }
+  .article-gif-container figcaption {
+    font-size: 14px;
+  }
 
   /* Hero section */
   .hero-text h1 {
@@ -77,8 +77,7 @@
     width: 100%;
   }
 
-
- .timeline {
+  .timeline {
     margin-left: 38px;
   }
 
@@ -86,13 +85,13 @@
     margin-left: 30px;
   }
 
-  .design-log {
-      margin-left: 30px;
-    }
+  .blog {
+    margin-left: 30px;
+  }
 
-    .blog-entry {
-      margin-top: 10px;
-    }
+  .blog-entry {
+    margin-top: 10px;
+  }
 
   /* Divider images */
   .divider {
@@ -136,9 +135,7 @@
   }
 }
 
-
 @media screen and (min-width: 768px) and (max-width: 1000px) {
-
   /* Divider images */
   .divider {
     padding: 1rem;
@@ -220,6 +217,4 @@
   article {
     margin-left: -80px;
   }
-
-
 }
