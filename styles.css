@@ -2,7 +2,7 @@
 
 :root {
   --text-color: #1a1c20;
-  --link-color: #af1010;
+  --link-color: #c22502;
   --background-color: #fcf6f8;
 }
 
@@ -128,7 +128,7 @@ nav a,
 }
 
 .nav-links a.active {
-  font-weight: bold;
+  font-weight: bolder;
   border: 2px solid rgba(0, 0, 0, 0.6);
 }
 
@@ -164,6 +164,11 @@ nav a,
 
 .social-links-container i {
   font-size: 24px;
+  transition: transform 0.3s ease;
+}
+
+.social-links-container i:hover {
+  transform: translateY(-5px);
 }
 
 /* Blog Post Styles */
@@ -521,7 +526,7 @@ td:first-child {
 }
 
 #quick-nav a:hover {
-  background: #e0c4a2;
+  background: #f69c4c;
   border-radius: 4px;
 }
 
@@ -759,7 +764,7 @@ td:first-child {
 }
 
 .tag.fastai {
-  background-color: #bc3c15; /* orange */
+  background-color: #e43e0c; /* orange */
 }
 
 .tag.design {
@@ -771,11 +776,11 @@ td:first-child {
 }
 
 .tag.evi {
-  background-color: #af6da4; /* blue */
+  background-color: #d66bc5; /* blue */
 }
 
 .tag.resnet18 {
-  background-color: #5a1e90; /* blue */
+  background-color: #8926e1; /* blue */
 }
 
 .tag.figma {
@@ -860,7 +865,7 @@ td:first-child {
 }
 
 .project-image img {
-  max-width: 500px; /* adjust as needed */
+  max-width: 420px; /* adjust as needed */
   height: auto;
   border-radius: 4px;
   transition: transform 0.3s ease, filter 0.3s ease;
@@ -875,12 +880,12 @@ td:first-child {
 .project-details {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 0.4rem;
   flex: 1; /* Take up remaining space */
 }
 
 .project-title {
-  font-weight: bold;
+  font-weight: bolder;
   margin-bottom: 0;
 }
 
@@ -900,11 +905,6 @@ td:first-child {
 .tech-stack {
   display: flex;
   flex-wrap: wrap;
-}
-
-.tech-stack img {
-  width: 24px;
-  height: 24px;
 }
 
 .expand-btn {

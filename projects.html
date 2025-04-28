@@ -113,12 +113,8 @@
                 <span class="tag webgl">WebGL</span>
                 <span class="tag react">React</span>
               </div>
-              <button class="expand-btn">Click me to read more...</button>
             </div>
             
-          </div>
-          <div class="project-body">
-            <p>To be filled out.</p>
           </div>
         </div>
         <div class="project">
@@ -126,7 +122,7 @@
             <div class="project-image">
               <img
                 src="assets/images/image-classifier.webp"
-                alt="Character Craft AI Writing Assistant"
+                alt="Penguin, Puffin, Pufferfish Image Classifier"
               />
             </div>
             <div class="project-details">
@@ -138,7 +134,7 @@
               </div>
               <ul class="project-links">
                 <li>
-                  <a href="https://character-craft.vercel.app/" target="_blank">
+                  <a href="https://colab.research.google.com/drive/1DvD-jM9UJ2Mv3kxShWd--gjiB9lvtpp4?usp=sharing" target="_blank">
                   <i class="fa-solid fa-book"></i> Colab Notebook</a>
                 </li>
               </ul>
@@ -146,12 +142,16 @@
                 <span class="tag fastai">Fastai</span>
                 <span class="tag resnet18">ResNet18</span>
               </div>
-              <button class="expand-btn">Click me to read more...</button>
+              <button class="expand-btn">Click to Expand</button>
             </div>
             
           </div>
           <div class="project-body">
-            <p>To be filled out.</p>
+            <p>Proof I'm a penguin:</p>
+            <img
+                src="assets/images/proof_of_penguin.webp"
+                alt="Penguin, Puffin, Pufferfish Image Classifier"
+              />
           </div>
         </div>
         
@@ -239,7 +239,7 @@
         btn.addEventListener('click', () => {
           const project = btn.closest('.project');
           project.classList.toggle('expanded');
-          btn.textContent = project.classList.contains('expanded') ? 'Click me to collapse!' : 'Click me to read more...';
+          btn.textContent = project.classList.contains('expanded') ? 'Click to Collapse' : 'Click to Expand';
         });
       });
     </script>
