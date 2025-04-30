@@ -795,17 +795,23 @@ td:first-child {
   background-color: #59576a;
 }
 
-.character-card {
+.profile-container{
   display: flex;
   align-items: center;
   color: #000000;
   border-radius: 15px;
-  max-width: 650px;
+  max-width: 1000px;
   margin: 50px auto;
-  border: 2px solid black;
 }
 
-.character-img img {
+.projects-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 1000px;
+}
+
+.profile-img img {
   width: 150px;
   height: 150px;
   border-radius: 50%;
@@ -813,11 +819,16 @@ td:first-child {
   object-fit: cover;
 }
 
-.character-info {
+.profile-info {
   margin-left: 30px;
 }
 
-.character-info h2 {
+.profile-info h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+/* .character-info h2 {
   margin: 0;
   font-size: 2em;
   color: #000000; /* Gold for a game-like flair */
@@ -827,7 +838,7 @@ td:first-child {
   font-style: italic;
   color: #000000;
   margin-bottom: 15px;
-}
+} */
 
 .stats {
   list-style: none;
@@ -933,4 +944,135 @@ td:first-child {
 .project.expanded .project-body {
   max-height: 500px; /* or large enough to fit your content */
   padding: 1rem;
+}
+
+/* Spotify Section Styles */
+.spotify-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2rem auto;
+  padding: 1rem;
+  border-radius: 10px;
+  max-width: 700px;
+}
+
+.spotify-toggle {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.toggle-btn {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 20px;
+  background: #f0f0f0;
+  color: #333;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: "Zen Kaku Gothic New", sans-serif;
+}
+
+.toggle-btn:hover {
+  background: #e0e0e0;
+}
+
+.toggle-btn.active {
+  background: #1DB954;
+  color: white;
+}
+
+.top-tracks-container {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  height: 380px; /* Total height of 4 tracks + gaps */
+  max-width: 700px;
+}
+
+.track {
+  border-radius: 8px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.top-track {
+  flex: 1;
+  height: 380px; /* Match the container height */
+}
+
+.other-tracks-list {
+  display: flex;
+  flex-direction: column;
+  height: 380px; /* Match the container height */
+}
+
+.other-tracks-list .track {
+  height: 80px; /* Each small track is 80px */
+  margin-bottom: 1rem; /* Add gap between tracks */
+}
+
+.other-tracks-list .track:last-child {
+  margin-bottom: 0; /* Remove margin from last track */
+}
+
+.spotify-embed {
+  border: none;
+  height: 100%;
+  width: 100%;
+}
+
+.error {
+  color: #d32f2f;
+  text-align: center;
+  padding: 1rem;
+  background: #ffebee;
+  border-radius: 8px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .top-tracks-container {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .other-tracks-list {
+    width: 100%;
+    height: auto;
+  }
+
+  .top-track {
+    height: 380px;
+  }
+}
+
+.recently-played-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1rem;
+}
+
+.recently-played-list .track {
+  width: 100%;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .top-tracks-container {
+    flex-direction: column;
+  }
+
+  .other-tracks-list {
+    width: 100%;
+  }
+
+  .top-track {
+    min-width: 100%;
+  }
+
+  .recently-played-list {
+    grid-template-columns: 1fr;
+  }
 }

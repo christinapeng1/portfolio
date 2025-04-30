@@ -47,40 +47,85 @@
         <ul class="nav-links">
           <li>
             <a href="index.html">
-              <img src="assets/images/undertale-heart.webp" alt="Undertale Heart" class="icon"> Home
+              <img
+                src="assets/images/undertale-heart.webp"
+                alt="Undertale Heart"
+                class="icon"
+              />
+              Home
             </a>
           </li>
           <li>
-            <a href="projects.html"
-              >
-              <img src="assets/images/undertale-heart.webp" alt="Undertale Heart" class="icon"> Projects</a
+            <a href="projects.html">
+              <img
+                src="assets/images/undertale-heart.webp"
+                alt="Undertale Heart"
+                class="icon"
+              />
+              Projects</a
             >
           </li>
           <li>
-            <a
-              href="about.html"
-              >
-              <img src="assets/images/undertale-heart.webp" alt="Undertale Heart" class="icon"> About</a
+            <a href="about.html">
+              <img
+                src="assets/images/undertale-heart.webp"
+                alt="Undertale Heart"
+                class="icon"
+              />
+              About</a
             >
           </li>
         </ul>
       </div>
       <div class="social-links-container">
-          <a href="mailto:christina_peng@brown.edu" target="_blank">
-            <i class="fa fa-envelope"></i>
-          </a>
-          <a href="https://www.linkedin.com/in/christina-peng/" target="_blank">
-            <div class="social-link">
-              <i class="fab fa-linkedin"></i>
-            </div>
-          </a>
-          <a href="https://github.com/christinapeng1" target="_blank">
-            <i class="fab fa-github"></i>
-          </a>
-        </div>
+        <a href="mailto:christina_peng@brown.edu" target="_blank">
+          <i class="fa fa-envelope"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/christina-peng/" target="_blank">
+          <div class="social-link">
+            <i class="fab fa-linkedin"></i>
+          </div>
+        </a>
+        <a href="https://github.com/christinapeng1" target="_blank">
+          <i class="fab fa-github"></i>
+        </a>
+      </div>
     </nav>
 
-    <div class="character-card">
+    <div class="profile-container">
+      <div class="profile-img">
+        <img
+          src="assets/images/christina-profile-2.png"
+          alt="Christina Peng headshot"
+        />
+      </div>
+      <div class="profile-info">
+        <h2>
+          I'm Christina, a student at Brown University. I study Computer Science
+          and English. I'm from Shanghai, China but I immigrated to the US when
+          I was 12. I'm interested in using technology to make the world a
+          better place.
+        </h2>
+      </div>
+    </div>
+
+    <!-- Spotify Section -->
+    <div class="spotify-section">
+      
+      <div class="spotify-toggle">
+        <button class="toggle-btn active" data-view="top">Top Tracks</button>
+        <button class="toggle-btn" data-view="recent">Recently Played</button>
+      </div>
+      <div id="spotify-data">
+        <div class="loading">Loading Spotify data...</div>
+      </div>
+    </div>
+
+    <div class="spotify-section">
+      <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/6vfYXvypBNCHNdqTf5VwgN?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    </div>
+
+    <!-- <div class="character-card">
       <div class="character-img">
         <img src="assets/images/christina-profile-2.png" alt="Christina Peng headshot">
       </div>
@@ -92,10 +137,9 @@
           <li><strong>Hobbies:</strong> Drawing, Social Deduction Games</li>
         </ul>
       </div>
-    </div>
+    </div> -->
 
     <script>
-
       const squeak = document.getElementById("squeak-sound");
       const mouseImg = document.querySelector(".squeaky-mouse");
 
@@ -143,7 +187,7 @@
           }
         });
       });
-
     </script>
+    <script src="spotify.js"></script>
   </body>
 </html>
