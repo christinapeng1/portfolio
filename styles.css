@@ -40,15 +40,6 @@ a:hover {
   flex-wrap: wrap;
 }
 
-.profile-img {
-  width: 200px;
-  height: 200px;
-  border-radius: 10%;
-  object-fit: cover;
-
-  flex-shrink: 0;
-}
-
 .hero-text {
   max-width: 650px;
 }
@@ -209,7 +200,7 @@ main {
   }
   30%,
   80% {
-    color: #a024b3;
+    color: #f3246c;
   } /* Orange */
   100% {
     color: inherit;
@@ -223,7 +214,7 @@ main {
   }
   50%,
   80% {
-    color: #1abc9c;
+    color: #00a2ff;
   } /* Teal */
   100% {
     color: inherit;
@@ -800,21 +791,14 @@ td:first-child {
   align-items: center;
   color: #000000;
   border-radius: 15px;
-  max-width: 1000px;
+  max-width: 700px;
   margin: 50px auto;
 }
 
-.projects-container {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-  max-width: 1000px;
-}
-
 .profile-img img {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  border-radius: 12%;
   border: 2px solid black;
   object-fit: cover;
 }
@@ -950,17 +934,29 @@ td:first-child {
 .spotify-section {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   margin: 2rem auto;
   padding: 1rem;
   border-radius: 10px;
   max-width: 700px;
 }
 
+.spotify-header {
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+
 .spotify-toggle {
   display: flex;
   gap: 1rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.spotify-description {
+  font-family: "Zen Kaku Gothic New", sans-serif;
+  color: #666;
+  font-size: 0.9rem;
+  margin: 0;
 }
 
 .toggle-btn {
@@ -1000,6 +996,7 @@ td:first-child {
 .top-track {
   flex: 1;
   height: 380px; /* Match the container height */
+  width: 400px;
 }
 
 .other-tracks-list {
