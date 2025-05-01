@@ -68,7 +68,7 @@
   /* Card grid */
   .card-grid {
     grid-template-columns: 1fr;
-    gap: 2rem;
+    gap: 1.5rem;
     padding: 1rem 1rem;
   }
 
@@ -132,6 +132,27 @@
   .project-image img {
     max-width: 100%; /* Make sure the image scales properly */
     height: auto;
+  }
+
+  .profile-container {
+    flex-direction: column;
+  }
+
+  .profile-info {
+    margin: 0px 50px;
+  }
+
+  #play {
+    padding: 0 1rem;
+  }
+
+  #play .section-title {
+    font-size: 24px;
+  }
+
+  #play .section-description {
+    font-size: 16px;
+    margin-bottom: 1.5rem;
   }
 }
 

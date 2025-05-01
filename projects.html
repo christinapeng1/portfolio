@@ -39,6 +39,7 @@
       preload="auto"
     ></audio>
 
+    <script src="assets/js/common.js"></script>
     <title>Christina Peng's Projects</title>
   </head>
   <body>
@@ -80,6 +81,7 @@
         </div>
     </nav>
 
+    <div id="page-content" class="slide-in">
     <section id="projects">
       <div class="projects-container">
         <div class="project">
@@ -164,56 +166,10 @@
     <div id="image-modal" class="modal">
       <img class="modal-content" id="modal-img" />
     </div>
+    </div>
 
     <script>
-      const squeak = document.getElementById("squeak-sound");
-      const mouseImg = document.querySelector(".squeaky-mouse");
-
-      if (mouseImg) {
-        mouseImg.addEventListener("click", () => {
-          squeak.currentTime = 0;
-          squeak.play();
-        });
-      }
-      const clickSound = document.getElementById("click-sound");
-      const links = document.querySelectorAll("a");
-
-      links.forEach((link) => {
-        link.addEventListener("click", function (event) {
-          // If link opens in a new tab or jumps to an anchor, we still want the sound to play first
-          if (clickSound) {
-            clickSound.currentTime = 0; // rewind if it's still playing
-            clickSound.play();
-          }
-        });
-      });
-
-      window.addEventListener("DOMContentLoaded", () => {
-        const navLinks = document.querySelectorAll(".nav-links a");
-        const currentUrl = window.location.href;
-
-        navLinks.forEach((link) => {
-          const linkUrl = link.href;
-
-          // Remove 'active' class first
-          link.classList.remove("active");
-
-          // Exact match or pathname+hash match
-          if (
-            linkUrl === currentUrl ||
-            (link.pathname === window.location.pathname &&
-              link.hash === window.location.hash)
-          ) {
-            link.classList.add("active");
-          }
-
-          // Optional: fallback for just pathname match (ignoring hash)
-          else if (link.pathname === window.location.pathname && !link.hash) {
-            link.classList.add("active");
-          }
-        });
-      });
-
+      // Project-specific code for modal and expand buttons
       const modal = document.getElementById("image-modal");
       const modalImg = document.getElementById("modal-img");
 
@@ -233,8 +189,8 @@
         }
       });
 
+      // Expand/collapse project sections
       const expandButtons = document.querySelectorAll('.expand-btn');
-
       expandButtons.forEach(btn => {
         btn.addEventListener('click', () => {
           const project = btn.closest('.project');

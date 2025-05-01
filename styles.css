@@ -18,6 +18,46 @@ html {
 body {
   font-family: "Zen Kaku Gothic New", system-ui, system-ui, serif;
   background-color: var(--background-color);
+  opacity: 1;
+}
+
+#page-content {
+  opacity: 0;
+  animation-duration: 0.8s;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Slide in from bottom */
+.slide-in {
+  animation-name: slideInFromBottom;
+}
+
+/* Slide out to bottom */
+.slide-out {
+  animation-name: slideOutToBottom;
+}
+
+@keyframes slideInFromBottom {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideOutToBottom {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(20px);
+    opacity: 0;
+  }
 }
 
 a {
@@ -235,10 +275,11 @@ main {
 
 /*=============== CARD ===============*/
 .card-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 4rem;
-  padding: 4rem;
+  max-width: 700px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin: 0 auto;
 }
 
 .card {
@@ -255,48 +296,6 @@ main {
   box-shadow: 0 10px 24px rgba(0, 0, 0, 0.2);
 }
 
-.card-info {
-  position: absolute;
-  bottom: -100%; /* hidden initially */
-  left: 0;
-  width: 100%;
-  background-color: white;
-  padding: 1rem;
-  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
-  transition: bottom 0.4s ease;
-}
-
-.card:hover .card-info {
-  bottom: 0;
-}
-
-/* Optional text styles */
-.card-info .title {
-  font-size: 0.85rem;
-  color: #666;
-  margin: 0;
-}
-
-.card-info .tagline {
-  margin: 0.25rem 0;
-  font-size: 1.2rem;
-  color: #222;
-}
-
-.image-container {
-  position: relative;
-  width: 100%;
-  border-radius: 8px;
-  overflow: hidden;
-}
-
-.image-container img {
-  width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 8px;
-}
-
 .video-container {
   position: relative;
   padding-bottom: 56.25%; /* 16:9 aspect ratio */
@@ -304,6 +303,7 @@ main {
   overflow: hidden;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  background-color: #f5f5f5;
 }
 
 .video-container iframe {
@@ -340,16 +340,16 @@ article {
   margin-left: -80px; /* Slightly shift left */
 }
 
-article h1{
+article h1 {
   text-align: center;
   margin-bottom: 1rem;
 }
 
-article h2{
+article h2 {
   text-align: center;
 }
 
-article h3{
+article h3 {
   text-align: center;
 }
 
@@ -495,6 +495,7 @@ td:first-child {
   transform: translateY(-50%);
   padding: 10px 15px;
   border-radius: 8px;
+  z-index: 1;
 }
 
 #quick-nav ul {
@@ -535,8 +536,8 @@ td:first-child {
 }
 
 .modal-content {
-  max-width: 80%; /* Changed from 90% */
-  max-height: 80vh; /* Changed from 90vh */
+  max-width: 80%;
+  max-height: 80vh;
   border-radius: 8px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
@@ -549,7 +550,7 @@ td:first-child {
   font-size: 40px;
   font-weight: bold;
   cursor: pointer;
-  z-index: 2;
+  z-index: 3;
   transition: color 0.2s;
 }
 
@@ -654,8 +655,13 @@ td:first-child {
 
 .section-title {
   position: relative;
-  max-width: 650px;
-  margin: auto;
+  max-width: 700px;
+}
+
+.section-description {
+  position: relative;
+  max-width: 700px;
+  margin-bottom: 20px;
 }
 
 .blog {
@@ -670,7 +676,7 @@ td:first-child {
 
 .blog-entry {
   display: inline-block;
-  margin-top: 16px;
+  margin-bottom: 16px;
   position: relative;
   transform-origin: center;
   transition: transform 0.2s ease, opacity 0.2s ease;
@@ -786,13 +792,13 @@ td:first-child {
   background-color: #59576a;
 }
 
-.profile-container{
+.profile-container {
   display: flex;
   align-items: center;
   color: #000000;
   border-radius: 15px;
   max-width: 700px;
-  margin: 50px auto;
+  margin: 1rem auto;
 }
 
 .profile-img img {
@@ -811,18 +817,6 @@ td:first-child {
   font-size: 2.5rem;
   margin-bottom: 1rem;
 }
-
-/* .character-info h2 {
-  margin: 0;
-  font-size: 2em;
-  color: #000000; /* Gold for a game-like flair */
-}
-
-.character-info .title {
-  font-style: italic;
-  color: #000000;
-  margin-bottom: 15px;
-} */
 
 .stats {
   list-style: none;
@@ -949,7 +943,6 @@ td:first-child {
 .spotify-toggle {
   display: flex;
   gap: 1rem;
-  margin-bottom: 0.5rem;
 }
 
 .spotify-description {
@@ -975,7 +968,7 @@ td:first-child {
 }
 
 .toggle-btn.active {
-  background: #1DB954;
+  background: #1db954;
   color: white;
 }
 
@@ -1072,4 +1065,10 @@ td:first-child {
   .recently-played-list {
     grid-template-columns: 1fr;
   }
+}
+
+#play {
+  max-width: 700px;
+  margin: 2rem auto;
+  padding: 0 1rem;
 }

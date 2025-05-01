@@ -23,6 +23,7 @@
     <link rel="preload" as="image" href="../assets/images/undertale-heart.webp">
     <audio id="click-sound" src="../assets/sounds/undertale-select.mp3" preload="auto"></audio>
     <audio id="squeak-sound" src="../assets/sounds/mouse_sqek.mp3" preload="auto"></audio>
+    <script src="../assets/js/common.js"></script>
 </head>
 <body>
     <nav id="desktop-nav">
@@ -74,8 +75,8 @@
         </ul>
     </nav>
 
-    <main>
-
+    <div id="page-content" class="slide-in">
+      <main>
         <article>
             <h2>Mar 5 2025</h2>
             <h1>Laundry Machine Personas</h1>
@@ -90,7 +91,7 @@
                 </figure>
 
                 <p>Laundry at Brown University is no exception.</p>
-                <p>Over the years, Brown's laundry system has seen a few changes. In Fall 2022, Brown’s laundry rooms saw a notable addition: payment kiosks.</p>
+                <p>Over the years, Brown's laundry system has seen a few changes. In Fall 2022, Brown's laundry rooms saw a notable addition: payment kiosks.</p>
                  <figure>
                     <img src="../assets/images/laundry-personas/laundry-kiosk-sketch.jpg" alt="Laundry Payment Kiosk Sketch">
                 </figure>
@@ -108,7 +109,7 @@
                 <h2>Research</h2>
                 <p>To begin my investigation, I wanted to speak with students firsthand on their experience using laundry machines. It was a Tuesday night when I made my way to Metcalf and Miller, two bustling first-year dorms at Brown. I wanted to interview first-years because they were the newest to campus, still figuring out the quirks of dorm living. If anyone had fresh, unfiltered reactions to the system, it would be them.</p>
 
-                <p>Drawing from what I learned in <a href="https://www.cs.cmu.edu/~jhm/Readings/Dillman,%20Chapter%204.pdf" target="_blank" class="highlight">Dillman’s The Basics of Asking Good Questions</a>, I carefully designed a set of interview questions:</p>
+                <p>Drawing from what I learned in <a href="https://www.cs.cmu.edu/~jhm/Readings/Dillman,%20Chapter%204.pdf" target="_blank" class="highlight">Dillman's The Basics of Asking Good Questions</a>, I carefully designed a set of interview questions:</p>
 
                 <ul>
                     <li>How often do you use laundry machines like this one?</li>
@@ -189,7 +190,8 @@
                 <p>Understanding user behaviors and pain points is essential for improving everyday interfaces like laundry machines. Through observation and interviews, we created key personas—some seeking simplicity, others relying on technology but facing usability challenges. By designing with user needs in mind, we can create a smoother, more efficient laundry experience for everyone.</p>
             </section>
         </article>
-    </main>
+      </main>
+    </div>
     <div id="image-modal" class="modal">
       <img class="modal-content" id="modal-img" />
     </div>
