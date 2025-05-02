@@ -44,15 +44,15 @@ const initializeNavigation = () => {
 
 // Page transitions
 const initializePageTransitions = () => {
-  const content = document.getElementById("page-content");
-  if (!content) return; // Skip if page-content doesn't exist
+  // const content = document.getElementById("page-content");
+  // if (!content) return; // Skip if page-content doesn't exist
 
-  // Add slide-in class when page loads
-  window.addEventListener("load", () => {
-    if (content) {
-      content.classList.add("slide-in");
-    }
-  });
+  // // Add slide-in class when page loads
+  // window.addEventListener("load", () => {
+  //   if (content) {
+  //     content.classList.add("slide-in");
+  //   }
+  // });
 
   document.querySelectorAll("a").forEach((link) => {
     link.addEventListener("click", function (e) {
@@ -72,20 +72,20 @@ const initializePageTransitions = () => {
         return;
       }
 
-      // Handle navigation
-      e.preventDefault();
-      if (content) {
-        content.classList.remove("slide-in");
-        content.classList.add("slide-out");
-      }
+      // // Handle navigation
+      // e.preventDefault();
+      // if (content) {
+      //   content.classList.remove("slide-in");
+      //   content.classList.add("slide-out");
+      // }
 
       window.location.href = href;
 
     });
   });
-  window.addEventListener("popstate", () => {
-    window.location.reload();
-  });
+  // window.addEventListener("popstate", () => {
+  //   window.location.reload();
+  // });
 };
 
 // Initialize everything when DOM is loaded
