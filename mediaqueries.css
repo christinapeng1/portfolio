@@ -32,7 +32,7 @@
   }
 
   h2 {
-    font-size: 24px;
+    font-size: 20px;
   }
 
   h3 {
@@ -138,16 +138,37 @@
     flex-direction: column;
   }
 
-  .profile-info {
-    margin: 0px 50px;
-  }
-
   .profile-info h1 {
     font-size: 32px;
   }
 
   #art {
+    padding: 0 1rem;
+  }
+
+ .spotify-section {
     padding: 0 2rem;
+  }
+
+  .top-tracks-container {
+    flex-direction: column;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .top-tracks-container .top-track {
+    display: none;
+  }
+
+  .other-tracks-list {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .other-tracks-list .track {
+    height: 80px;
+    width: 100%;
   }
 }
 
