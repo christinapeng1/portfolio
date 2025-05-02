@@ -347,16 +347,18 @@ article h1 {
 
 article h2 {
   text-align: center;
+  margin-bottom: 1rem;
 }
 
 article h3 {
   text-align: center;
+  margin-bottom: 1rem;
 }
 
 article img {
   max-width: 100%; /* Ensure images do not exceed the container width */
   height: auto; /* Maintain aspect ratio */
-  margin-bottom: 30px; /* Add space between images */
+  margin-bottom: 1rem;
   transition: transform 0.3s ease, filter 0.3s ease;
   cursor: pointer;
   border-radius: 4px;
@@ -374,7 +376,7 @@ article img:hover {
   gap: 20px; /* Space between images */
   flex-wrap: wrap; /* Allow images to wrap */
   justify-content: center; /* Center images */
-  margin-bottom: 1em;
+  margin-bottom: 1rem;
 }
 
 /* Style for individual figures (image + caption) */

@@ -54,11 +54,6 @@ const initializePageTransitions = () => {
     }
   });
 
-  // Handle back/forward navigation
-  window.addEventListener("popstate", () => {
-    window.location.reload();
-  });
-
   document.querySelectorAll("a").forEach((link) => {
     link.addEventListener("click", function (e) {
       const href = this.getAttribute("href");
