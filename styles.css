@@ -420,6 +420,7 @@ h3 {
 p {
   font-size: 18px;
   font-weight: 400;
+  margin-bottom: 1rem;
 }
 
 /* Add space after each section */
@@ -656,6 +657,7 @@ td:first-child {
 .section-title {
   position: relative;
   max-width: 750px;
+  margin-bottom: 1rem;
 }
 
 .section-description {
