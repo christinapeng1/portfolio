@@ -83,6 +83,9 @@ const initializePageTransitions = () => {
 
     });
   });
+  window.addEventListener("popstate", () => {
+    window.location.reload();
+  });
 };
 
 // Initialize everything when DOM is loaded
