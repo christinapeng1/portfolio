@@ -278,7 +278,7 @@ main {
   max-width: 700px;
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1rem;
   margin: 0 auto;
 }
 
@@ -405,7 +405,6 @@ h2 {
   font-size: 28px;
   font-weight: 400;
   font-family: "Zen Kaku Gothic New", "Avenir", system-ui, serif;
-  margin-bottom: 0.5em;
 }
 
 h3 {
@@ -655,7 +654,8 @@ td:first-child {
 
 .section-title {
   position: relative;
-  max-width: 700px;
+  max-width: 750px;
+  margin-bottom: 1rem;
 }
 
 .section-description {
@@ -798,7 +798,8 @@ td:first-child {
   color: #000000;
   border-radius: 15px;
   max-width: 700px;
-  margin: 1rem auto;
+  margin: auto;
+  padding-top: 2rem;
 }
 
 .profile-img img {
@@ -838,6 +839,7 @@ td:first-child {
   gap: 1.5rem;
   max-width: 1000px;
   margin: auto;
+  padding-top: 2rem;
 }
 
 .project {
@@ -929,8 +931,6 @@ td:first-child {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin: 2rem auto;
-  padding: 1rem;
   border-radius: 10px;
   max-width: 700px;
 }
@@ -974,10 +974,9 @@ td:first-child {
 
 .top-tracks-container {
   display: flex;
-  gap: 1rem;
+  flex: 1;
+  gap: 0.7rem;
   align-items: center;
-  height: 380px; /* Total height of 4 tracks + gaps */
-  max-width: 700px;
 }
 
 .track {
@@ -989,7 +988,7 @@ td:first-child {
 .top-track {
   flex: 1;
   height: 380px; /* Match the container height */
-  width: 400px;
+  max-width: 400px;
 }
 
 .other-tracks-list {
@@ -999,12 +998,12 @@ td:first-child {
 }
 
 .other-tracks-list .track {
-  height: 80px; /* Each small track is 80px */
-  margin-bottom: 1rem; /* Add gap between tracks */
+  height: 80px; 
+  margin-bottom: 0.7rem; /* Add gap between tracks */
 }
 
 .other-tracks-list .track:last-child {
-  margin-bottom: 0; /* Remove margin from last track */
+  margin-bottom: 0; 
 }
 
 .spotify-embed {
@@ -1067,8 +1066,20 @@ td:first-child {
   }
 }
 
-#play {
+#art {
   max-width: 700px;
-  margin: 2rem auto;
-  padding: 0 1rem;
+  margin: auto;
+  padding-top: 1rem;
+}
+
+#spotify-api {
+  max-width: 700px;
+  margin: auto;
+  padding-top: 1rem;
+}
+
+#spotify-playlist {
+  max-width: 700px;
+  margin: auto;
+  padding-top: 1rem;
 }

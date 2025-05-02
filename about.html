@@ -119,9 +119,10 @@
         </div>
       </div>
 
-      <section id="play">
-        <h2 class="section-title">I've been learning to draw in my free time!</h2>
+      <section id="art">
+        
         <div class="card-grid">
+          <h2>I've been learning to draw in my free time!</h2>
 
            <div class="card">
             <div class="video-container">
@@ -164,40 +165,43 @@
         </div>
       </section>
 
-      <div class="spotify-section">
-        <h2 class="section-title">I also listen to a lot of music...</h2>
-        <p class="section-description">P.S. These songs were fetched from my Spotify profile using the Spotify API!</p>
-        <div class="spotify-header">
-          <div class="spotify-toggle">
-            <button class="toggle-btn active" data-view="top">
-              Top Tracks
-            </button>
-            <button class="toggle-btn" data-view="recent">
-              Recently Played
-            </button>
+      <section id="spotify-api">
+        <div class="spotify-section">
+          <h2>I also listen to a lot of music...</h2>
+          <p class="section-description">P.S. These songs were fetched from my Spotify profile using the Spotify API!</p>
+          <div class="spotify-header">
+            <div class="spotify-toggle">
+              <button class="toggle-btn active" data-view="top">
+                Top Tracks
+              </button>
+              <button class="toggle-btn" data-view="recent">
+                Recently Played
+              </button>
+            </div>
+          </div>
+          <div id="spotify-data">
+            <div class="loading">Loading Spotify data...</div>
           </div>
         </div>
-        <div id="spotify-data">
-          <div class="loading">Loading Spotify data...</div>
         </div>
-      </div>
-    </div>
+      </section>
 
-      <div class="spotify-section">
-        <h2 class="section-title">Playlist of the Month</h2>
-        <p class="section-description">I've been making a new playlist every month! Here's the latest one:</p>
-        <iframe
-          style="border-radius: 12px"
-          src="https://open.spotify.com/embed/playlist/6vfYXvypBNCHNdqTf5VwgN?utm_source=generator"
-          width="100%"
-          height="152"
-          frameborder="0"
-          allowfullscreen=""
-          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-          loading="lazy"
-        ></iframe>
-      </div>
-
+      <section id="spotify-playlist">
+        <div class="spotify-section">
+          <h2>Playlist of the Month</h2>
+          <p class="section-description">I've been making a new playlist every month! Here's the latest one:</p>
+          <iframe
+            style="border-radius: 12px"
+            src="https://open.spotify.com/embed/playlist/6vfYXvypBNCHNdqTf5VwgN?utm_source=generator"
+            width="100%"
+            height="152"
+            frameborder="0"
+            allowfullscreen=""
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+            loading="lazy"
+          ></iframe>
+        </div>
+      </section>
       
 
   </body>

@@ -81,8 +81,8 @@
     margin-left: 38px;
   }
 
-  .section-title {
-    margin-left: 30px;
+  .section-title h2 {
+    margin-left: 0px;
   }
 
   .blog {
@@ -142,17 +142,12 @@
     margin: 0px 50px;
   }
 
-  #play {
-    padding: 0 1rem;
+  .profile-info h1 {
+    font-size: 32px;
   }
 
-  #play .section-title {
-    font-size: 24px;
-  }
-
-  #play .section-description {
-    font-size: 16px;
-    margin-bottom: 1.5rem;
+  #art {
+    padding: 0 2rem;
   }
 }
 
