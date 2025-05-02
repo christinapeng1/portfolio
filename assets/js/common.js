@@ -1,26 +1,26 @@
 // Sound effects
-const initializeSoundEffects = () => {
-  const squeak = document.getElementById("squeak-sound");
-  const mouseImg = document.querySelector(".squeaky-mouse");
-  const clickSound = document.getElementById("click-sound");
+// const initializeSoundEffects = () => {
+//   const squeak = document.getElementById("squeak-sound");
+//   const mouseImg = document.querySelector(".squeaky-mouse");
+//   const clickSound = document.getElementById("click-sound");
 
-  if (mouseImg) {
-    mouseImg.addEventListener("click", () => {
-      squeak.currentTime = 0;
-      squeak.play();
-    });
-  }
+//   if (mouseImg) {
+//     mouseImg.addEventListener("click", () => {
+//       squeak.currentTime = 0;
+//       squeak.play();
+//     });
+//   }
 
-  // Add click sound to all links
-  document.querySelectorAll("a").forEach((link) => {
-    link.addEventListener("click", function (event) {
-      if (clickSound) {
-        clickSound.currentTime = 0;
-        clickSound.play();
-      }
-    });
-  });
-};
+//   // Add click sound to all links
+//   document.querySelectorAll("a").forEach((link) => {
+//     link.addEventListener("click", function (event) {
+//       if (clickSound) {
+//         clickSound.currentTime = 0;
+//         clickSound.play();
+//       }
+//     });
+//   });
+// };
 
 // Navigation active state
 const initializeNavigation = () => {
@@ -81,7 +81,7 @@ const initializePageTransitions = () => {
 
 // Initialize everything when DOM is loaded
 document.addEventListener("DOMContentLoaded", () => {
-  initializeSoundEffects();
+  // initializeSoundEffects();
   initializeNavigation();
   initializePageTransitions();
 });
