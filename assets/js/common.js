@@ -56,12 +56,7 @@ const initializePageTransitions = () => {
 
   // Handle back/forward navigation
   window.addEventListener("popstate", () => {
-    if (content) {
-      content.classList.remove("slide-in");
-      // Force a reflow
-      void content.offsetWidth;
-      content.classList.add("slide-in");
-    }
+    window.location.reload();
   });
 
   document.querySelectorAll("a").forEach((link) => {
@@ -89,9 +84,8 @@ const initializePageTransitions = () => {
         content.classList.add("slide-out");
       }
 
-      setTimeout(() => {
-        window.location.href = href;
-      }, 400);
+      window.location.href = href;
+
     });
   });
 };
