@@ -146,7 +146,7 @@
     padding: 0 1rem;
   }
 
- .spotify-section {
+  .spotify-section {
     padding: 0 2rem;
   }
 
@@ -154,6 +154,7 @@
     flex-direction: column;
     width: 100%;
     max-width: 100%;
+    gap: 0.7rem;
   }
 
   .top-tracks-container .top-track {
@@ -164,11 +165,13 @@
     width: 100%;
     max-width: 100%;
     height: auto;
+    gap: 0.7rem;
   }
 
   .other-tracks-list .track {
     height: 80px;
     width: 100%;
+    margin: 0;
   }
 }
 

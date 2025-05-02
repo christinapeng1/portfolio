@@ -47,6 +47,23 @@ const initializePageTransitions = () => {
   const content = document.getElementById("page-content");
   if (!content) return; // Skip if page-content doesn't exist
 
+  // Add slide-in class when page loads
+  window.addEventListener("load", () => {
+    if (content) {
+      content.classList.add("slide-in");
+    }
+  });
+
+  // Handle back/forward navigation
+  window.addEventListener("popstate", () => {
+    if (content) {
+      content.classList.remove("slide-in");
+      // Force a reflow
+      void content.offsetWidth;
+      content.classList.add("slide-in");
+    }
+  });
+
   document.querySelectorAll("a").forEach((link) => {
     link.addEventListener("click", function (e) {
       const href = this.getAttribute("href");
