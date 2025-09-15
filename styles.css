@@ -793,6 +793,18 @@ td:first-child {
   background-color: #59576a;
 }
 
+.tag.godot {
+  background-color: #478CBF;
+}
+
+.tag.procreate {
+  background-color: #FF7DD0;
+}
+
+.tag.adviceslip {
+  background-color: #1a9e15;
+}
+
 .profile-container {
   display: flex;
   align-items: center;
@@ -872,7 +884,7 @@ td:first-child {
 .project-details {
   display: flex;
   flex-direction: column;
-  gap: 0.4rem;
+  gap: 0.3rem;
   flex: 1; /* Take up remaining space */
 }
 
