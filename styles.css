@@ -805,6 +805,18 @@ td:first-child {
   background-color: #1a9e15;
 }
 
+.tag.java {
+  background-color: #F8991C;
+}
+
+.tag.firebase {
+  background-color: #DE2C01;
+}
+
+.tag.javascript {
+  background-color: #df7ef3;
+}
+
 .profile-container {
   display: flex;
   align-items: center;
