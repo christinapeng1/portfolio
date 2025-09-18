@@ -943,11 +943,11 @@ td:first-child {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.5s ease;
-  padding: 0 1rem;
+  padding: 0rem 1rem;
 }
 
 .project.expanded .project-body {
-  max-height: 500px; /* or large enough to fit your content */
+  max-height: 600px; /* or large enough to fit your content */
   padding: 1rem;
 }
 
