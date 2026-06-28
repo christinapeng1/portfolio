@@ -218,7 +218,7 @@ main {
 }
 
 /* Engineer animation — starts early, ends with determination */
-@keyframes highlightDistance {
+@keyframes highlightFirst {
   0%,
   10% {
     color: inherit;
@@ -233,7 +233,7 @@ main {
 }
 
 /* Determination — starts later, but ends with engineer */
-@keyframes highlightEngineer {
+@keyframes highlightSecond {
   0%,
   30% {
     color: inherit;
@@ -247,30 +247,48 @@ main {
   }
 }
 
-@keyframes highlightDetermination {
+@keyframes highlightThird {
   0%,
   50% {
     color: inherit;
   }
   50%,
   80% {
-    color: #00a2ff;
-  } /* Teal */
+    color: #0d9646;
+  } 
   100% {
     color: inherit;
   }
 }
 
-#pixel {
-  animation: highlightDistance 10s infinite;
+@keyframes highlightFourth {
+  0%,
+  70% {
+    color: inherit;
+  }
+  70%,
+  80% {
+    color: #13a4bd;
+  } /* Brown */
+  100% {
+    color: inherit;
+  }
 }
 
-#engineer {
-  animation: highlightEngineer 10s infinite;
+#first {
+  animation: highlightFirst 10s infinite;
 }
 
-#determination {
-  animation: highlightDetermination 10s infinite;
+#second {
+  animation: highlightSecond 10s infinite;
+}
+
+#third {
+  animation: highlightThird 10s infinite;
+}
+
+#fourth {
+  animation: highlightFourth 10s infinite;
 }
 
 /*=============== CARD ===============*/
@@ -799,6 +817,22 @@ td:first-child {
 
 .tag.procreate {
   background-color: #FF7DD0;
+}
+
+.tag.dl {
+  background-color: #05b791; /* blue */
+}
+
+.tag.python {
+  background-color: #0a2da1; /* blue */
+}
+
+.tag.graphics {
+  background-color: #641bb6; 
+}
+
+.tag.cplusplus {
+  background-color: #ff8000; 
 }
 
 .tag.adviceslip {
